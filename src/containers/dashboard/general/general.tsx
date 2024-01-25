@@ -14,13 +14,13 @@ function General() {
       <div className="breadcrumb-header justify-content-between">
         <div className="left-content">
           <span className="main-content-title tx-primary mg-b-0 mg-b-lg-1">
-            DASHBOARD
+            GorillaBully
           </span>
         </div>
         <div className="justify-content-center mt-2">
           <ol className="breadcrumb breadcrumb-style3">
             <li className="breadcrumb-item tx-15">
-              <a >Dashboard</a>
+              <a>Dashboard</a>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
               Main
@@ -159,10 +159,7 @@ function General() {
                   <div className="card-title d-flex justify-content-between">
                     Activity Log
                     <div className="ms-auto">
-                      <a
-                        
-                        className="tx-muted tx-11 font-weight-semibold"
-                      >
+                      <a className="tx-muted tx-11 font-weight-semibold">
                         View All
                       </a>
                     </div>
@@ -306,14 +303,10 @@ function General() {
                       aria-labelledby="dropdownMenuButton1"
                     >
                       <Dropdown.Item>
-                        <a className="tx-muted" >
-                          Day
-                        </a>
+                        <a className="tx-muted">Day</a>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <a className="tx-muted" >
-                          Yearly
-                        </a>
+                        <a className="tx-muted">Yearly</a>
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
@@ -386,7 +379,11 @@ function General() {
                     id="uncontrolled-tab-example"
                     className="mb-3"
                   >
-                    <Tab eventKey="Pending" title="Pending" className="table-responsive">
+                    <Tab
+                      eventKey="Pending"
+                      title="Pending"
+                      className="table-responsive"
+                    >
                       <table className="table border-0 mb-0">
                         <thead>
                           <tr>
@@ -609,7 +606,11 @@ function General() {
                         </tbody>
                       </table>
                     </Tab>
-                    <Tab eventKey="conformed" title="Conformed" className="table-responsive">
+                    <Tab
+                      eventKey="conformed"
+                      title="Conformed"
+                      className="table-responsive"
+                    >
                       <table className="table border-0 mb-0">
                         <thead>
                           <tr>
@@ -838,10 +839,7 @@ function General() {
                   <div className="card-title d-flex justify-content-between">
                     transactions history
                     <div className="ms-auto">
-                      <a
-                        
-                        className="tx-muted tx-11 font-weight-semibold"
-                      >
+                      <a className="tx-muted tx-11 font-weight-semibold">
                         View All
                       </a>
                     </div>
@@ -850,13 +848,13 @@ function General() {
                 <Card.Body>
                   <div className="transactions-history-item">
                     <div className="d-flex">
-                      <a >
+                      <a>
                         <span className="avatar avatar-md br-5 bg-primary-transparent text-primary me-3">
                           <i className="fe fe-credit-card"></i>
                         </span>
                       </a>
                       <div className="w-100">
-                        <a >
+                        <a>
                           <span className="mb-1 text-default me-3">
                             Visa Card
                           </span>
@@ -875,13 +873,13 @@ function General() {
                   </div>
                   <div className="transactions-history-item">
                     <div className="d-flex">
-                      <a >
+                      <a>
                         <span className="avatar avatar-md br-5 bg-warning-transparent text-warning me-3">
                           <i className="fe fe-smartphone"></i>
                         </span>
                       </a>
                       <div className="w-100">
-                        <a >
+                        <a>
                           <span className="mb-1 text-default me-3">
                             Through UPI
                           </span>
@@ -898,13 +896,13 @@ function General() {
                   </div>
                   <div className="transactions-history-item">
                     <div className="d-flex">
-                      <a >
+                      <a>
                         <span className="avatar avatar-md br-5 bg-orange-transparent text-orange me-3">
                           <i className="fe fe-arrow-down"></i>
                         </span>
                       </a>
                       <div className="w-100">
-                        <a >
+                        <a>
                           <span className="mb-1 text-default me-3">
                             Bank Of Baroda Credit Card
                           </span>
@@ -923,13 +921,13 @@ function General() {
                   </div>
                   <div className="transactions-history-item">
                     <div className="d-flex">
-                      <a >
+                      <a>
                         <span className="avatar avatar-md br-5 bg-success-transparent text-success me-3">
                           <i className="fe fe-arrow-up"></i>
                         </span>
                       </a>
                       <div className="w-100">
-                        <a >
+                        <a>
                           <span className="mb-1 text-default me-3">
                             Paid By PayPal
                           </span>
@@ -946,13 +944,13 @@ function General() {
                   </div>
                   <div className="transactions-history-item">
                     <div className="d-flex">
-                      <a >
+                      <a>
                         <span className="avatar avatar-md br-5 bg-secondary-transparent tx-secondary me-3">
                           <i className="fe fe-more-horizontal"></i>
                         </span>
                       </a>
                       <div className="w-100">
-                        <a >
+                        <a>
                           <span className="mb-1 text-default me-3">
                             Credit Card
                           </span>
@@ -971,13 +969,13 @@ function General() {
                   </div>
                   <div className="transactions-history-item">
                     <div className="d-flex">
-                      <a >
+                      <a>
                         <span className="avatar avatar-md br-5 bg-success-transparent text-success me-3">
                           <i className="fe fe-arrow-up"></i>
                         </span>
                       </a>
                       <div className="w-100">
-                        <a >
+                        <a>
                           <span className="mb-1 text-default me-3">
                             Paid By Paytm
                           </span>
@@ -1006,7 +1004,7 @@ function General() {
                   <div className="card-title d-flex justify-content-between">
                     Tasks
                     <div className="ms-auto">
-                      <a  className="tx-muted tx-12 font-weight-normal">
+                      <a className="tx-muted tx-12 font-weight-normal">
                         View All
                       </a>
                     </div>
@@ -1017,10 +1015,7 @@ function General() {
                     <li>
                       <div className="d-flex align-items-center">
                         <div className="avatar-sm bg-primary-transparent rounded-circle d-flex align-items-center justify-content-center shadow">
-                          <a
-                            
-                            className="text-primary d-flex align-items-center justify-content-center"
-                          >
+                          <a className="text-primary d-flex align-items-center justify-content-center">
                             <i className="fe fe-activity"></i>
                           </a>
                         </div>
@@ -1035,7 +1030,6 @@ function General() {
                           <p className="tx-muted mb-0 tx-11 d-flex align-items-center">
                             2m ago
                             <span className="ms-2 d-flex align-items-center">
-                              
                               <span className="rounded-circle ht-5 wd-5 bg-primary me-1"></span>
                               in progress
                             </span>
@@ -1046,10 +1040,7 @@ function General() {
                     <li>
                       <div className="d-flex align-items-center">
                         <div className="avatar-sm bg-secondary-transparent rounded-circle d-flex align-items-center justify-content-center shadow">
-                          <a
-                            
-                            className="text-secondary d-flex align-items-center justify-content-center"
-                          >
+                          <a className="text-secondary d-flex align-items-center justify-content-center">
                             <i className="fe fe-command"></i>
                           </a>
                         </div>
@@ -1064,7 +1055,6 @@ function General() {
                           <p className="tx-muted mb-0 tx-11 d-flex align-items-center">
                             2m ago
                             <span className="ms-2 d-flex align-items-center">
-                              
                               <span className="rounded-circle ht-5 wd-5 bg-secondary me-1"></span>
                               started
                             </span>
@@ -1075,10 +1065,7 @@ function General() {
                     <li>
                       <div className="d-flex align-items-center">
                         <div className="avatar-sm bg-orange-transparent rounded-circle d-flex align-items-center justify-content-center shadow">
-                          <a
-                            
-                            className="text-orange d-flex align-items-center justify-content-center"
-                          >
+                          <a className="text-orange d-flex align-items-center justify-content-center">
                             <i className="fe fe-globe"></i>
                           </a>
                         </div>
@@ -1093,7 +1080,6 @@ function General() {
                           <p className="tx-muted mb-0 tx-11 d-flex align-items-center">
                             2m ago
                             <span className="ms-2 d-flex align-items-center">
-                              
                               <span className="rounded-circle ht-5 wd-5 bg-warning me-1"></span>
                               completed
                             </span>
@@ -1104,10 +1090,7 @@ function General() {
                     <li>
                       <div className="d-flex align-items-center">
                         <div className="avatar-sm bg-success-transparent rounded-circle d-flex align-items-center justify-content-center shadow">
-                          <a
-                            
-                            className="text-success d-flex align-items-center justify-content-center"
-                          >
+                          <a className="text-success d-flex align-items-center justify-content-center">
                             <i className="fe fe-activity"></i>
                           </a>
                         </div>
@@ -1122,7 +1105,6 @@ function General() {
                           <p className="tx-muted mb-0 tx-11 d-flex align-items-center">
                             2m ago
                             <span className="ms-2 d-flex align-items-center">
-                              
                               <span className="rounded-circle ht-5 wd-5 bg-success me-1"></span>
                               in progress
                             </span>
@@ -1243,7 +1225,9 @@ function General() {
                             <ul className="list-unstyled mb-0">
                               <li>
                                 <div className="d-flex align-items-center">
-                                  <div><i className="fe fe-user p-2 bg-primary-transparent tx-primary rounded-circle"></i></div>
+                                  <div>
+                                    <i className="fe fe-user p-2 bg-primary-transparent tx-primary rounded-circle"></i>
+                                  </div>
                                   <div className="flex-1 ms-3">
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       Joseph Arimathea
@@ -1253,7 +1237,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         15 Invoices
@@ -1280,7 +1266,10 @@ function General() {
                                       </span>
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
-                                      <NavLink to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                      <NavLink
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         2 Invoices
@@ -1306,7 +1295,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         37 Invoices
@@ -1332,7 +1323,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         4 Invoices
@@ -1360,7 +1353,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         2 Invoices
@@ -1386,7 +1381,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         37 Invoices
@@ -1426,7 +1423,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         2 Invoices
@@ -1452,7 +1451,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         7 Invoices
@@ -1478,7 +1479,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         2 Invoices
@@ -1506,7 +1509,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         2 Invoices
@@ -1532,7 +1537,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         7 Invoices
@@ -1558,7 +1565,9 @@ function General() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-muted tx-11"
                                       >
                                         7 Invoices

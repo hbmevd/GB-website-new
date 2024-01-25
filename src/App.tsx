@@ -130,11 +130,6 @@ import Switcherpagelayout from "./switcherpagelayout.tsx";
 
 import General from "./containers/dashboard/general/general.tsx";
 import Layout from "./layout.tsx";
-import Auth from "./firebase/auth.tsx";
-import Login from "./firebase/login.tsx";
-import FirebaseSignUp from "./firebase/signup.tsx";
-
-
 
 function App() {
   return (
@@ -142,11 +137,6 @@ function App() {
       <BrowserRouter>
         <React.Suspense fallback={<Loader />}>
           <Routes>
-            <Route path={`${import.meta.env.BASE_URL}`} element={<Auth />}>
-              <Route index element={<Login />} />
-              <Route path={`${import.meta.env.BASE_URL}firebase/login`} element={<Login />} />
-              <Route path={`${import.meta.env.BASE_URL}firebase/signup`} element={<FirebaseSignUp />} />
-            </Route>
             <Route path={`${import.meta.env.BASE_URL}`} element={<Layout />}>
               <Route
                 path={`${import.meta.env.BASE_URL}/`}
@@ -361,8 +351,9 @@ function App() {
                 element={<Shop />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/e-commerce/productDetails`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/e-commerce/productDetails`}
                 element={<Productdetailes />}
               />
               <Route
@@ -378,8 +369,9 @@ function App() {
                 element={<Addproducts />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/e-commerce/orderdetails`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/e-commerce/orderdetails`}
                 element={<Orderdetails />}
               />
               <Route
@@ -620,38 +612,45 @@ function App() {
                 element={<Signup />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/authentication/forgotpassword`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/authentication/forgotpassword`}
                 element={<Forgotpassword />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/authentication/resetpassword`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/authentication/resetpassword`}
                 element={<Restpassword />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/authentication/lockscreen`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/authentication/lockscreen`}
                 element={<Lockscreen />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/authentication/underconstruction`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/authentication/underconstruction`}
                 element={<Underconstruction />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/authentication/404error`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/authentication/404error`}
                 element={<Error404 />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/authentication/501error`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/authentication/501error`}
                 element={<Error501 />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL
-                  }pages/authentication/505error`}
+                path={`${
+                  import.meta.env.BASE_URL
+                }pages/authentication/505error`}
                 element={<Error505 />}
               />
               <Route path="*" element={<Error404 />} />

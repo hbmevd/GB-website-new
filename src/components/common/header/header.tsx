@@ -99,11 +99,6 @@ function Header({
     });
   }, []);
 
-  //rightside
-  const Rightsidebar = () => {
-    document.querySelector(".sidebar-right")?.classList.add("sidebar-open");
-  };
-
   // responsivesearch
   const responsivesearch = () => {
     document.querySelector(".navbar-form")?.classList.toggle("active");

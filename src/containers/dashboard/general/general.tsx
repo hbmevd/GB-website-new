@@ -4,7 +4,6 @@ import { Fragment } from "react";
 
 import Allimages from "../../../components/common/imagesdata/imagesdata";
 import { Card, Col, Dropdown, Row, Tab, Tabs } from "react-bootstrap";
-import { Generaldashboard, Totalinvestment } from "./data/charts";
 import Generaltable from "./data/tabledata";
 import { NavLink } from "react-router-dom";
 
@@ -44,26 +43,24 @@ function General() {
                       className="d-flex align-items-center justify-content-between flex-wrap border-primary-end p-4"
                     >
                       <div>
-                        <p className="tx-primary tx-12 mb-1">Total Profit </p>
+                        <p className="tx-primary tx-12 mb-1">Holders </p>
                         <h4 className="tx-22 numberfont font-weight-semibold mb-1">
-                          $8,943.00
+                          0
                         </h4>
-                        <p className="tx-11 tx-muted mb-0">Current Month</p>
+                        <p className="tx-11 tx-muted mb-0">Evolution 1 NFT</p>
                       </div>
-                      <div className="flex-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="24px"
-                          className="svg-primary total-profit-svg main-dashboard-cards-svg"
-                          viewBox="0 0 24 24"
-                          width="24px"
-                          fill="#175787"
-                        >
-                          <path d="M0 0h24v24H0V0z" fill="none"></path>
-                          <path d="M21 7.28V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-2.28c.59-.35 1-.98 1-1.72V9c0-.74-.41-1.37-1-1.72zM20 9v6h-7V9h7zM5 19V5h14v2h-6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h6v2H5z"></path>
-                          <circle cx="16" cy="12" r="1.5"></circle>
-                        </svg>
-                      </div>
+                      <div className="flex-center"></div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        className="svg-warning total-sales-svg main-dashboard-cards-svg"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        fill="#175787"
+                      >
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"></path>
+                      </svg>
                     </Col>
                     <Col
                       xxl={3}
@@ -73,28 +70,13 @@ function General() {
                       className="d-flex align-items-center justify-content-between flex-wrap border-primary-end p-4"
                     >
                       <div>
-                        <p className="tx-primary tx-12 mb-1">Total Orders</p>
+                        <p className="tx-primary tx-12 mb-1">Current Supply</p>
                         <h4 className="tx-22 numberfont font-weight-semibold mb-1">
-                          5,472.00
+                          1,000
                         </h4>
-                        <p className="tx-11 tx-muted mb-0">Current Month</p>
+                        <p className="tx-11 tx-muted mb-0">NFTs</p>
                       </div>
-                      <div className="flex-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="svg-secondary total-order-svg main-dashboard-cards-svg"
-                          enableBackground="new 0 0 24 24"
-                          height="24px"
-                          viewBox="0 0 24 24"
-                          width="24px"
-                          fill="#175787"
-                        >
-                          <g>
-                            <rect fill="none" height="24" width="24"></rect>
-                            <path d="M18,6h-2c0-2.21-1.79-4-4-4S8,3.79,8,6H6C4.9,6,4,6.9,4,8v12c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8C20,6.9,19.1,6,18,6z M12,4c1.1,0,2,0.9,2,2h-4C10,4.9,10.9,4,12,4z M18,20H6V8h2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V8h4v2c0,0.55,0.45,1,1,1s1-0.45,1-1V8 h2V20z"></path>
-                          </g>
-                        </svg>
-                      </div>
+                      <div className="flex-center"></div>
                     </Col>
                     <Col
                       xxl={3}
@@ -104,25 +86,13 @@ function General() {
                       className="d-flex align-items-center justify-content-between flex-wrap border-primary-end p-4"
                     >
                       <div>
-                        <p className="tx-primary tx-12 mb-1">Total Sales</p>
+                        <p className="tx-primary tx-12 mb-1">Price</p>
                         <h4 className="tx-22 numberfont font-weight-semibold mb-1">
-                          4,406.00
+                          FREE
                         </h4>
-                        <p className="tx-11 tx-muted mb-0">Current Month</p>
+                        <p className="tx-11 tx-muted mb-0">ETH</p>
                       </div>
-                      <div className="flex-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="24px"
-                          className="svg-warning total-sales-svg main-dashboard-cards-svg"
-                          viewBox="0 0 24 24"
-                          width="24px"
-                          fill="#175787"
-                        >
-                          <path d="M0 0h24v24H0V0z" fill="none"></path>
-                          <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"></path>
-                        </svg>
-                      </div>
+                      <div className="flex-center"></div>
                     </Col>
                     <Col
                       xxl={3}
@@ -132,9 +102,7 @@ function General() {
                       className="d-flex align-items-center justify-content-between flex-wrap ps-4 py-4 pe-2"
                     >
                       <div className="flex-grow-1">
-                        <p className="tx-primary tx-12 mb-1">
-                          Total Investment
-                        </p>
+                        <p className="tx-primary tx-12 mb-1"></p>
                         <h4 className="tx-22 numberfont font-weight-semibold mb-1">
                           $34K
                           <span className="badge badge-success-transparent tx-success tx-11 ms-2">
@@ -142,9 +110,6 @@ function General() {
                           </span>
                         </h4>
                         <p className="tx-11 tx-muted mb-0">Current Month</p>
-                      </div>
-                      <div id="total-investment" className="mx-1">
-                        <Totalinvestment />
                       </div>
                     </Col>
                   </Row>
@@ -357,9 +322,6 @@ function General() {
                         </div>
                       </Col>
                     </Row>
-                  </div>
-                  <div id="salesChart">
-                    <Generaldashboard />
                   </div>
                 </Card.Body>
               </div>

@@ -5,7 +5,13 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import Allimages from "../../components/common/imagesdata/imagesdata";
 import { ThemeChanger } from "../../redux/action";
-function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiable: any; ThemeChanger: any; }) {
+function Switcherpagesetting({
+  local_varaiable,
+  ThemeChanger,
+}: {
+  local_varaiable: any;
+  ThemeChanger: any;
+}) {
   useEffect(() => {
     SwitcherData.LocalStorageBackup(ThemeChanger);
   }, []);
@@ -51,7 +57,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                       type="radio"
                                       name="onoffswitch25"
                                       checked={local_varaiable.dir == "ltr"}
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Ltr(ThemeChanger);
                                       }}
@@ -73,7 +79,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                       id="switchbtn-rtl"
                                       className="onoffswitch2-checkbox"
                                       checked={local_varaiable.dir == "rtl"}
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Rtl(ThemeChanger);
                                       }}
@@ -102,7 +108,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                       checked={
                                         local_varaiable.datalayout == "vertical"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Verticaldirection(
                                           ThemeChanger
@@ -129,7 +135,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                         local_varaiable.datahorstyle ==
                                         "hor-click"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.HorizantalClickMenu(
                                           ThemeChanger
@@ -156,7 +162,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                         local_varaiable.datahorstyle ==
                                         "hor-hover"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.HorizantalHoverMenu(
                                           ThemeChanger
@@ -188,7 +194,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                         local_varaiable.datathemecolor ==
                                         "default"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Themedefault(ThemeChanger);
                                       }}
@@ -211,7 +217,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                         local_varaiable.datathemecolor ==
                                         "light"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Themelight(ThemeChanger);
                                       }}
@@ -233,7 +239,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                       checked={
                                         local_varaiable.datathemecolor == "dark"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Themedark(ThemeChanger);
                                       }}
@@ -256,7 +262,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                         local_varaiable.datathemecolor ==
                                         "glassy"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Themeglassy(ThemeChanger);
                                       }}
@@ -354,7 +360,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                       checked={
                                         local_varaiable.datawidth == "fullwidth"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Fullwidth(ThemeChanger);
                                       }}
@@ -376,10 +382,15 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                       checked={
                                         local_varaiable.datawidth == "boxed"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
-                                        if(localStorage.Zemhorizontal == 'horizontal'){
-                                          document.querySelector("#slide-right")?.classList.remove('d-none')
+                                        if (
+                                          localStorage.Zemhorizontal ==
+                                          "horizontal"
+                                        ) {
+                                          document
+                                            .querySelector("#slide-right")
+                                            ?.classList.remove("d-none");
                                         }
                                         SwitcherData.Boxedwidth(ThemeChanger);
                                       }}
@@ -408,7 +419,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                       checked={
                                         local_varaiable.dataposition == "fixed"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Fixed(ThemeChanger);
                                       }}
@@ -431,7 +442,7 @@ function Switcherpagesetting({ local_varaiable, ThemeChanger, }: { local_varaiab
                                         local_varaiable.dataposition ==
                                         "scrollable"
                                       }
-                                      onChange={() => { }}
+                                      onChange={() => {}}
                                       onClick={() => {
                                         SwitcherData.Scrollable(ThemeChanger);
                                       }}

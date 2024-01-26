@@ -173,7 +173,10 @@ function Widgets() {
                   <h3 className="card-title mb-1">My Profile</h3>
                   <p className="tx-11">
                     76% completed.
-                    <NavLink to={`${import.meta.env.BASE_URL}pages/profilepage/`} className="text-primary">
+                    <NavLink
+                      to={`${import.meta.env.BASE_URL}pages/profilepage/`}
+                      className="text-primary"
+                    >
                       Info
                     </NavLink>
                   </p>
@@ -191,12 +194,12 @@ function Widgets() {
                       <i className="fe fe-more-vertical tx-gray-600 tx-18"></i>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item >Reply</Dropdown.Item>
-                      <Dropdown.Item >Report Spam</Dropdown.Item>
-                      <Dropdown.Item >Delete</Dropdown.Item>
-                      <Dropdown.Item >Show Original</Dropdown.Item>
-                      <Dropdown.Item >Print</Dropdown.Item>
-                      <Dropdown.Item >Filter</Dropdown.Item>
+                      <Dropdown.Item>Reply</Dropdown.Item>
+                      <Dropdown.Item>Report Spam</Dropdown.Item>
+                      <Dropdown.Item>Delete</Dropdown.Item>
+                      <Dropdown.Item>Show Original</Dropdown.Item>
+                      <Dropdown.Item>Print</Dropdown.Item>
+                      <Dropdown.Item>Filter</Dropdown.Item>
                     </Dropdown.Menu>
                   </div>
                 </Dropdown>
@@ -206,7 +209,9 @@ function Widgets() {
               <div className="px-3 pb-3 w-100">
                 <div className="d-flex flex-column align-items-center justify-content-center">
                   <div className="avatar-xl rounded-circle me-0 mb-1 p-1 bg-blue-light">
-                    <NavLink to={`${import.meta.env.BASE_URL}pages/profilepage/`}>
+                    <NavLink
+                      to={`${import.meta.env.BASE_URL}pages/profilepage/`}
+                    >
                       <img
                         alt="avatar"
                         className="rounded-circle"
@@ -215,10 +220,18 @@ function Widgets() {
                     </NavLink>
                   </div>
                   <h6 className="tx-20 mb-0">
-                    <NavLink to={`${import.meta.env.BASE_URL}pages/profilepage/`}>Nick Taylor</NavLink>
+                    <NavLink
+                      to={`${import.meta.env.BASE_URL}pages/profilepage/`}
+                    >
+                      Nick Taylor
+                    </NavLink>
                   </h6>
                   <span className="tx-11 font-weight-semibold text-muted">
-                    <NavLink to={`${import.meta.env.BASE_URL}pages/profilepage/`}>UI / UX Designer</NavLink>
+                    <NavLink
+                      to={`${import.meta.env.BASE_URL}pages/profilepage/`}
+                    >
+                      UI / UX Designer
+                    </NavLink>
                   </span>
                   <div className="d-flex align-items-center mt-2 border radius-4">
                     <p
@@ -228,7 +241,46 @@ function Widgets() {
                       title=""
                       data-bs-original-title="Achievements"
                     >
-                      <svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" version="1.1" > <g> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(30.980392%,71.764706%,89.019608%)', fillOpacity: 1, }} d="M 20 20 C 20 24.140625 16.640625 27.5 12.5 27.5 C 8.359375 27.5 5 24.140625 5 20 C 5 15.859375 8.359375 12.5 12.5 12.5 C 16.640625 12.5 20 15.859375 20 20 Z M 20 20 " ></path> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(72.156863%,88.627451%,95.294118%)', fillOpacity: 1, }} d="M 23.636719 6.4375 L 17.136719 2.6875 C 17.136719 2.683594 17.136719 2.683594 17.136719 2.683594 C 16.539062 2.339844 15.773438 2.546875 15.429688 3.144531 L 12.503906 8.214844 L 15.296875 13.042969 C 15.292969 13.042969 15.292969 13.042969 15.292969 13.042969 C 16.992188 13.726562 18.375 15.011719 19.195312 16.632812 L 24.09375 8.144531 C 24.441406 7.546875 24.234375 6.78125 23.636719 6.4375 Z M 23.636719 6.4375 " ></path> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(58.431373%,82.745098%,93.333333%)', fillOpacity: 1, }} d="M 12.5 12.5 C 13.488281 12.5 14.429688 12.695312 15.296875 13.042969 L 9.570312 3.144531 C 9.570312 3.144531 9.570312 3.144531 9.570312 3.140625 C 9.222656 2.542969 8.460938 2.339844 7.863281 2.6875 L 1.363281 6.4375 C 0.765625 6.78125 0.558594 7.546875 0.90625 8.144531 L 5.804688 16.632812 C 7.039062 14.183594 9.570312 12.5 12.5 12.5 Z M 12.5 12.5 " ></path> </g> </svg>
+                      <svg
+                        height="20px"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 30 30"
+                        version="1.1"
+                      >
+                        {" "}
+                        <g>
+                          {" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(30.980392%,71.764706%,89.019608%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 20 20 C 20 24.140625 16.640625 27.5 12.5 27.5 C 8.359375 27.5 5 24.140625 5 20 C 5 15.859375 8.359375 12.5 12.5 12.5 C 16.640625 12.5 20 15.859375 20 20 Z M 20 20 "
+                          ></path>{" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(72.156863%,88.627451%,95.294118%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 23.636719 6.4375 L 17.136719 2.6875 C 17.136719 2.683594 17.136719 2.683594 17.136719 2.683594 C 16.539062 2.339844 15.773438 2.546875 15.429688 3.144531 L 12.503906 8.214844 L 15.296875 13.042969 C 15.292969 13.042969 15.292969 13.042969 15.292969 13.042969 C 16.992188 13.726562 18.375 15.011719 19.195312 16.632812 L 24.09375 8.144531 C 24.441406 7.546875 24.234375 6.78125 23.636719 6.4375 Z M 23.636719 6.4375 "
+                          ></path>{" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(58.431373%,82.745098%,93.333333%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 12.5 12.5 C 13.488281 12.5 14.429688 12.695312 15.296875 13.042969 L 9.570312 3.144531 C 9.570312 3.144531 9.570312 3.144531 9.570312 3.140625 C 9.222656 2.542969 8.460938 2.339844 7.863281 2.6875 L 1.363281 6.4375 C 0.765625 6.78125 0.558594 7.546875 0.90625 8.144531 L 5.804688 16.632812 C 7.039062 14.183594 9.570312 12.5 12.5 12.5 Z M 12.5 12.5 "
+                          ></path>{" "}
+                        </g>{" "}
+                      </svg>
                       24
                     </p>
                     <p
@@ -238,7 +290,64 @@ function Widgets() {
                       title=""
                       data-bs-original-title="Teams"
                     >
-                      <svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" version="1.1" > <g> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(30.980392%,71.764706%,89.019608%)', fillOpacity: 1, }} d="M 22.882812 15.277344 C 21.78125 16.257812 20.34375 16.875 18.75 16.875 C 18.410156 16.875 18.078125 16.84375 17.753906 16.789062 C 17.722656 16.761719 17.679688 16.738281 17.648438 16.710938 C 19.84375 18.542969 21.25 21.289062 21.25 24.375 C 21.25 25.066406 20.691406 25.625 20 25.625 L 27.5 25.625 C 28.191406 25.625 28.75 25.066406 28.75 24.375 C 28.75 20.328125 26.339844 16.851562 22.882812 15.277344 Z M 22.882812 15.277344 " ></path> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(72.156863%,88.627451%,95.294118%)', fillOpacity: 1, }} d="M 11.25 16.875 C 7.796875 16.875 5 14.078125 5 10.625 C 5 7.171875 7.796875 4.375 11.25 4.375 C 14.703125 4.375 17.5 7.171875 17.5 10.625 C 17.496094 14.074219 14.699219 16.871094 11.25 16.875 Z M 11.25 16.875 " ></path> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(72.156863%,88.627451%,95.294118%)', fillOpacity: 1, }} d="M 11.25 16.875 C 7.796875 16.875 5 14.078125 5 10.625 C 5 7.171875 7.796875 4.375 11.25 4.375 C 14.703125 4.375 17.5 7.171875 17.5 10.625 C 17.496094 14.074219 14.699219 16.871094 11.25 16.875 Z M 11.25 16.875 " ></path> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(58.431373%,82.745098%,93.333333%)', fillOpacity: 1, }} d="M 15.382812 15.277344 C 14.28125 16.257812 12.84375 16.875 11.25 16.875 C 9.65625 16.875 8.21875 16.261719 7.113281 15.277344 C 3.65625 16.851562 1.25 20.328125 1.25 24.375 C 1.25 25.066406 1.808594 25.625 2.5 25.625 L 20 25.625 C 20.691406 25.625 21.25 25.066406 21.25 24.375 C 21.25 20.328125 18.839844 16.851562 15.382812 15.277344 Z M 15.382812 15.277344 " ></path> <path style={{ stroke: 'none', fillRule: 'nonzero', fill: 'rgb(44.705882%,77.254902%,90.980392%)', fillOpacity: 1, }} d="M 18.75 4.375 C 17.335938 4.375 16.046875 4.863281 15 5.652344 C 15.339844 5.910156 15.652344 6.203125 15.933594 6.523438 C 16.011719 6.613281 16.085938 6.707031 16.160156 6.800781 C 16.3125 6.996094 16.457031 7.195312 16.585938 7.410156 C 16.699219 7.597656 16.804688 7.792969 16.902344 7.992188 C 16.953125 8.109375 17.007812 8.21875 17.054688 8.335938 C 17.175781 8.640625 17.273438 8.949219 17.34375 9.273438 C 17.363281 9.351562 17.375 9.429688 17.386719 9.507812 C 17.453125 9.871094 17.5 10.242188 17.5 10.625 C 17.5 11.019531 17.453125 11.398438 17.382812 11.769531 C 17.371094 11.828125 17.367188 11.882812 17.355469 11.9375 C 17.285156 12.25 17.1875 12.554688 17.070312 12.847656 C 17.027344 12.964844 16.980469 13.082031 16.929688 13.199219 C 16.824219 13.421875 16.707031 13.640625 16.578125 13.847656 C 16.25 14.386719 15.847656 14.863281 15.382812 15.277344 C 16.246094 15.671875 17.042969 16.179688 17.753906 16.789062 C 18.078125 16.84375 18.410156 16.875 18.75 16.875 C 22.199219 16.871094 24.996094 14.074219 25 10.625 C 25 7.171875 22.203125 4.375 18.75 4.375 Z M 18.75 4.375 " ></path> </g> </svg>
+                      <svg
+                        height="20px"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 30 30"
+                        version="1.1"
+                      >
+                        {" "}
+                        <g>
+                          {" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(30.980392%,71.764706%,89.019608%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 22.882812 15.277344 C 21.78125 16.257812 20.34375 16.875 18.75 16.875 C 18.410156 16.875 18.078125 16.84375 17.753906 16.789062 C 17.722656 16.761719 17.679688 16.738281 17.648438 16.710938 C 19.84375 18.542969 21.25 21.289062 21.25 24.375 C 21.25 25.066406 20.691406 25.625 20 25.625 L 27.5 25.625 C 28.191406 25.625 28.75 25.066406 28.75 24.375 C 28.75 20.328125 26.339844 16.851562 22.882812 15.277344 Z M 22.882812 15.277344 "
+                          ></path>{" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(72.156863%,88.627451%,95.294118%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 11.25 16.875 C 7.796875 16.875 5 14.078125 5 10.625 C 5 7.171875 7.796875 4.375 11.25 4.375 C 14.703125 4.375 17.5 7.171875 17.5 10.625 C 17.496094 14.074219 14.699219 16.871094 11.25 16.875 Z M 11.25 16.875 "
+                          ></path>{" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(72.156863%,88.627451%,95.294118%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 11.25 16.875 C 7.796875 16.875 5 14.078125 5 10.625 C 5 7.171875 7.796875 4.375 11.25 4.375 C 14.703125 4.375 17.5 7.171875 17.5 10.625 C 17.496094 14.074219 14.699219 16.871094 11.25 16.875 Z M 11.25 16.875 "
+                          ></path>{" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(58.431373%,82.745098%,93.333333%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 15.382812 15.277344 C 14.28125 16.257812 12.84375 16.875 11.25 16.875 C 9.65625 16.875 8.21875 16.261719 7.113281 15.277344 C 3.65625 16.851562 1.25 20.328125 1.25 24.375 C 1.25 25.066406 1.808594 25.625 2.5 25.625 L 20 25.625 C 20.691406 25.625 21.25 25.066406 21.25 24.375 C 21.25 20.328125 18.839844 16.851562 15.382812 15.277344 Z M 15.382812 15.277344 "
+                          ></path>{" "}
+                          <path
+                            style={{
+                              stroke: "none",
+                              fillRule: "nonzero",
+                              fill: "rgb(44.705882%,77.254902%,90.980392%)",
+                              fillOpacity: 1,
+                            }}
+                            d="M 18.75 4.375 C 17.335938 4.375 16.046875 4.863281 15 5.652344 C 15.339844 5.910156 15.652344 6.203125 15.933594 6.523438 C 16.011719 6.613281 16.085938 6.707031 16.160156 6.800781 C 16.3125 6.996094 16.457031 7.195312 16.585938 7.410156 C 16.699219 7.597656 16.804688 7.792969 16.902344 7.992188 C 16.953125 8.109375 17.007812 8.21875 17.054688 8.335938 C 17.175781 8.640625 17.273438 8.949219 17.34375 9.273438 C 17.363281 9.351562 17.375 9.429688 17.386719 9.507812 C 17.453125 9.871094 17.5 10.242188 17.5 10.625 C 17.5 11.019531 17.453125 11.398438 17.382812 11.769531 C 17.371094 11.828125 17.367188 11.882812 17.355469 11.9375 C 17.285156 12.25 17.1875 12.554688 17.070312 12.847656 C 17.027344 12.964844 16.980469 13.082031 16.929688 13.199219 C 16.824219 13.421875 16.707031 13.640625 16.578125 13.847656 C 16.25 14.386719 15.847656 14.863281 15.382812 15.277344 C 16.246094 15.671875 17.042969 16.179688 17.753906 16.789062 C 18.078125 16.84375 18.410156 16.875 18.75 16.875 C 22.199219 16.871094 24.996094 14.074219 25 10.625 C 25 7.171875 22.203125 4.375 18.75 4.375 Z M 18.75 4.375 "
+                          ></path>{" "}
+                        </g>{" "}
+                      </svg>
                       10
                     </p>
                   </div>
@@ -279,7 +388,6 @@ function Widgets() {
                       <div className="media me-2">
                         <div className="wd-30 ht-30 d-flex align-items-center justify-content-center radius-40 bg-primary-transparent text-primary">
                           <a
-                            
                             className="text-primary"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -292,7 +400,6 @@ function Widgets() {
                       <div className="media mt-0 me-2">
                         <div className="wd-30 ht-30 d-flex align-items-center justify-content-center radius-40 bg-secondary-transparent">
                           <a
-                            
                             className="text-warning"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -305,7 +412,6 @@ function Widgets() {
                       <div className="media mt-0 me-2">
                         <div className="wd-30 ht-30 d-flex align-items-center justify-content-center radius-40 bg-orange-transparent">
                           <a
-                            
                             className="text-orange"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -318,7 +424,6 @@ function Widgets() {
                       <div className="media mt-0">
                         <div className="wd-30 ht-30 d-flex align-items-center justify-content-center radius-40 bg-teal-transparent">
                           <a
-                            
                             className="text-teal"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -349,9 +454,7 @@ function Widgets() {
             <Card.Header className=" pb-0">
               <div className="d-flex align-items-center justify-content-between mb-2">
                 <h3 className="card-title mb-0">Recent Activity</h3>
-                <a  className="tx-primary">
-                  View All
-                </a>
+                <a className="tx-primary">View All</a>
               </div>
             </Card.Header>
             <Card.Body>
@@ -363,11 +466,15 @@ function Widgets() {
                     </div>
                     <div className="ms-2 flex-1">
                       <div className="d-flex align-items-center justify-content-between">
-                        <p className="mb-0"> Created a <a  className="tx-primary"> New Project.</a>
+                        <p className="mb-0">
+                          {" "}
+                          Created a <a className="tx-primary"> New Project.</a>
                         </p>
                         <span className="tx-11 tx-muted">08:45</span>
                       </div>
-                      <p className="mb-0 tx-12 tx-muted">  Sea ea takimata eirmod ut.
+                      <p className="mb-0 tx-12 tx-muted">
+                        {" "}
+                        Sea ea takimata eirmod ut.
                       </p>
                     </div>
                   </div>
@@ -384,7 +491,8 @@ function Widgets() {
                     <div className="ms-2 flex-1">
                       <div className="d-flex align-items-center justify-content-between">
                         <p className="mb-0">
-                          <a  className="font-weight-semibold">Katy Perri</a> commented.
+                          <a className="font-weight-semibold">Katy Perri</a>{" "}
+                          commented.
                         </p>
                         <span className="tx-11 tx-muted">yesterday</span>
                       </div>
@@ -392,10 +500,7 @@ function Widgets() {
                         <ul className="list-unstyled tx-muted">
                           <li className="mb-0">
                             <p className="mb-0 tx-12">
-
-                              <a  className="tx-primary">
-                                @Json_Taylor
-                              </a>
+                              <a className="tx-primary">@Json_Taylor</a>
                               Takimata rebum diam kasd sadipscing eirmod.
                             </p>
                           </li>
@@ -406,10 +511,7 @@ function Widgets() {
                             className="form-control p-3 radius-4"
                             placeholder="@katy_perri"
                           />
-                          <a
-                            
-                            className="btn btn-primary bg-primary text-white border-0 input-group-text"
-                          >
+                          <a className="btn btn-primary bg-primary text-white border-0 input-group-text">
                             <i className="fe fe-arrow-up"></i>
                           </a>
                         </div>
@@ -429,14 +531,13 @@ function Widgets() {
                     <div className="ms-2 flex-1">
                       <div className="d-flex align-items-center justify-content-between">
                         <p className="mb-0">
-                          <a  className="font-weight-semibold">Neon Tarly</a> shared a link.
+                          <a className="font-weight-semibold">Neon Tarly</a>{" "}
+                          shared a link.
                         </p>
                         <span className="tx-11 tx-muted">20 Jan 22</span>
                       </div>
                       <p className="mb-0 tx-12 tx-muted">
-                        <a  className="tx-primary">
-                          http://Et-Sed-dolor_sed
-                        </a>
+                        <a className="tx-primary">http://Et-Sed-dolor_sed</a>
                       </p>
                     </div>
                   </div>
@@ -453,7 +554,8 @@ function Widgets() {
                     <div className="ms-2 flex-1">
                       <div className="d-flex align-items-center justify-content-between">
                         <p className="mb-0">
-                          <a  className="font-weight-semibold">Wanda Rag</a> uploaded 3 files.
+                          <a className="font-weight-semibold">Wanda Rag</a>{" "}
+                          uploaded 3 files.
                         </p>
                         <span className="tx-11 tx-muted">01 Jan 22</span>
                       </div>
@@ -468,14 +570,12 @@ function Widgets() {
                           <p className="mb-0">WORD_Document</p>
                           <span className="small tx-11">
                             35.9mb
-                            <a  className="ms-1">
+                            <a className="ms-1">
                               <i className="fe fe-download tx-11"></i>
                             </a>
                           </span>
                         </div>
-                        <a  className="tx-11 more pos-absolute">
-                          +2 More
-                        </a>
+                        <a className="tx-11 more pos-absolute">+2 More</a>
                       </div>
                     </div>
                   </div>
@@ -487,7 +587,8 @@ function Widgets() {
                     </div>
                     <div className="ms-2 flex-1">
                       <div className="d-flex align-items-center justify-content-between">
-                        <p className="mb-0">Created a<a  className="tx-primary"> New Task.</a>
+                        <p className="mb-0">
+                          Created a<a className="tx-primary"> New Task.</a>
                         </p>
                         <span className="tx-11 tx-muted">31 Dec 21</span>
                       </div>
@@ -768,8 +869,10 @@ function Widgets() {
                         of target
                       </p>
                       <p className="mb-1 tx-13 text-start">Target</p>
-                      <div className="progress progress-style ht-5"> <div className="progress-bar bg-primary wd-80p" ></div> </div>
-
+                      <div className="progress progress-style ht-5">
+                        {" "}
+                        <div className="progress-bar bg-primary wd-80p"></div>{" "}
+                      </div>
                     </Col>
                   </Row>
                 </Card.Body>
@@ -794,7 +897,10 @@ function Widgets() {
                     of target
                   </p>
                   <p className="mb-1 tx-13 text-start">Sales Target</p>
-                  <div className="progress progress-style ht-5"> <div className="progress-bar bg-secondary wd-80p" ></div> </div>
+                  <div className="progress progress-style ht-5">
+                    {" "}
+                    <div className="progress-bar bg-secondary wd-80p"></div>{" "}
+                  </div>
                 </Card.Body>
               </Card>
             </Col>
@@ -902,10 +1008,7 @@ function Widgets() {
                     <li>
                       <div className="d-flex align-items-center">
                         <div className="avatar-sm bg-primary-gradient rounded-circle d-flex align-items-center justify-content-center shadow">
-                          <a
-                            
-                            className="text-white d-flex align-items-center justify-content-center"
-                          >
+                          <a className="text-white d-flex align-items-center justify-content-center">
                             <i className="fe fe-activity"></i>
                           </a>
                         </div>
@@ -923,15 +1026,13 @@ function Widgets() {
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
                                 <li>
-                                  <Dropdown.Item >
-                                    Change Status
-                                  </Dropdown.Item>
+                                  <Dropdown.Item>Change Status</Dropdown.Item>
                                 </li>
                                 <li>
-                                  <Dropdown.Item >Rename</Dropdown.Item>
+                                  <Dropdown.Item>Rename</Dropdown.Item>
                                 </li>
                                 <li>
-                                  <Dropdown.Item >Delete</Dropdown.Item>
+                                  <Dropdown.Item>Delete</Dropdown.Item>
                                 </li>
                               </Dropdown.Menu>
                             </Dropdown>
@@ -939,7 +1040,6 @@ function Widgets() {
                           <p className="tx-muted mb-0 tx-11 d-flex align-items-center">
                             2m ago
                             <span className="ms-2 d-flex align-items-center">
-
                               <span className="rounded-circle ht-5 wd-5 bg-gray-400 me-1"></span>
                               in progress
                             </span>
@@ -950,10 +1050,7 @@ function Widgets() {
                     <li>
                       <div className="d-flex align-items-center">
                         <div className="avatar-sm bg-secondary-gradient rounded-circle d-flex align-items-center justify-content-center shadow">
-                          <a
-                            
-                            className="text-white d-flex align-items-center justify-content-center"
-                          >
+                          <a className="text-white d-flex align-items-center justify-content-center">
                             <i className="fe fe-command"></i>
                           </a>
                         </div>
@@ -971,15 +1068,13 @@ function Widgets() {
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
                                 <li>
-                                  <Dropdown.Item >
-                                    Change Status
-                                  </Dropdown.Item>
+                                  <Dropdown.Item>Change Status</Dropdown.Item>
                                 </li>
                                 <li>
-                                  <Dropdown.Item >Rename</Dropdown.Item>
+                                  <Dropdown.Item>Rename</Dropdown.Item>
                                 </li>
                                 <li>
-                                  <Dropdown.Item >Delete</Dropdown.Item>
+                                  <Dropdown.Item>Delete</Dropdown.Item>
                                 </li>
                               </Dropdown.Menu>
                             </Dropdown>
@@ -987,7 +1082,6 @@ function Widgets() {
                           <p className="tx-muted mb-0 tx-11 d-flex align-items-center">
                             2m ago
                             <span className="ms-2 d-flex align-items-center">
-
                               <span className="rounded-circle ht-5 wd-5 bg-gray-400 me-1"></span>
                               started
                             </span>
@@ -998,10 +1092,7 @@ function Widgets() {
                     <li>
                       <div className="d-flex align-items-center">
                         <div className="avatar-sm bg-orange-gradient rounded-circle d-flex align-items-center justify-content-center shadow">
-                          <a
-                            
-                            className="text-white d-flex align-items-center justify-content-center"
-                          >
+                          <a className="text-white d-flex align-items-center justify-content-center">
                             <i className="fe fe-globe"></i>
                           </a>
                         </div>
@@ -1018,15 +1109,13 @@ function Widgets() {
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
                                 <li>
-                                  <Dropdown.Item >
-                                    Change Status
-                                  </Dropdown.Item>
+                                  <Dropdown.Item>Change Status</Dropdown.Item>
                                 </li>
                                 <li>
-                                  <Dropdown.Item >Rename</Dropdown.Item>
+                                  <Dropdown.Item>Rename</Dropdown.Item>
                                 </li>
                                 <li>
-                                  <Dropdown.Item >Delete</Dropdown.Item>
+                                  <Dropdown.Item>Delete</Dropdown.Item>
                                 </li>
                               </Dropdown.Menu>
                             </Dropdown>
@@ -1034,7 +1123,6 @@ function Widgets() {
                           <p className="tx-muted mb-0 tx-11 d-flex align-items-center">
                             2m ago
                             <span className="ms-2 d-flex align-items-center">
-
                               <span className="rounded-circle ht-5 wd-5 bg-gray-400 me-1"></span>
                               completed
                             </span>
@@ -1278,7 +1366,6 @@ function Widgets() {
                         Setting up and customizing your own sales.
                       </span>
                       <span className="ms-auto">
-
                         <span className="badge badge-light-transparent font-weight-semibold px-2 py-1 tx-11 me-2">
                           1 Day
                         </span>
@@ -1296,7 +1383,6 @@ function Widgets() {
                         having.
                       </span>
                       <span className="ms-auto">
-
                         <span className="badge badge-light-transparent font-weight-semibold px-2 py-1 tx-11 me-2">
                           2 Days
                         </span>
@@ -1314,9 +1400,7 @@ function Widgets() {
                       <h3 className="card-title mb-1">Billings</h3>
                       <span className="tx-muted tx-11">204 transactions</span>
                     </div>
-                    <a  className="tx-primary">
-                      View History
-                    </a>
+                    <a className="tx-primary">View History</a>
                   </div>
                 </Card.Header>
                 <Card.Body>
@@ -1349,7 +1433,9 @@ function Widgets() {
                                       </p>
                                       <p className="mb-0 d-flex align-items-center justify-content-between">
                                         <NavLink
-                                          to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                          to={`${
+                                            import.meta.env.BASE_URL
+                                          }pages/invoice/`}
                                           className="tx-primary tx-11"
                                         >
                                           15 Invoices
@@ -1377,7 +1463,9 @@ function Widgets() {
                                       </p>
                                       <p className="mb-0 d-flex align-items-center justify-content-between">
                                         <NavLink
-                                          to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                          to={`${
+                                            import.meta.env.BASE_URL
+                                          }pages/invoice/`}
                                           className="tx-primary tx-11"
                                         >
                                           2 Invoices
@@ -1407,7 +1495,9 @@ function Widgets() {
                                       </p>
                                       <p className="mb-0 d-flex align-items-center justify-content-between">
                                         <NavLink
-                                          to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                          to={`${
+                                            import.meta.env.BASE_URL
+                                          }pages/invoice/`}
                                           className="tx-primary tx-11"
                                         >
                                           37 Invoices
@@ -1437,7 +1527,9 @@ function Widgets() {
                                       </p>
                                       <p className="mb-0 d-flex align-items-center justify-content-between">
                                         <NavLink
-                                          to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                          to={`${
+                                            import.meta.env.BASE_URL
+                                          }pages/invoice/`}
                                           className="tx-primary tx-11"
                                         >
                                           4 Invoices
@@ -1470,7 +1562,9 @@ function Widgets() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-primary tx-11"
                                       >
                                         2 Invoices
@@ -1498,7 +1592,9 @@ function Widgets() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-primary tx-11"
                                       >
                                         7 Invoices
@@ -1525,7 +1621,10 @@ function Widgets() {
                                       </span>
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
-                                      <NavLink to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                      <NavLink
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-primary tx-11"
                                       >
                                         2 Invoices
@@ -1555,7 +1654,9 @@ function Widgets() {
                                     </p>
                                     <p className="mb-0 d-flex align-items-center justify-content-between">
                                       <NavLink
-                                        to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                                        to={`${
+                                          import.meta.env.BASE_URL
+                                        }pages/invoice/`}
                                         className="tx-primary tx-11"
                                       >
                                         7 Invoices

@@ -1,4 +1,8 @@
-import { Fragment, useEffect, useState } from "react";
+import {
+  Fragment,
+  useEffect,
+  useState,
+} from "react";
 import {
   Accordion,
   Card,
@@ -19,6 +23,10 @@ import Landingcarousel from "./data/carousel";
 import { connect } from "react-redux";
 import * as SwitcherData from "../../../components/common/switcher/switcherdata";
 import { ThemeChanger } from "../../../redux/action";
+
+const GorillaBullyLogo =
+  "./public/images/gb1.jpg";
+
 function Landing({
   local_varaiable,
   ThemeChanger,
@@ -26,75 +34,162 @@ function Landing({
   local_varaiable: any;
   ThemeChanger: any;
 }) {
-  
-
   useEffect(() => {
     ThemeChanger({
       ...local_varaiable,
     });
   }, []);
   const Topup = () => {
-    if (window.scrollY > 30 && document.querySelector(".nav-header-main")) {
-      const Scolls = document.querySelectorAll(".sticky");
+    if (
+      window.scrollY > 30 &&
+      document.querySelector(
+        ".nav-header-main"
+      )
+    ) {
+      const Scolls =
+        document.querySelectorAll(
+          ".sticky"
+        );
       Scolls.forEach((e) => {
-        e.classList.add("sticky-pin");
+        e.classList.add(
+          "sticky-pin"
+        );
       });
     } else {
-      const Scolls = document.querySelectorAll(".sticky");
+      const Scolls =
+        document.querySelectorAll(
+          ".sticky"
+        );
       Scolls.forEach((e) => {
-        e.classList.remove("sticky-pin");
+        e.classList.remove(
+          "sticky-pin"
+        );
       });
     }
   };
-  window.addEventListener("scroll", Topup);
+  window.addEventListener(
+    "scroll",
+    Topup
+  );
 
-  const Sidebartoggle = () => {
-    let bodytag = document.querySelector("body") as HTMLElement;
+  const Sidebartoggle =
+    () => {
+      let bodytag =
+        document.querySelector(
+          "body"
+        ) as HTMLElement;
 
-    bodytag.classList.toggle("landing-sidemenu-open");
-  };
-
-  useEffect(() => {
-    SwitcherData.LocalStorageBackup(ThemeChanger);
-  }, []);
-
-  const [activeSection, setActiveSection] = useState('home');
-
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const homeSection : any = document.getElementById('home');
-      const servicesSection : any = document.getElementById('services');
-      const featuresSection : any = document.getElementById('features');
-      const pricingSection : any = document.getElementById('pricing');
-      const reviewsSection : any = document.getElementById('reviews');
-      const contactSection : any = document.getElementById('contact');
-      const offset = 100; 
-
-      if (homeSection.offsetTop - offset <= window.scrollY) {
-        setActiveSection('home');
-      }
-      if (servicesSection.offsetTop - offset <= window.scrollY) {
-        setActiveSection('services');
-      }
-      if (featuresSection.offsetTop - offset <= window.scrollY) {
-        setActiveSection('features');
-      }
-      if (pricingSection.offsetTop - offset <= window.scrollY) {
-        setActiveSection('pricing');
-      }
-      if (reviewsSection.offsetTop - offset <= window.scrollY) {
-        setActiveSection('reviews');
-      }
-      if (contactSection.offsetTop - offset <= window.scrollY) {
-        setActiveSection('contact');
-      }
+      bodytag.classList.toggle(
+        "landing-sidemenu-open"
+      );
     };
 
-    window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    SwitcherData.LocalStorageBackup(
+      ThemeChanger
+    );
+  }, []);
+
+  const [
+    activeSection,
+    setActiveSection,
+  ] = useState("home");
+
+  useEffect(() => {
+    const handleScroll =
+      () => {
+        const homeSection: any =
+          document.getElementById(
+            "home"
+          );
+        const servicesSection: any =
+          document.getElementById(
+            "services"
+          );
+        const featuresSection: any =
+          document.getElementById(
+            "features"
+          );
+        const pricingSection: any =
+          document.getElementById(
+            "pricing"
+          );
+        const reviewsSection: any =
+          document.getElementById(
+            "reviews"
+          );
+        const contactSection: any =
+          document.getElementById(
+            "contact"
+          );
+        const offset = 100;
+
+        if (
+          homeSection.offsetTop -
+            offset <=
+          window.scrollY
+        ) {
+          setActiveSection(
+            "home"
+          );
+        }
+        if (
+          servicesSection.offsetTop -
+            offset <=
+          window.scrollY
+        ) {
+          setActiveSection(
+            "services"
+          );
+        }
+        if (
+          featuresSection.offsetTop -
+            offset <=
+          window.scrollY
+        ) {
+          setActiveSection(
+            "features"
+          );
+        }
+        if (
+          pricingSection.offsetTop -
+            offset <=
+          window.scrollY
+        ) {
+          setActiveSection(
+            "pricing"
+          );
+        }
+        if (
+          reviewsSection.offsetTop -
+            offset <=
+          window.scrollY
+        ) {
+          setActiveSection(
+            "reviews"
+          );
+        }
+        if (
+          contactSection.offsetTop -
+            offset <=
+          window.scrollY
+        ) {
+          setActiveSection(
+            "contact"
+          );
+        }
+      };
+
+    window.addEventListener(
+      "scroll",
+      handleScroll
+    );
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
     };
   }, []);
 
@@ -102,14 +197,30 @@ function Landing({
     <Fragment>
       <Helmet>
         <html
-          dir={local_varaiable.dir}
-          data-theme-color={local_varaiable.datathemecolor}
-          data-menuimg={local_varaiable.bgImg}
-          data-width={local_varaiable.datawidth}
-          data-position={local_varaiable.dataposition}
-          data-vertical-style={local_varaiable.dataverticalstyle}
-          data-layout={local_varaiable.datalayout}
-          data-hor-style={local_varaiable.datahorstyle}
+          dir={
+            local_varaiable.dir
+          }
+          data-theme-color={
+            local_varaiable.datathemecolor
+          }
+          data-menuimg={
+            local_varaiable.bgImg
+          }
+          data-width={
+            local_varaiable.datawidth
+          }
+          data-position={
+            local_varaiable.dataposition
+          }
+          data-vertical-style={
+            local_varaiable.dataverticalstyle
+          }
+          data-layout={
+            local_varaiable.datalayout
+          }
+          data-hor-style={
+            local_varaiable.datahorstyle
+          }
         ></html>
         <body className="ltr main-body app sidebar-mini"></body>
       </Helmet>
@@ -118,59 +229,89 @@ function Landing({
           <div className="sidemenu-landing">
             <ul className=" nav flex-column flex-nowrap mt-3 pb-3 border-bottom">
               <li className="nav-item">
-                <a href="#home" className="nav-link active nav-scroll">
+                <a
+                  href="#home"
+                  className="nav-link active nav-scroll"
+                >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#services" className="nav-link nav-scroll">
+                <a
+                  href="#services"
+                  className="nav-link nav-scroll"
+                >
                   Services
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#features" className="nav-link nav-scroll">
+                <a
+                  href="#features"
+                  className="nav-link nav-scroll"
+                >
                   Features
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#pricing" className="nav-link nav-scroll">
+                <a
+                  href="#pricing"
+                  className="nav-link nav-scroll"
+                >
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#reviews" className="nav-link nav-scroll">
+                <a
+                  href="#reviews"
+                  className="nav-link nav-scroll"
+                >
                   Reviews
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#contact" className="nav-link nav-scroll">
+                <a
+                  href="#contact"
+                  className="nav-link nav-scroll"
+                >
                   Contact
                 </a>
               </li>
             </ul>
             <div className="p-3">
-              <a  className="btn btn-block rounded-pill btn-primary">
+              <a className="btn btn-block rounded-pill btn-primary">
                 Sign Up
               </a>
-              <a  className="btn btn-block rounded-pill btn-primary">
+              <a className="btn btn-block rounded-pill btn-primary">
                 Login
               </a>
             </div>
           </div>
           <div className="landing-page-content">
-            <section className="banner-section" id="home">
+            <section
+              className="banner-section"
+              id="home"
+            >
               <div className="nav-header-main sticky">
-
                 <Container>
                   <Row className="row align-items-center justify-content-between">
-                    <Col lg={9} md={11} sm={12}>
+                    <Col
+                      lg={9}
+                      md={11}
+                      sm={12}
+                    >
                       <div className="d-flex align-items-center justify-content-between">
                         <Link
-                          to={`${import.meta.env.BASE_URL}dashboard/index/`}
+                          to={`${
+                            import.meta
+                              .env
+                              .BASE_URL
+                          }dashboard/index/`}
                           className="header-logo"
                         >
                           <img
-                            src={logowhite}
+                            src={
+                              logowhite
+                            }
                             className="mobile-logo dark-logo-1"
                             alt="logo"
                           />
@@ -180,7 +321,9 @@ function Landing({
                             href="#;"
                             className="nav-header-icon flex-center"
                             id="landingMenuBtn"
-                            onClick={() => Sidebartoggle()}
+                            onClick={() =>
+                              Sidebartoggle()
+                            }
                           >
                             <i className="fe fe-align-left landing-open-btn"></i>
                             <i className="fe fe-x landing-close-btn"></i>
@@ -194,16 +337,26 @@ function Landing({
                             <Nav.Item className="nav-item">
                               <Nav.Link
                                 href="#home"
-                                className={`nav-link  nav-scroll ${activeSection == 'home' ? 'active' : ''}`}
+                                className={`nav-link  nav-scroll ${
+                                  activeSection ==
+                                  "home"
+                                    ? "active"
+                                    : ""
+                                }`}
                               >
                                 Home
                               </Nav.Link>
                             </Nav.Item>
-                            
+
                             <Nav.Item className="nav-item">
                               <Nav.Link
                                 href="#services"
-                                className={`nav-link  nav-scroll ${activeSection == 'services' ? 'active' : ''}`}
+                                className={`nav-link  nav-scroll ${
+                                  activeSection ==
+                                  "services"
+                                    ? "active"
+                                    : ""
+                                }`}
                               >
                                 Services
                               </Nav.Link>
@@ -212,7 +365,12 @@ function Landing({
                             <Nav.Item className="nav-item">
                               <Nav.Link
                                 href="#features"
-                                className={`nav-link  nav-scroll ${activeSection == 'features' ? 'active' : ''}`}
+                                className={`nav-link  nav-scroll ${
+                                  activeSection ==
+                                  "features"
+                                    ? "active"
+                                    : ""
+                                }`}
                               >
                                 Features
                               </Nav.Link>
@@ -221,7 +379,12 @@ function Landing({
                             <Nav.Item className="nav-item">
                               <Nav.Link
                                 href="#pricing"
-                                className={`nav-link  nav-scroll ${activeSection == 'pricing' ? 'active' : ''}`}
+                                className={`nav-link  nav-scroll ${
+                                  activeSection ==
+                                  "pricing"
+                                    ? "active"
+                                    : ""
+                                }`}
                               >
                                 Pricing
                               </Nav.Link>
@@ -230,7 +393,12 @@ function Landing({
                             <Nav.Item className="nav-item">
                               <Nav.Link
                                 href="#reviews"
-                                className={`nav-link  nav-scroll ${activeSection == 'reviews' ? 'active' : ''}`}
+                                className={`nav-link  nav-scroll ${
+                                  activeSection ==
+                                  "reviews"
+                                    ? "active"
+                                    : ""
+                                }`}
                               >
                                 Reviews
                               </Nav.Link>
@@ -239,7 +407,12 @@ function Landing({
                             <Nav.Item className="nav-item">
                               <Nav.Link
                                 href="#contact"
-                                className={`nav-link  nav-scroll ${activeSection == 'contact' ? 'active' : ''}`}
+                                className={`nav-link  nav-scroll ${
+                                  activeSection ==
+                                  "contact"
+                                    ? "active"
+                                    : ""
+                                }`}
                               >
                                 Contact
                               </Nav.Link>
@@ -248,22 +421,33 @@ function Landing({
                         </div>
                       </div>
                     </Col>
-                    <Col lg={3} md={1} sm={12}>
+                    <Col
+                      lg={3}
+                      md={1}
+                      sm={12}
+                    >
                       <div className="d-none d-lg-flex justify-content-end">
                         <div className="btn-list min-btn-list">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/authentication/signin/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/authentication/signin/`}
                             className="btn rounded-pill btn-secondary"
                           >
                             Login
                           </Link>
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/authentication/signup/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/authentication/signup/`}
                             className="btn rounded-pill btn-primary"
                           >
-                            Sign up
+                            Sign
+                            up
                           </Link>
                         </div>
                       </div>
@@ -278,8 +462,11 @@ function Landing({
                         <ul className="dropdown-menu">
                           <li>
                             <Link
-                              to={`${import.meta.env.BASE_URL
-                                }pages/authentication/signin/`}
+                              to={`${
+                                import.meta
+                                  .env
+                                  .BASE_URL
+                              }pages/authentication/signin/`}
                               className="dropdown-item"
                             >
                               Login
@@ -287,11 +474,15 @@ function Landing({
                           </li>
                           <li>
                             <Link
-                              to={`${import.meta.env.BASE_URL
-                                }pages/authentication/signup/`}
+                              to={`${
+                                import.meta
+                                  .env
+                                  .BASE_URL
+                              }pages/authentication/signup/`}
                               className="dropdown-item"
                             >
-                              Sign Up
+                              Sign
+                              Up
                             </Link>
                           </li>
                         </ul>
@@ -300,32 +491,130 @@ function Landing({
                   </Row>
                 </Container>
               </div>
-              <div className="jumps-prevent" style={{ paddingTop:57 }}></div>
+              <div
+                className="jumps-prevent"
+                style={{
+                  paddingTop: 57,
+                }}
+              ></div>
 
               <Container>
                 <div className="d-flex flex-wrap">
                   <div className="wd-lg-40p wd-100p mb-lg-0 mb-4">
                     <p className="title-content">
-                      <span className="title me-2"> Zem </span>Bootstrap 5 Admin Template
+                      <span className="title me-2">
+                        {" "}
+                        Welcome
+                        to
+                      </span>
+                      GorillaBully
                     </p>
-                    <p className="title-desc">Make your life easy with zem.</p>
+                    <p className="title-desc">
+                      Pioneering
+                      the
+                      Evolution
+                      of
+                      Digital
+                      Culture
+                    </p>
                     <p className="title-desc mb-md-4 mb-3">
-                      Zem is a admin dashboard template designed with many cool
-                      features and fully responsive. Now you can use this admin
-                      template to design stunning dashboards.
+                      Welcome
+                      to an
+                      NFT
+                      revolution
+                      that
+                      seamlessly
+                      blends
+                      technology,
+                      community,
+                      and
+                      street
+                      culture
+                      in a
+                      symphony
+                      of
+                      modern
+                      minimalism.
+                      Our
+                      project
+                      transcends
+                      the
+                      ordinary,
+                      embodying
+                      a brand
+                      that is
+                      clean,
+                      futuristic,
+                      and
+                      pulsating
+                      with the
+                      vibrant
+                      essence
+                      of
+                      street
+                      culture.
+                      At the
+                      heart of
+                      GorillaBully
+                      lies a
+                      commitment
+                      to
+                      seamlessly
+                      blend
+                      cutting-edge
+                      technology
+                      with a
+                      thriving
+                      community
+                      spirit.
+                      We are
+                      not just
+                      creators;
+                      we are
+                      curators
+                      of a
+                      movement
+                      that
+                      celebrates
+                      uniqueness
+                      and
+                      diversity.
+                      Our
+                      brand is
+                      a
+                      testament
+                      to the
+                      combination
+                      of art
+                      and
+                      technology,
+                      where
+                      each NFT
+                      is more
+                      than a
+                      digital
+                      asset -
+                      it's
+                      ownership
+                      of our
+                      brands
+                      future.
                     </p>
                     <a
                       href="#;"
                       className="btn btn-secondary rounded-pill btn-lg"
                     >
-                      Get Started
+                      Get
+                      Started
                     </a>
                   </div>
                   <div className="wd-lg-50p wd-100p ms-auto">
                     <div className="image-container">
-                      <a >
+                      <a>
                         <img
-                          src={Allimages("Media12")}
+                          src={
+                            GorillaBullyLogo
+                          }
                           className="img-fluid"
                           alt="img"
                         />
@@ -340,32 +629,46 @@ function Landing({
               <Container>
                 <div className="text-center">
                   <p className="section-title mb-4">
-                    Companies that have already tried our services
+                    Companies
+                    that have
+                    already
+                    tried our
+                    services
                   </p>
                 </div>
                 <div className="d-md-flex align-items-center justify-content-between flex-wrap">
                   <img
-                    src={Allimages("Clients1")}
+                    src={Allimages(
+                      "Clients1"
+                    )}
                     alt="img"
                     className="brand-img"
                   />
                   <img
-                    src={Allimages("Clients2")}
+                    src={Allimages(
+                      "Clients2"
+                    )}
                     alt="img"
                     className="brand-img"
                   />
                   <img
-                    src={Allimages("Clients3")}
+                    src={Allimages(
+                      "Clients3"
+                    )}
                     alt="img"
                     className="brand-img"
                   />
                   <img
-                    src={Allimages("Clients4")}
+                    src={Allimages(
+                      "Clients4"
+                    )}
                     alt="img"
                     className="brand-img"
                   />
                   <img
-                    src={Allimages("Clients5")}
+                    src={Allimages(
+                      "Clients5"
+                    )}
                     alt="img"
                     className="brand-img"
                   />
@@ -373,114 +676,305 @@ function Landing({
               </Container>
             </section>
 
-            <section className="choose-section" id="services">
+            <section
+              className="choose-section"
+              id="services"
+            >
               <Container>
                 <div className="text-center mb-5">
-                  <a href="#top" className="tx-primary">
+                  <a
+                    href="#top"
+                    className="tx-primary"
+                  >
                     Services
                   </a>
-                  <p className="section-title-2 mb-1">Why Choose Zem?</p>
+                  <p className="section-title-2 mb-1">
+                    Why Choose
+                    Zem?
+                  </p>
                   <p>
-                    The Zem admin template comes with strong features which are
-                    completely easy-to-use for any user, even for a beginner.
+                    The Zem
+                    admin
+                    template
+                    comes with
+                    strong
+                    features
+                    which are
+                    completely
+                    easy-to-use
+                    for any
+                    user, even
+                    for a
+                    beginner.
                   </p>
                 </div>
                 <Row>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-info-transparent flex-center">
                         <i className="fe fe-package tx-info"></i>
                       </p>
-                      <h5>Unique Design</h5>
+                      <h5>
+                        Unique
+                        Design
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Zem has a unique design that you cannot compare with any
-                        other templates.
+                        Zem
+                        has a
+                        unique
+                        design
+                        that
+                        you
+                        cannot
+                        compare
+                        with
+                        any
+                        other
+                        templates.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-danger-transparent flex-center">
                         <i className="fe fe-code tx-danger"></i>
                       </p>
-                      <h5>Quality & Clean Code</h5>
+                      <h5>
+                        Quality
+                        &
+                        Clean
+                        Code
+                      </h5>
                       <p className="mb-0 title-desc">
-                        The Zem admin code is maintained very cleanly and
-                        well-structured with proper comments.
+                        The
+                        Zem
+                        admin
+                        code
+                        is
+                        maintained
+                        very
+                        cleanly
+                        and
+                        well-structured
+                        with
+                        proper
+                        comments.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-green-transparent flex-center">
                         <i className="fe fe-layers tx-green"></i>
                       </p>
-                      <h5>Multiple Demos</h5>
+                      <h5>
+                        Multiple
+                        Demos
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Zem included with multiple demos and screen shots to
-                        give a quick overview.
+                        Zem
+                        included
+                        with
+                        multiple
+                        demos
+                        and
+                        screen
+                        shots
+                        to
+                        give a
+                        quick
+                        overview.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-teal-transparent flex-center">
                         <i className="fe fe-book-open tx-teal"></i>
                       </p>
-                      <h5>Well Documentation</h5>
+                      <h5>
+                        Well
+                        Documentation
+                      </h5>
                       <p className="mb-0 title-desc">
-                        The documentation provides clear-cut material and is
-                        instructed with such a way that every user can
+                        The
+                        documentation
+                        provides
+                        clear-cut
+                        material
+                        and is
+                        instructed
+                        with
+                        such a
+                        way
+                        that
+                        every
+                        user
+                        can
                         understand.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-green-transparent flex-center">
                         <i className="fe fe-file tx-green"></i>
                       </p>
-                      <h5>User Pages</h5>
+                      <h5>
+                        User
+                        Pages
+                      </h5>
                       <p className="mb-0 title-desc">
-                        The most advanced "User Pages" are included in this
-                        template, like registration, profile, and log-in pages,
+                        The
+                        most
+                        advanced
+                        "User
+                        Pages"
+                        are
+                        included
+                        in
+                        this
+                        template,
+                        like
+                        registration,
+                        profile,
+                        and
+                        log-in
+                        pages,
                         etc.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-warning-transparent flex-center">
                         <i className="fe fe-aperture tx-warning"></i>
                       </p>
-                      <h5>Modern UI Widgets</h5>
+                      <h5>
+                        Modern
+                        UI
+                        Widgets
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Modern widgets are included in this template. Please
-                        check out the best option that suits for your projects.
+                        Modern
+                        widgets
+                        are
+                        included
+                        in
+                        this
+                        template.
+                        Please
+                        check
+                        out
+                        the
+                        best
+                        option
+                        that
+                        suits
+                        for
+                        your
+                        projects.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-info-transparent flex-center">
                         <i className="fe fe-box tx-info"></i>
                       </p>
-                      <h5>100+ UI Components</h5>
+                      <h5>
+                        100+
+                        UI
+                        Components
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Tempor accusam magna ipsum ea et. Sanctus aliquyam ea
-                        duo sit consetetur. Labore stet sed.
+                        Tempor
+                        accusam
+                        magna
+                        ipsum
+                        ea et.
+                        Sanctus
+                        aliquyam
+                        ea duo
+                        sit
+                        consetetur.
+                        Labore
+                        stet
+                        sed.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={3} lg={4} md={6} sm={6} className="col-12">
+                  <Col
+                    xl={3}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-orange-transparent flex-center">
                         <i className="fe fe-file-text tx-orange"></i>
                       </p>
-                      <h5>Validating Forms</h5>
+                      <h5>
+                        Validating
+                        Forms
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Tempor accusam magna ipsum ea et. Sanctus aliquyam ea
-                        duo sit consetetur. Labore stet sed.
+                        Tempor
+                        accusam
+                        magna
+                        ipsum
+                        ea et.
+                        Sanctus
+                        aliquyam
+                        ea duo
+                        sit
+                        consetetur.
+                        Labore
+                        stet
+                        sed.
                       </p>
                     </div>
                   </Col>
@@ -494,34 +988,96 @@ function Landing({
             >
               <Container>
                 <Row>
-                  <Col xl={6} lg={6} md={12}>
-                    <a href="#top" className="tx-primary">
+                  <Col
+                    xl={6}
+                    lg={6}
+                    md={12}
+                  >
+                    <a
+                      href="#top"
+                      className="tx-primary"
+                    >
                       Features
                     </a>
-                    <p className="section-title-2">Look Into The Product</p>
-                    <p className="title-desc">
-                      No sanctus ea diam duo no kasd amet. Gubergren justo kasd
-                      nonumy est dolor, aliquyam at dolores eirmod dolore lorem.
+                    <p className="section-title-2">
+                      Look
+                      Into The
+                      Product
                     </p>
                     <p className="title-desc">
-                      No sanctus ea diam duo no kasd amet. Gubergren justo kasd
-                      nonumy est dolor, aliquyam at dolores eirmod dolore lorem.
-                      Stet et rebum dolore consetetur eirmod no sit lorem
+                      No
+                      sanctus
+                      ea diam
+                      duo no
+                      kasd
+                      amet.
+                      Gubergren
+                      justo
+                      kasd
+                      nonumy
+                      est
+                      dolor,
+                      aliquyam
+                      at
+                      dolores
+                      eirmod
+                      dolore
+                      lorem.
+                    </p>
+                    <p className="title-desc">
+                      No
+                      sanctus
+                      ea diam
+                      duo no
+                      kasd
+                      amet.
+                      Gubergren
+                      justo
+                      kasd
+                      nonumy
+                      est
+                      dolor,
+                      aliquyam
+                      at
+                      dolores
+                      eirmod
+                      dolore
+                      lorem.
+                      Stet et
+                      rebum
+                      dolore
+                      consetetur
+                      eirmod
+                      no sit
+                      lorem
                       lorem..
                     </p>
                     <div className="btn-list min-btn-list-lg mt-5">
                       <Link
-                        to={`${import.meta.env.BASE_URL}dashboard/index/`}
+                        to={`${
+                          import.meta
+                            .env
+                            .BASE_URL
+                        }dashboard/index/`}
                         className="btn btn-primary"
                       >
-                        Live Preview
+                        Live
+                        Preview
                       </Link>
-                      <a href="#;" className="btn btn-secondary">
-                        Buy Now
+                      <a
+                        href="#;"
+                        className="btn btn-secondary"
+                      >
+                        Buy
+                        Now
                       </a>
                     </div>
                   </Col>
-                  <Col xl={6} lg={6} md={12}>
+                  <Col
+                    xl={6}
+                    lg={6}
+                    md={12}
+                  >
                     <div className="text-center">
                       <svg
                         className="scale-1-5"
@@ -1242,31 +1798,88 @@ function Landing({
                 <div className="d-sm-flex align-items-center justify-content-between text-center">
                   <div className="text-center counter-container container-1">
                     <span className="counter fw-semibold counter">
-                      <CountUp end={3} start={0} duration={4.94} />
+                      <CountUp
+                        end={
+                          3
+                        }
+                        start={
+                          0
+                        }
+                        duration={
+                          4.94
+                        }
+                      />
                     </span>
-                    <span>+</span>
-                    <p className="mb-0 tx-18">Dashboard</p>
+                    <span>
+                      +
+                    </span>
+                    <p className="mb-0 tx-18">
+                      Dashboard
+                    </p>
                   </div>
                   <div className="text-center counter-container container-2">
                     <span className="counter fw-semibold counter">
-                      <CountUp end={105} start={0} duration={4.94} />
+                      <CountUp
+                        end={
+                          105
+                        }
+                        start={
+                          0
+                        }
+                        duration={
+                          4.94
+                        }
+                      />
                     </span>
-                    <span>+</span>
-                    <p className="mb-0 tx-18">Pages</p>
+                    <span>
+                      +
+                    </span>
+                    <p className="mb-0 tx-18">
+                      Pages
+                    </p>
                   </div>
                   <div className="text-center counter-container container-3">
                     <span className="counter fw-semibold counter">
-                      <CountUp end={40} start={0} duration={4.94} />
+                      <CountUp
+                        end={
+                          40
+                        }
+                        start={
+                          0
+                        }
+                        duration={
+                          4.94
+                        }
+                      />
                     </span>
-                    <span>+</span>
-                    <p className="mb-0 tx-18">Plugins</p>
+                    <span>
+                      +
+                    </span>
+                    <p className="mb-0 tx-18">
+                      Plugins
+                    </p>
                   </div>
                   <div className="text-center counter-container container-4">
                     <span className="counter fw-semibold counter">
-                      <CountUp end={4} start={0} duration={4.94} />
+                      <CountUp
+                        end={
+                          4
+                        }
+                        start={
+                          0
+                        }
+                        duration={
+                          4.94
+                        }
+                      />
                     </span>
-                    <span>+</span>
-                    <p className="mb-0 tx-18">Advanced Pages</p>
+                    <span>
+                      +
+                    </span>
+                    <p className="mb-0 tx-18">
+                      Advanced
+                      Pages
+                    </p>
                   </div>
                 </div>
               </Container>
@@ -1275,16 +1888,36 @@ function Landing({
             <section className="working-section mt-3">
               <Container>
                 <div className="text-center mb-4">
-                  <p className="section-title-2 mb-1">How It Works</p>
+                  <p className="section-title-2 mb-1">
+                    How It
+                    Works
+                  </p>
                   <p>
-                    Et labore elitr elitr no ipsum vero stet invidunt, takimata
-                    magna ipsum aliquyam consetetur, accusam.
+                    Et labore
+                    elitr
+                    elitr no
+                    ipsum vero
+                    stet
+                    invidunt,
+                    takimata
+                    magna
+                    ipsum
+                    aliquyam
+                    consetetur,
+                    accusam.
                   </p>
                 </div>
                 <div>
                   <div className="working-container container-1">
                     <div className="row align-items-center">
-                      <Col xl={6} lg={6} md={6} sm={12}>
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                      >
                         <div className="working-svg-container svg-container-1">
                           <svg
                             id="SvgjsSvg1237"
@@ -1680,14 +2313,20 @@ c8.996,0,16.291-7.295,16.291-16.292C1847.429,1446.037,1840.134,1438.747,1831.138
                                   fill="#141414"
                                   className="colorFFF svgShape"
                                 ></rect>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#141414"
                                     d="M1651.546 1043.312c-21.97 36.508-62.088 60.938-107.942 60.938-33.487 0-63.937-13.027-86.473-34.29l86.473-90.932L1651.546 1043.312zM1672.078 969.699h-125.761V844.48C1615.768 844.48 1672.078 900.539 1672.078 969.699zM1706.29 983.978c-.052 23.397-6.544 45.28-17.823 63.998l-107.942-64.285h124.734L1706.29 983.978zM1528.704 844.48v125.219l-86.472 90.929c-24.203-22.816-39.301-55.121-39.301-90.929C1402.931 900.539 1459.237 844.48 1528.704 844.48z"
                                     className="colorFFF svgShape"
                                   ></path>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <rect
                                     width="295.368"
                                     height="280.344"
@@ -1707,7 +2346,10 @@ c8.996,0,16.291-7.295,16.291-16.292C1847.429,1446.037,1840.134,1438.747,1831.138
                                     className="colorFFF svgShape"
                                   ></path>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <circle
                                     cx="486.59"
                                     cy="1041.64"
@@ -1751,7 +2393,10 @@ C619.08,968.583,559.648,909.147,486.591,909.147z"
                                     ></path>
                                   </g>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#ffda82"
                                     d="M1235.714,425.626h-136.715c-9.718,0-17.595,7.878-17.595,17.598v136.711
@@ -1782,7 +2427,10 @@ V443.224C1253.309,434.772,1247.354,427.717,1239.411,426.021z"
                                     ></polygon>
                                   </g>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#fdb8a9"
                                     d="M650.484,1372.908h-142.73c-10.148,0-18.374,8.226-18.374,18.374v142.732
@@ -1818,7 +2466,10 @@ v-142.732C668.856,1382.46,662.631,1375.094,654.341,1373.32z"
                                     ></polygon>
                                   </g>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#fdb8a9"
                                     d="M2564.452,1146.78H2430.38c-9.536,0-17.262,7.724-17.262,17.255v134.075
@@ -1862,7 +2513,10 @@ C2530.063,1279.999,2526.915,1281.375,2523.637,1281.375z"
                                     ></path>
                                   </g>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#fdb8a9"
                                     d="M2203.536,310.007h-148.417c-10.549,0-19.1,8.552-19.1,19.104v148.413
@@ -1893,7 +2547,10 @@ V329.111C2222.641,319.935,2216.172,312.281,2207.548,310.436z"
                                     ></polygon>
                                   </g>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#a9e3f7"
                                     d="M2526.903,806.962c3.054-30.827,30.516-53.345,61.347-50.291c30.827,3.05,53.345,30.518,50.291,61.345
@@ -1911,7 +2568,10 @@ c-3.05,30.827-30.518,53.345-61.344,50.292C2546.364,865.255,2523.853,837.789,2526
                                     className="colorFFF svgShape"
                                   ></polygon>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#a9e3f7"
                                     d="M1674.601,231.991c3.05-30.83,30.517-53.345,61.346-50.293c30.827,3.052,53.343,30.518,50.293,61.347
@@ -1929,7 +2589,10 @@ c-3.054,30.827-30.524,53.344-61.344,50.292C1694.064,290.284,1671.547,262.818,167
                                     className="colorFFF svgShape"
                                   ></polygon>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#a9e3f7"
                                     d="M268.979,690.179c3.054-30.83,30.52-53.345,61.349-50.293c30.827,3.054,53.344,30.518,50.29,61.345
@@ -1947,7 +2610,10 @@ c-3.05,30.829-30.518,53.346-61.343,50.292C288.445,748.474,265.926,721.008,268.97
                                     className="colorFFF svgShape"
                                   ></polygon>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#fddfa3"
                                     d="M807.592,258.104c3.054-30.83,30.522-53.349,61.347-50.293c30.831,3.05,53.347,30.516,50.296,61.345
@@ -1960,7 +2626,10 @@ c-3.056,30.829-30.524,53.344-61.349,50.292C827.056,316.399,804.542,288.931,807.5
                                     className="colorFFF svgShape"
                                   ></path>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#fddfa3"
                                     d="M2763.922,1230.943c3.05-30.827,30.516-53.344,61.343-50.291c30.831,3.052,53.344,30.518,50.294,61.345
@@ -1973,7 +2642,10 @@ c-3.054,30.831-30.518,53.347-61.349,50.295C2783.383,1289.238,2760.865,1261.774,2
                                     className="colorFFF svgShape"
                                   ></path>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#fddfa3"
                                     d="M2343.841,303.845c3.05-30.827,30.511-53.342,61.343-50.293c30.831,3.054,53.345,30.521,50.295,61.348
@@ -1986,21 +2658,30 @@ c-3.054,30.829-30.518,53.347-61.349,50.292C2363.302,362.14,2340.785,334.674,2343
                                     className="colorFFF svgShape"
                                   ></path>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#9fd7f9"
                                     d="M530.315 354.216v62.769h-21.945c-10.344 0-18.733-8.389-18.733-18.729V372.97c0-10.341 8.389-18.754 18.733-18.754H530.315zM609.762 415.576c-7.527 8.534-71.173 1.409-71.173 1.409v-62.769c0 0 11.673-11.32 14.791-21.731 3.081-10.345 5.841-25.283 13.822-23.163 8.008 2.121 11.538 31.026 1.668 44.895 0 0 31.101-8.413 39.537.786C616.414 363.702 616.82 407.594 609.762 415.576z"
                                     className="colorACECF3 svgShape"
                                   ></path>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#9fd7f9"
                                     d="M2685.553 567.07v62.768h21.943c10.344 0 18.735-8.386 18.735-18.729v-25.285c0-10.341-8.391-18.754-18.735-18.754H2685.553zM2606.106 628.431c7.529 8.534 71.175 1.407 71.175 1.407V567.07c0 0-11.675-11.318-14.793-21.733-3.081-10.338-5.843-25.279-13.824-23.159-8.005 2.121-11.536 31.024-1.665 44.892 0 0-31.101-8.409-39.537.789C2599.454 576.558 2599.047 620.452 2606.106 628.431z"
                                     className="colorACECF3 svgShape"
                                   ></path>
                                 </g>
-                                <g fill="#333232" className="color000 svgShape">
+                                <g
+                                  fill="#333232"
+                                  className="color000 svgShape"
+                                >
                                   <path
                                     fill="#9fd7f9"
                                     d="M1481.532 315.953v62.768h21.945c10.34 0 18.729-8.392 18.729-18.731v-25.281c0-10.343-8.389-18.756-18.729-18.756H1481.532zM1402.084 377.317c7.529 8.529 71.179 1.404 71.179 1.404v-62.768c0 0-11.678-11.318-14.801-21.731-3.071-10.343-5.838-25.286-13.822-23.163-8.004 2.118-11.533 31.024-1.668 44.894 0 0-31.097-8.413-39.533.787C1395.43 325.437 1395.03 369.331 1402.084 377.317z"
@@ -2017,19 +2698,73 @@ c-3.054,30.829-30.518,53.347-61.349,50.292C2363.302,362.14,2340.785,334.674,2343
                           </svg>
                         </div>
                       </Col>
-                      <Col xl={6} lg={6} md={6} sm={12}>
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                      >
                         <div className="working-content content-1">
-                          <h4 className="mb-3">Customize Your Dashboard</h4>
+                          <h4 className="mb-3">
+                            Customize
+                            Your
+                            Dashboard
+                          </h4>
                           <p className="title-desc">
-                            No ipsum rebum est invidunt eos dolore. Sed sea
-                            ipsum vero invidunt rebum et erat, tempor consetetur
-                            sadipscing no ipsum,.
+                            No
+                            ipsum
+                            rebum
+                            est
+                            invidunt
+                            eos
+                            dolore.
+                            Sed
+                            sea
+                            ipsum
+                            vero
+                            invidunt
+                            rebum
+                            et
+                            erat,
+                            tempor
+                            consetetur
+                            sadipscing
+                            no
+                            ipsum,.
                           </p>
                           <p className="title-desc mb-0">
-                            Ut dolor sed aliquyam at lorem ipsum labore diam
-                            eos. Tempor labore dolor justo nonumy stet, sanctus
-                            amet sed accusam elitr amet eirmod. No ea gubergren
-                            dolores elitr labore ipsum..
+                            Ut
+                            dolor
+                            sed
+                            aliquyam
+                            at
+                            lorem
+                            ipsum
+                            labore
+                            diam
+                            eos.
+                            Tempor
+                            labore
+                            dolor
+                            justo
+                            nonumy
+                            stet,
+                            sanctus
+                            amet
+                            sed
+                            accusam
+                            elitr
+                            amet
+                            eirmod.
+                            No
+                            ea
+                            gubergren
+                            dolores
+                            elitr
+                            labore
+                            ipsum..
                           </p>
                         </div>
                       </Col>
@@ -2037,24 +2772,85 @@ c-3.054,30.829-30.518,53.347-61.349,50.292C2363.302,362.14,2340.785,334.674,2343
                   </div>
                   <div className="working-container container-2">
                     <div className="row align-items-center">
-                      <Col xl={6} lg={6} md={6} sm={12} className=" myorder-2">
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                        className=" myorder-2"
+                      >
                         <div className="working-content content-2">
-                          <h4 className="mb-3">Built-In Themes</h4>
+                          <h4 className="mb-3">
+                            Built-In
+                            Themes
+                          </h4>
                           <p className="title-desc">
-                            Dolore voluptua sed kasd labore erat sed ipsum rebum
-                            sit, sanctus invidunt est sed sanctus. Dolor clita
-                            invidunt elitr dolore.
+                            Dolore
+                            voluptua
+                            sed
+                            kasd
+                            labore
+                            erat
+                            sed
+                            ipsum
+                            rebum
+                            sit,
+                            sanctus
+                            invidunt
+                            est
+                            sed
+                            sanctus.
+                            Dolor
+                            clita
+                            invidunt
+                            elitr
+                            dolore.
                           </p>
                           <p className="title-desc mb-0">
-                            Lorem dolores labore stet rebum invidunt voluptua at
-                            dolores lorem, amet dolor dolore dolor ut
-                            sadipscing, dolore sanctus accusam diam sanctus kasd
-                            gubergren, ipsum dolor lorem amet stet, aliquyam
+                            Lorem
+                            dolores
+                            labore
+                            stet
+                            rebum
+                            invidunt
+                            voluptua
+                            at
+                            dolores
+                            lorem,
+                            amet
+                            dolor
+                            dolore
+                            dolor
+                            ut
+                            sadipscing,
+                            dolore
+                            sanctus
+                            accusam
+                            diam
+                            sanctus
+                            kasd
+                            gubergren,
+                            ipsum
+                            dolor
+                            lorem
+                            amet
+                            stet,
+                            aliquyam
                             takimata.
                           </p>
                         </div>
                       </Col>
-                      <Col xl={6} lg={6} md={6} sm={12} className=" myorder-1">
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                        className=" myorder-1"
+                      >
                         <div className="working-svg-container svg-container-2">
                           <svg
                             id="SvgjsSvg1336"
@@ -2482,7 +3278,14 @@ c-3.054,30.829-30.518,53.347-61.349,50.292C2363.302,362.14,2340.785,334.674,2343
                   </div>
                   <div className="working-container container-3">
                     <div className="row align-items-center">
-                      <Col xl={6} lg={6} md={6} sm={12}>
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                      >
                         <div className="working-svg-container svg-container-3">
                           <svg
                             id="SvgjsSvg1403"
@@ -3665,19 +4468,71 @@ v-14.583H226.646z"
                           </svg>
                         </div>
                       </Col>
-                      <Col xl={6} lg={6} md={6} sm={12}>
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                      >
                         <div className="working-content content-3">
-                          <h4 className="mb-3">Updates</h4>
+                          <h4 className="mb-3">
+                            Updates
+                          </h4>
                           <p className="title-desc">
-                            Sea takimata sea sit justo consetetur et diam erat
-                            erat, dolor vero et sit duo dolor, dolores ipsum
-                            gubergren stet.
+                            Sea
+                            takimata
+                            sea
+                            sit
+                            justo
+                            consetetur
+                            et
+                            diam
+                            erat
+                            erat,
+                            dolor
+                            vero
+                            et
+                            sit
+                            duo
+                            dolor,
+                            dolores
+                            ipsum
+                            gubergren
+                            stet.
                           </p>
                           <p className="title-desc mb-0">
-                            Stet sadipscing lorem ipsum invidunt takimata ipsum
-                            no eos dolor. Sed at dolores et ut dolor voluptua
-                            sit duo. Ipsum ea kasd nonumy dolor, eos takimata
-                            eirmod est gubergren eos.
+                            Stet
+                            sadipscing
+                            lorem
+                            ipsum
+                            invidunt
+                            takimata
+                            ipsum
+                            no
+                            eos
+                            dolor.
+                            Sed
+                            at
+                            dolores
+                            et
+                            ut
+                            dolor
+                            voluptua
+                            sit
+                            duo.
+                            Ipsum
+                            ea
+                            kasd
+                            nonumy
+                            dolor,
+                            eos
+                            takimata
+                            eirmod
+                            est
+                            gubergren
+                            eos.
                           </p>
                         </div>
                       </Col>
@@ -3685,23 +4540,84 @@ v-14.583H226.646z"
                   </div>
                   <div className="working-container container-4">
                     <div className="row align-items-center">
-                      <Col xl={6} lg={6} md={6} sm={12} className=" myorder-2">
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                        className=" myorder-2"
+                      >
                         <div className="working-content content-4">
-                          <h4 className="mb-3">Compatibility</h4>
+                          <h4 className="mb-3">
+                            Compatibility
+                          </h4>
                           <p className="title-desc">
-                            Sea takimata sea sit justo consetetur et diam erat
-                            erat, dolor vero et sit duo dolor, dolores ipsum
-                            gubergren stet.
+                            Sea
+                            takimata
+                            sea
+                            sit
+                            justo
+                            consetetur
+                            et
+                            diam
+                            erat
+                            erat,
+                            dolor
+                            vero
+                            et
+                            sit
+                            duo
+                            dolor,
+                            dolores
+                            ipsum
+                            gubergren
+                            stet.
                           </p>
                           <p className="title-desc mb-0">
-                            Stet sadipscing lorem ipsum invidunt takimata ipsum
-                            no eos dolor. Sed at dolores et ut dolor voluptua
-                            sit duo. Ipsum ea kasd nonumy dolor, eos takimata
-                            eirmod est gubergren eos.
+                            Stet
+                            sadipscing
+                            lorem
+                            ipsum
+                            invidunt
+                            takimata
+                            ipsum
+                            no
+                            eos
+                            dolor.
+                            Sed
+                            at
+                            dolores
+                            et
+                            ut
+                            dolor
+                            voluptua
+                            sit
+                            duo.
+                            Ipsum
+                            ea
+                            kasd
+                            nonumy
+                            dolor,
+                            eos
+                            takimata
+                            eirmod
+                            est
+                            gubergren
+                            eos.
                           </p>
                         </div>
                       </Col>
-                      <Col xl={6} lg={6} md={6} sm={12} className=" myorder-1">
+                      <Col
+                        xl={6}
+                        lg={6}
+                        md={6}
+                        sm={
+                          12
+                        }
+                        className=" myorder-1"
+                      >
                         <div className="working-svg-container svg-container-4">
                           <svg
                             id="SvgjsSvg1549"
@@ -4017,15 +4933,29 @@ v-14.583H226.646z"
             >
               <Container>
                 <div className="text-center mb-4">
-                  <a href="#top" className="tx-primary">
+                  <a
+                    href="#top"
+                    className="tx-primary"
+                  >
                     Pricing
                   </a>
                   <p className="section-title-2 mb-1">
-                    Choose Best Plans For You
+                    Choose
+                    Best Plans
+                    For You
                   </p>
                   <p className="title-desc">
-                    Takimata erat aliquyam ipsum amet et eos vero sit sit..
-                    Rebum et lorem voluptua lorem.
+                    Takimata
+                    erat
+                    aliquyam
+                    ipsum amet
+                    et eos
+                    vero sit
+                    sit..
+                    Rebum et
+                    lorem
+                    voluptua
+                    lorem.
                   </p>
                 </div>
 
@@ -4036,49 +4966,85 @@ v-14.583H226.646z"
                       id="uncontrolled-tab-example"
                       className="mb-3 d-inline-flex"
                     >
-                      <Tab eventKey="monthly" title="Monthly">
+                      <Tab
+                        eventKey="monthly"
+                        title="Monthly"
+                      >
                         <div className="row align-items-center">
-                          <Col xl={4} md={12}>
+                          <Col
+                            xl={
+                              4
+                            }
+                            md={
+                              12
+                            }
+                          >
                             <Card className="card pricing-card">
                               <Card.Body>
                                 <div className="tx-center">
-                                  <h4>Basic</h4>
+                                  <h4>
+                                    Basic
+                                  </h4>
                                   <p className="tx-muted">
-                                    Sed duo rebum et et dolores sed amet rebum
-                                    magna. Et sea elitr.
+                                    Sed
+                                    duo
+                                    rebum
+                                    et
+                                    et
+                                    dolores
+                                    sed
+                                    amet
+                                    rebum
+                                    magna.
+                                    Et
+                                    sea
+                                    elitr.
                                   </p>
-                                  <p className="tx-50">$10</p>
+                                  <p className="tx-50">
+                                    $10
+                                  </p>
                                 </div>
                                 <ul className="list-unstyled mb-4">
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    2 Free Domain Name
+
+                                    2
+                                    Free
+                                    Domain
+                                    Name
                                   </li>
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    3 One-Click Apps
+
+                                    3
+                                    One-Click
+                                    Apps
                                   </li>
                                   <li className="mb-3 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    1 Databases
+
+                                    1
+                                    Databases
                                   </li>
                                   <li className="mb-3 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    Money BackGuarantee
+                                    Money
+                                    BackGuarantee
                                   </li>
                                   <li className="mb-0 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    24/7 support
+                                    24/7
+                                    support
                                   </li>
                                 </ul>
                                 <div className="tx-center">
@@ -4086,70 +5052,108 @@ v-14.583H226.646z"
                                     href="#;"
                                     className="btn btn-primary-light btn-block"
                                   >
-                                    Choose Plan
+                                    Choose
+                                    Plan
                                   </a>
                                 </div>
                               </Card.Body>
                             </Card>
                           </Col>
-                          <Col xl={4} md={12}>
+                          <Col
+                            xl={
+                              4
+                            }
+                            md={
+                              12
+                            }
+                          >
                             <Card className="card pricing-card bg-primary-transparent premium-card">
                               <Card.Body>
                                 <div className="tx-center">
-                                  <h4>Premium</h4>
+                                  <h4>
+                                    Premium
+                                  </h4>
                                   <p className="op-8">
-                                    Sed duo rebum et et dolores sed amet rebum
-                                    magna. Et sea elitr.
+                                    Sed
+                                    duo
+                                    rebum
+                                    et
+                                    et
+                                    dolores
+                                    sed
+                                    amet
+                                    rebum
+                                    magna.
+                                    Et
+                                    sea
+                                    elitr.
                                   </p>
-                                  <p className="tx-50">$29</p>
+                                  <p className="tx-50">
+                                    $29
+                                  </p>
                                 </div>
                                 <ul className="list-unstyled mb-4">
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      2 Free Domain Name
+
+                                      2
+                                      Free
+                                      Domain
+                                      Name
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      3 One-Click Apps
+
+                                      3
+                                      One-Click
+                                      Apps
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      1 Databases
+
+                                      1
+                                      Databases
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      Money BackGuarantee
+                                      Money
+                                      BackGuarantee
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      Visitors Monitoring
+                                      Visitors
+                                      Monitoring
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span className="op-7">
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      Regular Updates
+                                      Regular
+                                      Updates
                                     </span>
                                     <span className="badge badge-light rounded-pill ms-3">
-                                      Yearly paln
+                                      Yearly
+                                      paln
                                     </span>
                                   </li>
                                   <li className="mb-0 tx-14">
                                     <span className="op-7">
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      24/7 support
+                                      24/7
+                                      support
                                     </span>
                                     <span className="badge badge-light rounded-pill ms-3">
-                                      Yearly paln
+                                      Yearly
+                                      paln
                                     </span>
                                   </li>
                                 </ul>
@@ -4158,53 +5162,87 @@ v-14.583H226.646z"
                                     href="#;"
                                     className="btn btn-primary btn-block"
                                   >
-                                    Choose Plan
+                                    Choose
+                                    Plan
                                   </a>
                                 </div>
                               </Card.Body>
                             </Card>
                           </Col>
-                          <Col xl={4} md={12}>
+                          <Col
+                            xl={
+                              4
+                            }
+                            md={
+                              12
+                            }
+                          >
                             <Card className="card pricing-card">
                               <Card.Body>
                                 <div className="tx-center">
-                                  <h4>Standard</h4>
+                                  <h4>
+                                    Standard
+                                  </h4>
                                   <p className="tx-muted">
-                                    Sed duo rebum et et dolores sed amet rebum
-                                    magna. Et sea elitr.
+                                    Sed
+                                    duo
+                                    rebum
+                                    et
+                                    et
+                                    dolores
+                                    sed
+                                    amet
+                                    rebum
+                                    magna.
+                                    Et
+                                    sea
+                                    elitr.
                                   </p>
-                                  <p className="tx-50">$15</p>
+                                  <p className="tx-50">
+                                    $15
+                                  </p>
                                 </div>
                                 <ul className="list-unstyled mb-4">
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    2 Free Domain Name
+
+                                    2
+                                    Free
+                                    Domain
+                                    Name
                                   </li>
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    3 One-Click Apps
+
+                                    3
+                                    One-Click
+                                    Apps
                                   </li>
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    1 Databases
+
+                                    1
+                                    Databases
                                   </li>
                                   <li className="mb-3 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    Money BackGuarantee
+                                    Money
+                                    BackGuarantee
                                   </li>
                                   <li className="mb-0 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    24/7 support
+                                    24/7
+                                    support
                                   </li>
                                 </ul>
                                 <div className="tx-center">
@@ -4212,7 +5250,8 @@ v-14.583H226.646z"
                                     href="#;"
                                     className="btn btn-primary-light btn-block"
                                   >
-                                    Choose Plan
+                                    Choose
+                                    Plan
                                   </a>
                                 </div>
                               </Card.Body>
@@ -4220,49 +5259,85 @@ v-14.583H226.646z"
                           </Col>
                         </div>
                       </Tab>
-                      <Tab eventKey="yearly" title="Yearly">
+                      <Tab
+                        eventKey="yearly"
+                        title="Yearly"
+                      >
                         <Row className="row align-items-center">
-                          <Col xl={4} md={12}>
+                          <Col
+                            xl={
+                              4
+                            }
+                            md={
+                              12
+                            }
+                          >
                             <Card className="card pricing-card">
                               <Card.Body>
                                 <div className="tx-center">
-                                  <h4>Basic</h4>
+                                  <h4>
+                                    Basic
+                                  </h4>
                                   <p className="tx-muted">
-                                    Sed duo rebum et et dolores sed amet rebum
-                                    magna. Et sea elitr.
+                                    Sed
+                                    duo
+                                    rebum
+                                    et
+                                    et
+                                    dolores
+                                    sed
+                                    amet
+                                    rebum
+                                    magna.
+                                    Et
+                                    sea
+                                    elitr.
                                   </p>
-                                  <p className="tx-50">$170</p>
+                                  <p className="tx-50">
+                                    $170
+                                  </p>
                                 </div>
                                 <ul className="list-unstyled mb-4">
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    2 Free Domain Name
+
+                                    2
+                                    Free
+                                    Domain
+                                    Name
                                   </li>
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    3 One-Click Apps
+
+                                    3
+                                    One-Click
+                                    Apps
                                   </li>
                                   <li className="mb-3 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    1 Databases
+
+                                    1
+                                    Databases
                                   </li>
                                   <li className="mb-3 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    Money BackGuarantee
+                                    Money
+                                    BackGuarantee
                                   </li>
                                   <li className="mb-0 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    24/7 support
+                                    24/7
+                                    support
                                   </li>
                                 </ul>
                                 <div className="tx-center">
@@ -4270,64 +5345,100 @@ v-14.583H226.646z"
                                     href="#;"
                                     className="btn btn-primary-light btn-block"
                                   >
-                                    Choose Plan
+                                    Choose
+                                    Plan
                                   </a>
                                 </div>
                               </Card.Body>
                             </Card>
                           </Col>
-                          <Col xl={4} md={12}>
+                          <Col
+                            xl={
+                              4
+                            }
+                            md={
+                              12
+                            }
+                          >
                             <Card className="card pricing-card bg-primary-transparent premium-card">
                               <Card.Body>
                                 <div className="tx-center">
-                                  <h4>Premium</h4>
+                                  <h4>
+                                    Premium
+                                  </h4>
                                   <p className="op-8">
-                                    Sed duo rebum et et dolores sed amet rebum
-                                    magna. Et sea elitr.
+                                    Sed
+                                    duo
+                                    rebum
+                                    et
+                                    et
+                                    dolores
+                                    sed
+                                    amet
+                                    rebum
+                                    magna.
+                                    Et
+                                    sea
+                                    elitr.
                                   </p>
-                                  <p className="tx-50">$319</p>
+                                  <p className="tx-50">
+                                    $319
+                                  </p>
                                 </div>
                                 <ul className="list-unstyled mb-4">
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      2 Free Domain Name
+
+                                      2
+                                      Free
+                                      Domain
+                                      Name
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      3 One-Click Apps
+
+                                      3
+                                      One-Click
+                                      Apps
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      1 Databases
+
+                                      1
+                                      Databases
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      Money BackGuarantee
+                                      Money
+                                      BackGuarantee
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      Visitors Monitoring
+                                      Visitors
+                                      Monitoring
                                     </span>
                                   </li>
                                   <li className="mb-3 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      Regular Updates
+                                      Regular
+                                      Updates
                                     </span>
                                   </li>
                                   <li className="mb-0 tx-14">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
-                                      24/7 support
+                                      24/7
+                                      support
                                     </span>
                                   </li>
                                 </ul>
@@ -4336,53 +5447,87 @@ v-14.583H226.646z"
                                     href="#;"
                                     className="btn btn-primary btn-block"
                                   >
-                                    Choose Plan
+                                    Choose
+                                    Plan
                                   </a>
                                 </div>
                               </Card.Body>
                             </Card>
                           </Col>
-                          <Col xl={4} md={12}>
+                          <Col
+                            xl={
+                              4
+                            }
+                            md={
+                              12
+                            }
+                          >
                             <Card className="card pricing-card">
                               <Card.Body>
                                 <div className="tx-center">
-                                  <h4>Standard</h4>
+                                  <h4>
+                                    Standard
+                                  </h4>
                                   <p className="tx-muted">
-                                    Sed duo rebum et et dolores sed amet rebum
-                                    magna. Et sea elitr.
+                                    Sed
+                                    duo
+                                    rebum
+                                    et
+                                    et
+                                    dolores
+                                    sed
+                                    amet
+                                    rebum
+                                    magna.
+                                    Et
+                                    sea
+                                    elitr.
                                   </p>
-                                  <p className="tx-50">$239</p>
+                                  <p className="tx-50">
+                                    $239
+                                  </p>
                                 </div>
                                 <ul className="list-unstyled mb-4">
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    2 Free Domain Name
+
+                                    2
+                                    Free
+                                    Domain
+                                    Name
                                   </li>
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    3 One-Click Apps
+
+                                    3
+                                    One-Click
+                                    Apps
                                   </li>
                                   <li className="mb-3 tx-14 tx-primary">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    1 Databases
+
+                                    1
+                                    Databases
                                   </li>
                                   <li className="mb-3 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    Money BackGuarantee
+                                    Money
+                                    BackGuarantee
                                   </li>
                                   <li className="mb-0 tx-14 tx-muted">
                                     <span>
                                       <i className="fa fa-check me-2 tx-10"></i>
                                     </span>
-                                    24/7 support
+                                    24/7
+                                    support
                                   </li>
                                 </ul>
                                 <div className="tx-center">
@@ -4390,7 +5535,8 @@ v-14.583H226.646z"
                                     href="#;"
                                     className="btn btn-primary-light btn-block"
                                   >
-                                    Choose Plan
+                                    Choose
+                                    Plan
                                   </a>
                                 </div>
                               </Card.Body>
@@ -4407,46 +5553,114 @@ v-14.583H226.646z"
             <section className="best-features-section mt-3">
               <Container>
                 <div className="text-center mb-5">
-                  <p className="section-title-2 mb-1">Our Best Features</p>
+                  <p className="section-title-2 mb-1">
+                    Our Best
+                    Features
+                  </p>
                   <p className="title-desc">
-                    Et tempor. Sadipscing et nonumy. Magna eirmod amet erat et,
-                    sit sed at sed et aliquyam nonumy aliquyam sit.
+                    Et tempor.
+                    Sadipscing
+                    et nonumy.
+                    Magna
+                    eirmod
+                    amet erat
+                    et, sit
+                    sed at sed
+                    et
+                    aliquyam
+                    nonumy
+                    aliquyam
+                    sit.
                   </p>
                 </div>
                 <div className="row justify-content-between">
-                  <Col xl={4} sm={4} className="col-12">
+                  <Col
+                    xl={4}
+                    sm={4}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card text-center bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-primary-transparent flex-center mx-auto">
                         <i className="fe fe-shield tx-primary"></i>
                       </p>
-                      <h5>On Demand</h5>
+                      <h5>
+                        On
+                        Demand
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Tempor accusam magna ipsum ea et. Sanctus aliquyam ea
-                        duo sit consetetur. Labore stet sed.
+                        Tempor
+                        accusam
+                        magna
+                        ipsum
+                        ea et.
+                        Sanctus
+                        aliquyam
+                        ea duo
+                        sit
+                        consetetur.
+                        Labore
+                        stet
+                        sed.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={4} sm={4} className="col-12">
+                  <Col
+                    xl={4}
+                    sm={4}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card text-center bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-green-transparent flex-center mx-auto">
                         <i className="fe fe-clock tx-green"></i>
                       </p>
-                      <h5>Any Time</h5>
+                      <h5>
+                        Any
+                        Time
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Tempor accusam magna ipsum ea et. Sanctus aliquyam ea
-                        duo sit consetetur. Labore stet sed.
+                        Tempor
+                        accusam
+                        magna
+                        ipsum
+                        ea et.
+                        Sanctus
+                        aliquyam
+                        ea duo
+                        sit
+                        consetetur.
+                        Labore
+                        stet
+                        sed.
                       </p>
                     </div>
                   </Col>
-                  <Col xl={4} sm={4} className="col-12">
+                  <Col
+                    xl={4}
+                    sm={4}
+                    className="col-12"
+                  >
                     <div className="p-3 feature-card text-center bg-hover-shape shadow-none ">
                       <p className="rounded-icon bg-warning-transparent flex-center mx-auto">
                         <i className="fe fe-zap tx-warning"></i>
                       </p>
-                      <h5>24*7 Support</h5>
+                      <h5>
+                        24*7
+                        Support
+                      </h5>
                       <p className="mb-0 title-desc">
-                        Tempor accusam magna ipsum ea et. Sanctus aliquyam ea
-                        duo sit consetetur. Labore stet sed.
+                        Tempor
+                        accusam
+                        magna
+                        ipsum
+                        ea et.
+                        Sanctus
+                        aliquyam
+                        ea duo
+                        sit
+                        consetetur.
+                        Labore
+                        stet
+                        sed.
                       </p>
                     </div>
                   </Col>
@@ -4454,18 +5668,39 @@ v-14.583H226.646z"
               </Container>
             </section>
 
-            <section className="happy-clients-section" id="reviews">
+            <section
+              className="happy-clients-section"
+              id="reviews"
+            >
               <Container>
                 <div className="text-center mb-5">
-                  <a href="#top" className="invert">
+                  <a
+                    href="#top"
+                    className="invert"
+                  >
                     Reviews
                   </a>
                   <p className="section-title-2 invert mb-1">
-                    What Our Happy Clients Say
+                    What Our
+                    Happy
+                    Clients
+                    Say
                   </p>
                   <p className="title-desc invert op-6">
-                    Kasd sadipscing ipsum sit stet ea. Ea aliquyam kasd accusam
-                    ea duo stet elitr. Lorem accusam et kasd duo gubergren..
+                    Kasd
+                    sadipscing
+                    ipsum sit
+                    stet ea.
+                    Ea
+                    aliquyam
+                    kasd
+                    accusam ea
+                    duo stet
+                    elitr.
+                    Lorem
+                    accusam et
+                    kasd duo
+                    gubergren..
                   </p>
                 </div>
                 <Landingcarousel />
@@ -4476,11 +5711,25 @@ v-14.583H226.646z"
               <Container>
                 <div className="text-center mb-5">
                   <p className="section-title-2 mb-1">
-                    Frequently Asked Questions
+                    Frequently
+                    Asked
+                    Questions
                   </p>
                   <p className="title-desc">
-                    Kasd sadipscing ipsum sit stet ea. Ea aliquyam kasd accusam
-                    ea duo stet elitr. Lorem accusam et kasd duo gubergren..
+                    Kasd
+                    sadipscing
+                    ipsum sit
+                    stet ea.
+                    Ea
+                    aliquyam
+                    kasd
+                    accusam ea
+                    duo stet
+                    elitr.
+                    Lorem
+                    accusam et
+                    kasd duo
+                    gubergren..
                   </p>
                 </div>
                 <div>
@@ -4490,10 +5739,14 @@ v-14.583H226.646z"
                         <div className="d-flex align-items-center mb-3">
                           <i className="fe fe-help-circle tx-muted tx-18 me-1"></i>
                           <h5 className="section-title-1 mb-0">
-                            General Questions
+                            General
+                            Questions
                           </h5>
                         </div>
-                        <Accordion className="accordion-style2" defaultActiveKey="0">
+                        <Accordion
+                          className="accordion-style2"
+                          defaultActiveKey="0"
+                        >
                           <Accordion.Item eventKey="0">
                             <Accordion.Header>
                               <a
@@ -4504,62 +5757,295 @@ v-14.583H226.646z"
                                 aria-expanded="true"
                                 aria-controls="accordion1"
                               >
-                                How To Insert All The Plugins?
+                                How
+                                To
+                                Insert
+                                All
+                                The
+                                Plugins?
                               </a>
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
                               system.
                             </Accordion.Body>
                           </Accordion.Item>
                           <Accordion.Item eventKey="1">
                             <Accordion.Header>
-                              How Can I contact?
+                              How
+                              Can
+                              I
+                              contact?
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
-                              system, and expound the actual teachings of the
-                              great explorer of the truth, the master-builder of
-                              human happiness. No one rejects, dislikes, or
-                              avoids pleasure itself, because it is pleasure,
-                              but because those who do not know how to pursue
-                              pleasure rationally encounter consequences.
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
+                              system,
+                              and
+                              expound
+                              the
+                              actual
+                              teachings
+                              of
+                              the
+                              great
+                              explorer
+                              of
+                              the
+                              truth,
+                              the
+                              master-builder
+                              of
+                              human
+                              happiness.
+                              No
+                              one
+                              rejects,
+                              dislikes,
+                              or
+                              avoids
+                              pleasure
+                              itself,
+                              because
+                              it
+                              is
+                              pleasure,
+                              but
+                              because
+                              those
+                              who
+                              do
+                              not
+                              know
+                              how
+                              to
+                              pursue
+                              pleasure
+                              rationally
+                              encounter
+                              consequences.
                             </Accordion.Body>
                           </Accordion.Item>
                           <Accordion.Item eventKey="2">
                             <Accordion.Header>
-                              Can I use this Plugins in Another Template?
+                              Can
+                              I
+                              use
+                              this
+                              Plugins
+                              in
+                              Another
+                              Template?
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
-                              system, and expound the actual teachings of the
-                              great explorer of the truth, the master-builder of
-                              human happiness. No one rejects, dislikes, or
-                              avoids pleasure itself, because it is pleasure,
-                              but because those who do not know how to pursue
-                              pleasure rationally encounter consequences.
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
+                              system,
+                              and
+                              expound
+                              the
+                              actual
+                              teachings
+                              of
+                              the
+                              great
+                              explorer
+                              of
+                              the
+                              truth,
+                              the
+                              master-builder
+                              of
+                              human
+                              happiness.
+                              No
+                              one
+                              rejects,
+                              dislikes,
+                              or
+                              avoids
+                              pleasure
+                              itself,
+                              because
+                              it
+                              is
+                              pleasure,
+                              but
+                              because
+                              those
+                              who
+                              do
+                              not
+                              know
+                              how
+                              to
+                              pursue
+                              pleasure
+                              rationally
+                              encounter
+                              consequences.
                             </Accordion.Body>
                           </Accordion.Item>
                           <Accordion.Item eventKey="3">
                             <Accordion.Header>
-                              Does it Easy to Customizable?
+                              Does
+                              it
+                              Easy
+                              to
+                              Customizable?
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
-                              system, and expound the actual teachings of the
-                              great explorer of the truth, the master-builder of
-                              human happiness. No one rejects, dislikes, or
-                              avoids pleasure itself, because it is pleasure,
-                              but because those who do not know how to pursue
-                              pleasure rationally encounter consequences.
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
+                              system,
+                              and
+                              expound
+                              the
+                              actual
+                              teachings
+                              of
+                              the
+                              great
+                              explorer
+                              of
+                              the
+                              truth,
+                              the
+                              master-builder
+                              of
+                              human
+                              happiness.
+                              No
+                              one
+                              rejects,
+                              dislikes,
+                              or
+                              avoids
+                              pleasure
+                              itself,
+                              because
+                              it
+                              is
+                              pleasure,
+                              but
+                              because
+                              those
+                              who
+                              do
+                              not
+                              know
+                              how
+                              to
+                              pursue
+                              pleasure
+                              rationally
+                              encounter
+                              consequences.
                             </Accordion.Body>
                           </Accordion.Item>
                         </Accordion>
@@ -4570,7 +6056,9 @@ v-14.583H226.646z"
                         <div className="d-flex align-items-center mb-3">
                           <i className="fe fe-help-circle tx-muted tx-18 me-1"></i>
                           <h5 className="section-title-1 mb-0">
-                            Terms & Privacy
+                            Terms
+                            &
+                            Privacy
                           </h5>
                         </div>
                         {/* <div className="accordion accordion-style2" id="accordionFaq1">
@@ -4666,7 +6154,12 @@ v-14.583H226.646z"
                                 aria-expanded="true"
                                 aria-controls="accordion1"
                               >
-                                How To Insert All The Plugins?
+                                How
+                                To
+                                Insert
+                                All
+                                The
+                                Plugins?
                                 {/* <span className="accordion-controls">
                                   <span className="expand"><i className="fe fe-plus"></i></span>
                                   <span className="shrink"><i className="fe fe-minus"></i></span>
@@ -4674,74 +6167,369 @@ v-14.583H226.646z"
                               </a>
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
                               system.
                             </Accordion.Body>
                           </Accordion.Item>
                           <Accordion.Item eventKey="1">
                             <Accordion.Header>
-                              How Can I contact?
+                              How
+                              Can
+                              I
+                              contact?
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
-                              system, and expound the actual teachings of the
-                              great explorer of the truth, the master-builder of
-                              human happiness. No one rejects, dislikes, or
-                              avoids pleasure itself, because it is pleasure,
-                              but because those who do not know how to pursue
-                              pleasure rationally encounter consequences.
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
+                              system,
+                              and
+                              expound
+                              the
+                              actual
+                              teachings
+                              of
+                              the
+                              great
+                              explorer
+                              of
+                              the
+                              truth,
+                              the
+                              master-builder
+                              of
+                              human
+                              happiness.
+                              No
+                              one
+                              rejects,
+                              dislikes,
+                              or
+                              avoids
+                              pleasure
+                              itself,
+                              because
+                              it
+                              is
+                              pleasure,
+                              but
+                              because
+                              those
+                              who
+                              do
+                              not
+                              know
+                              how
+                              to
+                              pursue
+                              pleasure
+                              rationally
+                              encounter
+                              consequences.
                             </Accordion.Body>
                           </Accordion.Item>
                           <Accordion.Item eventKey="2">
                             <Accordion.Header>
-                              Can I use this Plugins in Another Template?
+                              Can
+                              I
+                              use
+                              this
+                              Plugins
+                              in
+                              Another
+                              Template?
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
-                              system, and expound the actual teachings of the
-                              great explorer of the truth, the master-builder of
-                              human happiness. No one rejects, dislikes, or
-                              avoids pleasure itself, because it is pleasure,
-                              but because those who do not know how to pursue
-                              pleasure rationally encounter consequences.
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
+                              system,
+                              and
+                              expound
+                              the
+                              actual
+                              teachings
+                              of
+                              the
+                              great
+                              explorer
+                              of
+                              the
+                              truth,
+                              the
+                              master-builder
+                              of
+                              human
+                              happiness.
+                              No
+                              one
+                              rejects,
+                              dislikes,
+                              or
+                              avoids
+                              pleasure
+                              itself,
+                              because
+                              it
+                              is
+                              pleasure,
+                              but
+                              because
+                              those
+                              who
+                              do
+                              not
+                              know
+                              how
+                              to
+                              pursue
+                              pleasure
+                              rationally
+                              encounter
+                              consequences.
                             </Accordion.Body>
                           </Accordion.Item>
                           <Accordion.Item eventKey="3">
                             <Accordion.Header>
-                              Does it Easy to Customizable?
+                              Does
+                              it
+                              Easy
+                              to
+                              Customizable?
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
-                              system, and expound the actual teachings of the
-                              great explorer of the truth, the master-builder of
-                              human happiness. No one rejects, dislikes, or
-                              avoids pleasure itself, because it is pleasure,
-                              but because those who do not know how to pursue
-                              pleasure rationally encounter consequences.
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
+                              system,
+                              and
+                              expound
+                              the
+                              actual
+                              teachings
+                              of
+                              the
+                              great
+                              explorer
+                              of
+                              the
+                              truth,
+                              the
+                              master-builder
+                              of
+                              human
+                              happiness.
+                              No
+                              one
+                              rejects,
+                              dislikes,
+                              or
+                              avoids
+                              pleasure
+                              itself,
+                              because
+                              it
+                              is
+                              pleasure,
+                              but
+                              because
+                              those
+                              who
+                              do
+                              not
+                              know
+                              how
+                              to
+                              pursue
+                              pleasure
+                              rationally
+                              encounter
+                              consequences.
                             </Accordion.Body>
                           </Accordion.Item>
                           <Accordion.Item eventKey="4">
                             <Accordion.Header>
-                              How To Add additional plugins?
+                              How
+                              To
+                              Add
+                              additional
+                              plugins?
                             </Accordion.Header>
                             <Accordion.Body>
-                              I must explain to you how all this mistaken idea
-                              of denouncing pleasure and praising pain was born
-                              and I will give you a complete account of the
-                              system, and expound the actual teachings of the
-                              great explorer of the truth, the master-builder of
-                              human happiness. No one rejects, dislikes, or
-                              avoids pleasure itself, because it is pleasure,
-                              but because those who do not know how to pursue
-                              pleasure rationally encounter consequences.
+                              I
+                              must
+                              explain
+                              to
+                              you
+                              how
+                              all
+                              this
+                              mistaken
+                              idea
+                              of
+                              denouncing
+                              pleasure
+                              and
+                              praising
+                              pain
+                              was
+                              born
+                              and
+                              I
+                              will
+                              give
+                              you
+                              a
+                              complete
+                              account
+                              of
+                              the
+                              system,
+                              and
+                              expound
+                              the
+                              actual
+                              teachings
+                              of
+                              the
+                              great
+                              explorer
+                              of
+                              the
+                              truth,
+                              the
+                              master-builder
+                              of
+                              human
+                              happiness.
+                              No
+                              one
+                              rejects,
+                              dislikes,
+                              or
+                              avoids
+                              pleasure
+                              itself,
+                              because
+                              it
+                              is
+                              pleasure,
+                              but
+                              because
+                              those
+                              who
+                              do
+                              not
+                              know
+                              how
+                              to
+                              pursue
+                              pleasure
+                              rationally
+                              encounter
+                              consequences.
                             </Accordion.Body>
                           </Accordion.Item>
                         </Accordion>
@@ -4755,33 +6543,66 @@ v-14.583H226.646z"
             <section className="more-faq-section bg-primary-transparent mt-3">
               <Container>
                 <div className="text-center ">
-                  <p className="section-title-2 mb-1">Still Have Questions ?</p>
+                  <p className="section-title-2 mb-1">
+                    Still Have
+                    Questions
+                    ?
+                  </p>
                   <p className="title-desc mb-4">
-                    If you cannot find the answer, you can always contact us.
+                    If you
+                    cannot
+                    find the
+                    answer,
+                    you can
+                    always
+                    contact
+                    us.
                   </p>
                   <div className="btn-list min-btn-list-xl">
-                    <a href="#;" className="btn btn-secondary m-1">
-                      <i className="fe fe-mail me-2 tx-14"></i>Mail us
+                    <a
+                      href="#;"
+                      className="btn btn-secondary m-1"
+                    >
+                      <i className="fe fe-mail me-2 tx-14"></i>
+                      Mail us
                     </a>
-                    <a href="#;" className="btn btn-secondary m-1">
-                      <i className="fe fe-twitter me-2 tx-14"></i>Send a tweet
+                    <a
+                      href="#;"
+                      className="btn btn-secondary m-1"
+                    >
+                      <i className="fe fe-twitter me-2 tx-14"></i>
+                      Send a
+                      tweet
                     </a>
                   </div>
                 </div>
               </Container>
             </section>
 
-            <section className="contact-us-section mt-3" id="contact">
+            <section
+              className="contact-us-section mt-3"
+              id="contact"
+            >
               <Container>
                 <div className="text-center mb-5">
-                  <a href="#top" className="tx-primary">
+                  <a
+                    href="#top"
+                    className="tx-primary"
+                  >
                     Contact
                   </a>
                   <p className="section-title-2 mb-1">
-                    Feel Free To Contact Us
+                    Feel Free
+                    To Contact
+                    Us
                   </p>
                   <p className="title-desc mb-0">
-                    No et duo kasd sed aliquyam kasd ipsum sea, at ea sed labore
+                    No et duo
+                    kasd sed
+                    aliquyam
+                    kasd ipsum
+                    sea, at ea
+                    sed labore
                     amet at..
                   </p>
                 </div>
@@ -4789,8 +6610,14 @@ v-14.583H226.646z"
                   <Row>
                     <div className="col-xl-6">
                       <div className="form-group ">
-                        <label htmlFor="cusName" className="form-label">
-                          Name <span className="text-danger">*</span>
+                        <label
+                          htmlFor="cusName"
+                          className="form-label"
+                        >
+                          Name{" "}
+                          <span className="text-danger">
+                            *
+                          </span>
                         </label>
                         <input
                           type="text"
@@ -4802,8 +6629,14 @@ v-14.583H226.646z"
                     </div>
                     <div className="col-xl-6">
                       <div className="form-group">
-                        <label htmlFor="cusEmail" className="form-label">
-                          Email <span className="text-danger">*</span>
+                        <label
+                          htmlFor="cusEmail"
+                          className="form-label"
+                        >
+                          Email{" "}
+                          <span className="text-danger">
+                            *
+                          </span>
                         </label>
                         <input
                           type="text"
@@ -4815,7 +6648,10 @@ v-14.583H226.646z"
                     </div>
                   </Row>
                   <div className="form-group">
-                    <label htmlFor="cusSubject" className="form-label">
+                    <label
+                      htmlFor="cusSubject"
+                      className="form-label"
+                    >
                       Subject
                     </label>
                     <input
@@ -4826,8 +6662,14 @@ v-14.583H226.646z"
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="cusMessage" className="form-label">
-                      Message <span className="text-danger">*</span>
+                    <label
+                      htmlFor="cusMessage"
+                      className="form-label"
+                    >
+                      Message{" "}
+                      <span className="text-danger">
+                        *
+                      </span>
                     </label>
                     <textarea
                       className="form-control"
@@ -4836,13 +6678,24 @@ v-14.583H226.646z"
                     ></textarea>
                   </div>
                   <div className="form-group">
-                    <button className="btn btn-primary">Send Message</button>
+                    <button className="btn btn-primary">
+                      Send
+                      Message
+                    </button>
                   </div>
                 </form>
                 <div className="text-center mb-5">
-                  <p className="section-title-1 mb-1">Our Offices</p>
+                  <p className="section-title-1 mb-1">
+                    Our
+                    Offices
+                  </p>
                   <p className="title-desc tx-13 mb-0">
-                    No et duo kasd sed aliquyam kasd ipsum sea, at ea sed labore
+                    No et duo
+                    kasd sed
+                    aliquyam
+                    kasd ipsum
+                    sea, at ea
+                    sed labore
                     amet at..
                   </p>
                 </div>
@@ -4853,13 +6706,25 @@ v-14.583H226.646z"
                         <i className="fe fe-map-pin text-muted"></i>
                       </p>
                       <p className="font-weight-semibold tx-17 mb-1">
-                        Sub Branch
+                        Sub
+                        Branch
                       </p>
                       <p className="title-desc tx-13 mb-2">
-                        Mon - Fri 9am to 6pm
+                        Mon -
+                        Fri
+                        9am to
+                        6pm
                       </p>
-                      <p className="title-desc mb-1">150 Burno Street</p>
-                      <p className="title-desc mb-0">Consetetur, SC, 1116</p>
+                      <p className="title-desc mb-1">
+                        150
+                        Burno
+                        Street
+                      </p>
+                      <p className="title-desc mb-0">
+                        Consetetur,
+                        SC,
+                        1116
+                      </p>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-auto col-sm-4 col-12">
@@ -4868,13 +6733,25 @@ v-14.583H226.646z"
                         <i className="fe fe-map-pin text-primary"></i>
                       </p>
                       <p className="font-weight-semibold tx-17 mb-1">
-                        Main Branch
+                        Main
+                        Branch
                       </p>
                       <p className="title-desc tx-13 mb-2">
-                        Mon - Fri 9am to 6pm
+                        Mon -
+                        Fri
+                        9am to
+                        6pm
                       </p>
-                      <p className="title-desc mb-1">150 Burno Street</p>
-                      <p className="title-desc mb-0">Consetetur, SC, 1116</p>
+                      <p className="title-desc mb-1">
+                        150
+                        Burno
+                        Street
+                      </p>
+                      <p className="title-desc mb-0">
+                        Consetetur,
+                        SC,
+                        1116
+                      </p>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-auto col-sm-4 col-12">
@@ -4883,13 +6760,25 @@ v-14.583H226.646z"
                         <i className="fe fe-map-pin text-muted"></i>
                       </p>
                       <p className="font-weight-semibold tx-17 mb-1">
-                        Sub Branch
+                        Sub
+                        Branch
                       </p>
                       <p className="title-desc tx-13 mb-2">
-                        Mon - Fri 9am to 6pm
+                        Mon -
+                        Fri
+                        9am to
+                        6pm
                       </p>
-                      <p className="title-desc mb-1">150 Burno Street</p>
-                      <p className="title-desc mb-0">Consetetur, SC, 1116</p>
+                      <p className="title-desc mb-1">
+                        150
+                        Burno
+                        Street
+                      </p>
+                      <p className="title-desc mb-0">
+                        Consetetur,
+                        SC,
+                        1116
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -4902,26 +6791,43 @@ v-14.583H226.646z"
                   <div className="col-xl-4 col-md-4 col-sm-12">
                     <div className="footer-container-1">
                       <img
-                        src={logowhiteoriginal}
+                        src={
+                          logowhiteoriginal
+                        }
                         className="mobile-logo dark-logo-1"
                         alt="logo"
                       />
                       <p className="op-7 mb-2 invert">
-                        Admin and Dashboard Template
+                        Admin
+                        and
+                        Dashboard
+                        Template
                       </p>
                       <p className="op-7 mb-0 invert">
-                        Use this admin template to design stunning dashboards
+                        Use
+                        this
+                        admin
+                        template
+                        to
+                        design
+                        stunning
+                        dashboards
                       </p>
                     </div>
                   </div>
                   <div className="col-xl-2 col-md-2 col-sm-4">
                     <div className="footer-container-2">
-                      <h5 className="invert mb-3">Products</h5>
+                      <h5 className="invert mb-3">
+                        Products
+                      </h5>
                       <ul className="list-unstyled">
                         <li className="mb-2 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/profilepage/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/profilepage/`}
                             className="invert"
                           >
                             Products
@@ -4929,17 +6835,24 @@ v-14.583H226.646z"
                         </li>
                         <li className="mb-2 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/e-commerce/productDetails/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/e-commerce/productDetails/`}
                             className="invert"
                           >
-                            Product Details
+                            Product
+                            Details
                           </Link>
                         </li>
                         <li className="mb-2 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/e-commerce/cart/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/e-commerce/cart/`}
                             className="invert"
                           >
                             Cart
@@ -4947,11 +6860,15 @@ v-14.583H226.646z"
                         </li>
                         <li className="mb-0 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/e-commerce/addproduct/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/e-commerce/addproduct/`}
                             className="invert"
                           >
-                            Add Product
+                            Add
+                            Product
                           </Link>
                         </li>
                       </ul>
@@ -4959,11 +6876,17 @@ v-14.583H226.646z"
                   </div>
                   <div className="col-xl-2 col-md-2 col-sm-4">
                     <div className="footer-container-3">
-                      <h5 className="invert mb-3">Pages</h5>
+                      <h5 className="invert mb-3">
+                        Pages
+                      </h5>
                       <ul className="list-unstyled">
                         <li className="mb-2 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL}pages/profilepage/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/profilepage/`}
                             className="invert"
                           >
                             Profile
@@ -4971,7 +6894,11 @@ v-14.583H226.646z"
                         </li>
                         <li className="mb-2 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL}pages/blog/blog/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/blog/blog/`}
                             className="invert"
                           >
                             Blog
@@ -4979,7 +6906,11 @@ v-14.583H226.646z"
                         </li>
                         <li className="mb-2 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL}pages/invoice/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/invoice/`}
                             className="invert"
                           >
                             Invoice
@@ -4987,10 +6918,15 @@ v-14.583H226.646z"
                         </li>
                         <li className="mb-2 footer-page-link">
                           <Link
-                            to={`${import.meta.env.BASE_URL}pages/aboutus/`}
+                            to={`${
+                              import.meta
+                                .env
+                                .BASE_URL
+                            }pages/aboutus/`}
                             className="invert"
                           >
-                            About Us
+                            About
+                            Us
                           </Link>
                         </li>
                       </ul>
@@ -4998,21 +6934,34 @@ v-14.583H226.646z"
                   </div>
                   <div className="col-xl-2 col-md-2 col-sm-4">
                     <div className="footer-container-4">
-                      <h5 className="invert mb-3">Social Media</h5>
+                      <h5 className="invert mb-3">
+                        Social
+                        Media
+                      </h5>
                       <ul className="list-unstyled">
                         <li className="mb-2 footer-page-link">
-                          <a href="#;" className="invert">
+                          <a
+                            href="#;"
+                            className="invert"
+                          >
                             <i className="fe fe-facebook tx-13 me-2"></i>
                             Facebook
                           </a>
                         </li>
                         <li className="mb-2 footer-page-link">
-                          <a href="#;" className="invert">
-                            <i className="fe fe-twitter tx-13 me-2"></i>Twitter
+                          <a
+                            href="#;"
+                            className="invert"
+                          >
+                            <i className="fe fe-twitter tx-13 me-2"></i>
+                            Twitter
                           </a>
                         </li>
                         <li className="mb-2 footer-page-link">
-                          <a href="#;" className="invert">
+                          <a
+                            href="#;"
+                            className="invert"
+                          >
                             <i className="fe fe-linkedin tx-13 me-2"></i>
                             Linkedin
                           </a>
@@ -5022,25 +6971,50 @@ v-14.583H226.646z"
                   </div>
                 </div>
                 <div className="invert text-center copyright-content op-6">
-                  Copyright © 2023 <a href="#;" className="invert">
+                  Copyright ©
+                  2023{" "}
+                  <a
+                    href="#;"
+                    className="invert"
+                  >
                     zem
                   </a>
-                  . Designed with <span className="fa fa-heart tx-danger"></span> by <a href="https://www.spruko.com/" className="invert">Spruko</a> All rights reserved
+                  . Designed
+                  with{" "}
+                  <span className="fa fa-heart tx-danger"></span>{" "}
+                  by{" "}
+                  <a
+                    href="https://www.spruko.com/"
+                    className="invert"
+                  >
+                    Spruko
+                  </a>{" "}
+                  All rights
+                  reserved
                 </div>
               </Container>
             </section>
           </div>
         </div>
       </div>
-      <div id="overlay" onClick={function(){
-        document.body.classList.remove('landing-sidemenu-open');
-      }}></div>
+      <div
+        id="overlay"
+        onClick={function () {
+          document.body.classList.remove(
+            "landing-sidemenu-open"
+          );
+        }}
+      ></div>
     </Fragment>
-
   );
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (
+  state: any
+) => ({
   local_varaiable: state,
 });
-export default connect(mapStateToProps, { ThemeChanger })(Landing);
+export default connect(
+  mapStateToProps,
+  { ThemeChanger }
+)(Landing);

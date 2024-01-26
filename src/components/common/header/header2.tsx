@@ -17,7 +17,7 @@ import store from "../../../redux/store";
 function Header() {
   const [Lang, setLang] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const theme :any = store.getState();
+  const theme: any = store.getState();
   const elem: any = document.documentElement;
   const handleFullscreen = () => {
     switch (isFullscreen) {
@@ -86,7 +86,11 @@ function Header() {
         className="main-header side-header sticky nav nav-item"
         style={{ marginBottom: "-63px" }}
       >
-        <div className={`main-container ${theme.datalayout == 'horizontal' ? 'container' : 'container-fluid'} `}>
+        <div
+          className={`main-container ${
+            theme.datalayout == "horizontal" ? "container" : "container-fluid"
+          } `}
+        >
           <div className="main-header-left">
             <div className="responsive-logo">
               <Link
@@ -110,10 +114,10 @@ function Header() {
               data-bs-toggle="sidebar"
               onClick={() => openCloseSidebar()}
             >
-              <a className="open-toggle" >
+              <a className="open-toggle">
                 <i className="header-icon fe fe-align-left"></i>
               </a>
-              <a className="close-toggle" >
+              <a className="close-toggle">
                 <i className="header-icon fe fe-x"></i>
               </a>
             </div>
@@ -141,7 +145,10 @@ function Header() {
                 type="search"
               />
 
-              <Button className="btn br-te-4 br-be-4" variant="default border-0">
+              <Button
+                className="btn br-te-4 br-be-4"
+                variant="default border-0"
+              >
                 <i className="fas fa-search"></i>
               </Button>
             </div>
@@ -500,7 +507,6 @@ function Header() {
                       className="new nav-link no-caret"
                       variant="default"
                       data-bs-toggle="dropdown"
-                      
                     >
                       <svg
                         className="ionicon header-icon-svgs"
@@ -555,8 +561,9 @@ function Header() {
                             Shopping Cart
                           </h6>
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/e-commerce/cart/`}
+                            to={`${
+                              import.meta.env.BASE_URL
+                            }pages/e-commerce/cart/`}
                             className="btn btn-sm ms-auto my-auto btn-primary float-end tx-13"
                           >
                             View All
@@ -570,8 +577,9 @@ function Header() {
                         <li className="mb-0 pos-relative">
                           <div className="d-flex pd-x-13 py-2 pos-relative">
                             <Link
-                              to={`${import.meta.env.BASE_URL
-                                }pages/e-commerce/cart/`}
+                              to={`${
+                                import.meta.env.BASE_URL
+                              }pages/e-commerce/cart/`}
                               className="masked-link"
                             ></Link>
                             <div className="avatar-lg">
@@ -616,8 +624,9 @@ function Header() {
                         <li className="mb-0 pos-relative">
                           <div className="d-flex pd-x-13 py-2 pos-relative">
                             <Link
-                              to={`${import.meta.env.BASE_URL
-                                }pages/e-commerce/cart/`}
+                              to={`${
+                                import.meta.env.BASE_URL
+                              }pages/e-commerce/cart/`}
                               className="masked-link"
                             ></Link>
                             <div className="avatar-lg">
@@ -800,8 +809,9 @@ Quantity:
                       <div className="text-center dropdown-footer">
                         <NavLink
                           className="btn btn-primary btn-block text-center"
-                          to={`${import.meta.env.BASE_URL
-                            }pages/e-commerce/checkout/`}
+                          to={`${
+                            import.meta.env.BASE_URL
+                          }pages/e-commerce/checkout/`}
                         >
                           Proceed to checkout
                         </NavLink>
@@ -813,7 +823,6 @@ Quantity:
                       className="new nav-link no-caret"
                       variant="default"
                       data-bs-toggle="dropdown"
-                      
                     >
                       <svg
                         className="ionicon header-icon-svgs"
@@ -1016,7 +1025,7 @@ Quantity:
                         </li>
                       </ul>
                       <div className="text-center dropdown-footer">
-                        <a className="btn btn-primary btn-block text-center" >
+                        <a className="btn btn-primary btn-block text-center">
                           MARK ALL AS READ
                         </a>
                       </div>
@@ -1026,7 +1035,6 @@ Quantity:
                     <Dropdown.Toggle
                       className="new nav-link no-caret"
                       variant="default"
-                      
                       data-bs-toggle="dropdown"
                     >
                       <svg
@@ -1051,12 +1059,12 @@ Quantity:
                           </h6>
                           <ul className="ah-actions actions align-items-center ms-auto d-flex">
                             <li>
-                              <a  className="header-icon-svgs">
+                              <a className="header-icon-svgs">
                                 <i className="fe fe-edit"></i>
                               </a>
                             </li>
                             <li>
-                              <a  className="header-icon-svgs">
+                              <a className="header-icon-svgs">
                                 <i className="fe fe-plus"></i>
                               </a>
                             </li>
@@ -1151,8 +1159,9 @@ Quantity:
                         </li>
                         <li className="d-inline-block m-1">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }app/filemanagers/filemanager/`}
+                            to={`${
+                              import.meta.env.BASE_URL
+                            }app/filemanagers/filemanager/`}
                             className="p-3 dropdown-item border radius-4"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -1297,8 +1306,9 @@ Quantity:
                         </li>
                         <li className="d-inline-block m-1">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/e-commerce/shop/`}
+                            to={`${
+                              import.meta.env.BASE_URL
+                            }pages/e-commerce/shop/`}
                             className="p-3 dropdown-item border radius-4"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -1350,8 +1360,9 @@ Quantity:
                         </li>
                         <li className="d-inline-block m-1">
                           <Link
-                            to={`${import.meta.env.BASE_URL
-                              }pages/form/formelements/`}
+                            to={`${
+                              import.meta.env.BASE_URL
+                            }pages/form/formelements/`}
                             className="p-3 dropdown-item border radius-4"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -1394,7 +1405,7 @@ Quantity:
                   </Dropdown>
 
                   <li className="nav-item full-screen fullscreen-button">
-                    <a className="new nav-link full-screen-link" >
+                    <a className="new nav-link full-screen-link">
                       <svg
                         className="ionicon header-icon-svgs"
                         viewBox="0 0 512 512"
@@ -1531,8 +1542,9 @@ Quantity:
                       </Dropdown.Item>
                       <Dropdown.Item
                         className="dropdown-item"
-                        href={`${import.meta.env.BASE_URL
-                          }pages/authentication/signup/`}
+                        href={`${
+                          import.meta.env.BASE_URL
+                        }pages/authentication/signup/`}
                       >
                         <i className="fe fe-power"></i>
                         Log Out
@@ -1542,7 +1554,6 @@ Quantity:
                 </ul>
               </Navbar.Collapse>
             </div>
-
           </div>
         </div>
       </Navbar>

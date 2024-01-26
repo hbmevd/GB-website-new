@@ -69,14 +69,14 @@ export class Generaldashboard extends React.Component<{}, spark3> {
         },
         markers: {
           size: [0, 0, 3],
-       
+
           strokeColors: "#000",
           strokeOpacity: 0.6,
           strokeDashArray: 0,
           fillOpacity: 1,
           discrete: [],
           shape: "circle",
-        
+
           offsetX: 0,
           offsetY: 0,
           onClick: undefined,

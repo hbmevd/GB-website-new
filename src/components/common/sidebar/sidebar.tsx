@@ -6,6 +6,9 @@ import faviconwhite1 from "../../../assets/img/brand/favicon-white-1.png";
 import RSC from "react-scrollbars-custom";
 import { NavLink, useLocation } from "react-router-dom";
 import store from "../../../redux/store";
+import { ConnectWallet } from "@thirdweb-dev/react";
+import buttonStyles from "../../../assets/css/buttonStyles.module.css";
+
 const history: any = [];
 function Sidebar({
   ThemeChanger,
@@ -36,14 +39,20 @@ function Sidebar({
   // location
   useEffect(() => {
     setTimeout(() => {
-      if (document.documentElement.getAttribute("data-layout") == 'horizontal' && window.innerWidth >= 992) {
+      if (
+        document.documentElement.getAttribute("data-layout") == "horizontal" &&
+        window.innerWidth >= 992
+      ) {
         clearMenuActive();
       }
     }, 100);
   }, []);
   //  In Horizontal When we click the body it should we Closed using in useEfffect Refer line No:16
   function mainContentClickFn() {
-    if (document.documentElement.getAttribute("data-layout") == 'horizontal' && window.innerWidth >= 992) {
+    if (
+      document.documentElement.getAttribute("data-layout") == "horizontal" &&
+      window.innerWidth >= 992
+    ) {
       clearMenuActive();
     }
   }
@@ -78,10 +87,13 @@ function Sidebar({
     });
     setMenuitems((arr: any) => [...arr]);
   }
+
   function setSidemenu() {
-    let horiCondition = document.documentElement.getAttribute('data-hor-style') != 'hor-hover' || window.innerWidth < 992;
+    let horiCondition =
+      document.documentElement.getAttribute("data-hor-style") != "hor-hover" ||
+      window.innerWidth < 992;
     console.log(horiCondition);
-    
+
     if (menuitems) {
       menuitems.map((mainlevel: any) => {
         if (mainlevel.Items) {
@@ -95,7 +107,7 @@ function Sidebar({
               location.pathname = "/test/zem-ts/preview/dashboard/index/";
             }
             if (location.pathname === items.path + "/") {
-              horiCondition ? items.active = true : '';
+              horiCondition ? (items.active = true) : "";
               items.selected = true;
             }
             if (items.children) {
@@ -103,9 +115,9 @@ function Sidebar({
                 submenu.active = false;
                 submenu.selected = false;
                 if (location.pathname === submenu.path + "/") {
-                  horiCondition ? items.active = true : '';
+                  horiCondition ? (items.active = true) : "";
                   items.selected = true;
-                  horiCondition ? submenu.active = true : '';
+                  horiCondition ? (submenu.active = true) : "";
                   submenu.selected = true;
                 }
                 if (submenu.children) {
@@ -114,11 +126,11 @@ function Sidebar({
                     submenu1.selected = false;
                     submenu1.selected = false;
                     if (location.pathname === submenu1.path + "/") {
-                      horiCondition ? items.active = true : '';
+                      horiCondition ? (items.active = true) : "";
                       items.selected = true;
-                      horiCondition ? submenu.active = true : '';
+                      horiCondition ? (submenu.active = true) : "";
                       submenu.selected = true;
-                      horiCondition ? submenu1.active = true : '';
+                      horiCondition ? (submenu1.active = true) : "";
                       submenu1.selected = true;
                     }
                     return submenu1;
@@ -135,65 +147,66 @@ function Sidebar({
       });
     }
   }
+
   function toggleSidemenu(item: any) {
-      // To show/hide the menu
-      if (!item.active) {
-        menuitems.map((mainlevel: any) => {
-          if (mainlevel.Items) {
-            mainlevel.Items.map((sublevel: any) => {
-              sublevel.active = false;
+    // To show/hide the menu
+    if (!item.active) {
+      menuitems.map((mainlevel: any) => {
+        if (mainlevel.Items) {
+          mainlevel.Items.map((sublevel: any) => {
+            sublevel.active = false;
 
-              if (item === sublevel) {
-                sublevel.active = true;
-              }
-              if (sublevel.children) {
-                sublevel.children.map((sublevel1: any) => {
-                  sublevel1.active = false;
+            if (item === sublevel) {
+              sublevel.active = true;
+            }
+            if (sublevel.children) {
+              sublevel.children.map((sublevel1: any) => {
+                sublevel1.active = false;
 
-                  if (item === sublevel1) {
-                    sublevel.active = true;
-                    sublevel1.active = true;
-                  }
-                  if (sublevel1.children) {
-                    sublevel1.children.map((sublevel2: any) => {
-                      sublevel2.active = false;
+                if (item === sublevel1) {
+                  sublevel.active = true;
+                  sublevel1.active = true;
+                }
+                if (sublevel1.children) {
+                  sublevel1.children.map((sublevel2: any) => {
+                    sublevel2.active = false;
 
-                      if (item === sublevel2) {
-                        sublevel.active = true;
+                    if (item === sublevel2) {
+                      sublevel.active = true;
 
-                        sublevel1.active = true;
+                      sublevel1.active = true;
 
-                        sublevel2.active = true;
-                      }
-                      if (sublevel2.children) {
-                        sublevel2.children.map((sublevel3: any) => {
-                          sublevel3.active = false;
-                          if (item === sublevel3) {
-                            sublevel.active = true;
+                      sublevel2.active = true;
+                    }
+                    if (sublevel2.children) {
+                      sublevel2.children.map((sublevel3: any) => {
+                        sublevel3.active = false;
+                        if (item === sublevel3) {
+                          sublevel.active = true;
 
-                            sublevel1.active = true;
+                          sublevel1.active = true;
 
-                            sublevel2.active = true;
+                          sublevel2.active = true;
 
-                            sublevel3.active = true;
-                          }
-                          return sublevel2;
-                        });
-                      }
-                      return sublevel2;
-                    });
-                  }
-                  return sublevel1;
-                });
-              }
-              return sublevel;
-            });
-          }
-          return mainlevel;
-        });
-      } else {
-        item.active = !item.active;
-      }
+                          sublevel3.active = true;
+                        }
+                        return sublevel2;
+                      });
+                    }
+                    return sublevel2;
+                  });
+                }
+                return sublevel1;
+              });
+            }
+            return sublevel;
+          });
+        }
+        return mainlevel;
+      });
+    } else {
+      item.active = !item.active;
+    }
     setMenuitems((arr: any) => [...arr]);
 
     if (localStorage.dataverticalstyleicontext == "icontext") {
@@ -257,7 +270,7 @@ function Sidebar({
           onMouseOver={() => Onhover()}
           onMouseOut={() => Outhover()}
         >
-        <RSC>
+          <RSC>
             <div className="main-sidebar-header active">
               <NavLink
                 className="header-logo active"
@@ -306,14 +319,17 @@ function Sidebar({
                     </li>
                     {Item.Items.map((menuItem: any, i: any) => (
                       <li
-                        className={`slide   ${menuItem.active ? "is-expanded" : ""}`}
+                        className={`slide   ${
+                          menuItem.active ? "is-expanded" : ""
+                        }`}
                         key={i}
                       >
                         {menuItem.type === "link" ? (
                           <NavLink
                             to={menuItem.path + "/"}
-                            className={`side-menu__item ${menuItem.selected ? " active" : ""
-                              }`}
+                            className={`side-menu__item ${
+                              menuItem.selected ? " active" : ""
+                            }`}
                           >
                             {menuItem.icon}
                             <span className="side-menu__label">
@@ -324,9 +340,11 @@ function Sidebar({
                           ""
                         )}
                         {menuItem.type === "empty" ? (
-                          <a href="javascript:;"
-                            className={`side-menu__item ${menuItem.selected ? " active" : ""
-                              }`}
+                          <a
+                            href="javascript:;"
+                            className={`side-menu__item ${
+                              menuItem.selected ? " active" : ""
+                            }`}
                           >
                             {menuItem.icon}
                             <span className="side-menu__label">
@@ -342,8 +360,9 @@ function Sidebar({
                               event.preventDefault();
                               toggleSidemenu(menuItem);
                             }}
-                            className={`side-menu__item ${menuItem.selected ? "active is-expanded" : ""
-                              }`}
+                            className={`side-menu__item ${
+                              menuItem.selected ? "active is-expanded" : ""
+                            }`}
                           >
                             {menuItem.icon}
                             <span className="side-menu__label">
@@ -367,7 +386,9 @@ function Sidebar({
                           <ul
                             className={`slide-menu ${
                               menuItem.active ? "open" : ""
-                              } ${i == Item.Items.length - 1 ? 'lastElement':''}`}
+                            } ${
+                              i == Item.Items.length - 1 ? "lastElement" : ""
+                            }`}
                             style={
                               menuItem.active
                                 ? { display: "block" }
@@ -379,16 +400,19 @@ function Sidebar({
                                 return (
                                   <li
                                     key={index}
-                                    className={`sub-slide ${childrenItem.selected ? "is-expanded" : ""
-                                      } ${childrenItem.active ? "is-expanded" : ""
-                                      }`}
+                                    className={`sub-slide ${
+                                      childrenItem.selected ? "is-expanded" : ""
+                                    } ${
+                                      childrenItem.active ? "is-expanded" : ""
+                                    }`}
                                   >
                                     {childrenItem.type === "sub" ? (
                                       <a
-                                        className={`slide-item ${childrenItem.selected
-                                          ? "active is-expanded"
-                                          : ""
-                                          }`}
+                                        className={`slide-item ${
+                                          childrenItem.selected
+                                            ? "active is-expanded"
+                                            : ""
+                                        }`}
                                         onClick={(event) => {
                                           event.preventDefault();
                                           toggleSidemenu(childrenItem);
@@ -419,7 +443,8 @@ function Sidebar({
                                     )}
                                     {childrenItem.type === "empty" ? (
                                       <span>
-                                        <a href="javascript:;"
+                                        <a
+                                          href="javascript:;"
                                           className="slide-item"
                                         >
                                           {childrenItem.title}
@@ -431,8 +456,9 @@ function Sidebar({
                                     )}
                                     {childrenItem.children ? (
                                       <ul
-                                        className={`sub-slide-menu ${childrenItem.selected ? "open" : ""
-                                          }`}
+                                        className={`sub-slide-menu ${
+                                          childrenItem.selected ? "open" : ""
+                                        }`}
                                         style={
                                           childrenItem.active
                                             ? { display: "block" }
@@ -443,7 +469,7 @@ function Sidebar({
                                           (childrenSubItem: any, key: any) => (
                                             <li key={key}>
                                               {childrenSubItem.type ===
-                                                "link" ? (
+                                              "link" ? (
                                                 <NavLink
                                                   to={
                                                     childrenSubItem.path + "/"
@@ -459,8 +485,9 @@ function Sidebar({
                                                 ""
                                               )}
                                               {childrenSubItem.type ===
-                                                "empty" ? (
-                                                <a href="javascript:;"
+                                              "empty" ? (
+                                                <a
+                                                  href="javascript:;"
                                                   className="sub-side-menu__item"
                                                 >
                                                   <span className="sub-side-menu__label">
@@ -472,15 +499,17 @@ function Sidebar({
                                                 ""
                                               )}
                                               {childrenSubItem.type ===
-                                                "sub" ? (
+                                              "sub" ? (
                                                 <span
-                                                  className={`sub-slide2 ${childrenSubItem.selected
-                                                    ? "is-expanded"
-                                                    : ""
-                                                    } ${childrenSubItem.active
+                                                  className={`sub-slide2 ${
+                                                    childrenSubItem.selected
                                                       ? "is-expanded"
                                                       : ""
-                                                    }`}
+                                                  } ${
+                                                    childrenSubItem.active
+                                                      ? "is-expanded"
+                                                      : ""
+                                                  }`}
                                                 >
                                                   <NavLink
                                                     to="#"
@@ -505,19 +534,20 @@ function Sidebar({
                                                     ) => (
                                                       <ul
                                                         key={key}
-                                                        className={`sub-slide-menu1 ${childrenSubItemsub.selected
-                                                          ? "open"
-                                                          : ""
-                                                          }`}
+                                                        className={`sub-slide-menu1 ${
+                                                          childrenSubItemsub.selected
+                                                            ? "open"
+                                                            : ""
+                                                        }`}
                                                         style={
                                                           childrenSubItemsub.active
                                                             ? {
-                                                              display:
-                                                                "block",
-                                                            }
+                                                                display:
+                                                                  "block",
+                                                              }
                                                             : {
-                                                              display: "none",
-                                                            }
+                                                                display: "none",
+                                                              }
                                                         }
                                                       >
                                                         {childrenItem.children.map(
@@ -567,17 +597,6 @@ function Sidebar({
                   </Fragment>
                 ))}
               </ul>
-              <div className="slide-right" id="slide-right">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#7b8191"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
-                </svg>
-              </div>
             </div>
           </RSC>
         </aside>

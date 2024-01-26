@@ -1,11 +1,15 @@
-import { Fragment } from 'react'
-import Pageheader from '../../../components/common/pageheader/pageheader'
-import { Card, Col, Row } from 'react-bootstrap'
+import { Fragment } from "react";
+import Pageheader from "../../../components/common/pageheader/pageheader";
+import { Card, Col, Row } from "react-bootstrap";
 
 function Emptypage() {
   return (
     <Fragment>
-      <Pageheader titles={'Empty page'} active={'Empty page'} Subtite={'Pages'} />
+      <Pageheader
+        titles={"Empty page"}
+        active={"Empty page"}
+        Subtite={"Pages"}
+      />
 
       <Row>
         <Col md={12}>
@@ -17,7 +21,7 @@ function Emptypage() {
         </Col>
       </Row>
     </Fragment>
-  )
+  );
 }
 
-export default Emptypage
+export default Emptypage;

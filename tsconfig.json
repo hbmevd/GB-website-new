@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/**/*.css"],
+  "include": ["src", "src/**/*.css", "src/whitelistFunction.js", "firebaseConfig.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

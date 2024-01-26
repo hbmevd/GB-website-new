@@ -127,6 +127,7 @@ import Level2_1 from "./containers/menulevels/level-2/level2-1/level2-1.tsx";
 import Level2_2 from "./containers/menulevels/level-2/level2-2/level2-2.tsx";
 import Images from "./components/ui/elements/images/images.tsx";
 import Switcherpagelayout from "./switcherpagelayout.tsx";
+import WhitelistChecker from "./containers/pages/Web3pages/whitelistChecker.tsx";
 
 import General from "./containers/dashboard/general/general.tsx";
 import Layout from "./layout.tsx";
@@ -140,7 +141,7 @@ function App() {
             <Route path={`${import.meta.env.BASE_URL}`} element={<Layout />}>
               <Route
                 path={`${import.meta.env.BASE_URL}/`}
-                element={<General />}
+                element={<WhitelistChecker />}
               />
               <Route
                 path={`${import.meta.env.BASE_URL}dashboard/index`}

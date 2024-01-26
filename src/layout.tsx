@@ -11,7 +11,9 @@ import { Fragment, useEffect, useState } from "react";
 import { MENUITEMS } from "./components/common/sidebar/menudata";
 function Layout() {
   const [menuitems, setMenuitems] = useState(MENUITEMS);
-  document.querySelector("body")?.classList.remove("error-page1", "bg-primary", "ltr");
+  document
+    .querySelector("body")
+    ?.classList.remove("error-page1", "bg-primary", "ltr");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,7 +85,7 @@ function Layout() {
                 MENUITEMS={menuitems}
                 local_varaiable={undefined}
                 ThemeChanger={undefined}
-                />
+              />
             </div>
             <div
               className="main-content app-content"

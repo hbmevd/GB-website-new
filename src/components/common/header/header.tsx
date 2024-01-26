@@ -16,7 +16,7 @@ import { ThemeChanger } from "../../../redux/action";
 import { connect } from "react-redux";
 import store from "../../../redux/store";
 
-const gblogo = "../../../public/images/gblogo.png";
+import gblogo from "/Images/gblogo.png";
 
 function Header({
   local_varaiable,

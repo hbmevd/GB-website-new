@@ -6,8 +6,6 @@ import faviconwhite1 from "../../../assets/img/brand/favicon-white-1.png";
 import RSC from "react-scrollbars-custom";
 import { NavLink, useLocation } from "react-router-dom";
 import store from "../../../redux/store";
-import { ConnectWallet } from "@thirdweb-dev/react";
-import buttonStyles from "../../../assets/css/buttonStyles.module.css";
 
 const history: any = [];
 function Sidebar({

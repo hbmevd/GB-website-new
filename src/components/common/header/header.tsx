@@ -15,9 +15,6 @@ import Allimages from "../imagesdata/imagesdata";
 import { ThemeChanger } from "../../../redux/action";
 import { connect } from "react-redux";
 import store from "../../../redux/store";
-import { ConnectWallet } from "@thirdweb-dev/react";
-
-import buttonStyles from "../../../assets/css/buttonStyles.module.css";
 
 const gblogo = "../../../public/images/gblogo.png";
 
@@ -101,6 +98,7 @@ function Header({
       }
     });
   }, []);
+
   //rightside
   const Rightsidebar = () => {
     document.querySelector(".sidebar-right")?.classList.add("sidebar-open");

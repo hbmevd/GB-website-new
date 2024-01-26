@@ -207,12 +207,6 @@ export function Themedefault(actionfunction: any) {
     datahorstyle: "hor-hover",
   });
 
-  console.log("Setting theme to default:", {
-    datawidth: "fullwidth",
-    datathemecolor: "glassy",
-    datahorstyle: "hor-hover",
-  });
-
   localStorage.setItem("ZemThemestyles", "glassy");
   localStorage.removeItem("datathemecolor");
   document.documentElement.style.removeProperty("--background-rgb");

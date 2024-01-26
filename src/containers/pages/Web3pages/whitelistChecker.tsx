@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Pageheader from "../../../components/common/pageheader/pageheader";
 import { Card, Col } from "react-bootstrap";
 import buttonStyles from "../../../assets/css/buttonStyles.module.css";
@@ -28,7 +29,7 @@ function WhitelistChecker() {
     <Fragment>
       <Pageheader
         titles=""
-        active={"Whitelist Checker"}
+        active={"Whitelist Verifier"}
         Subtite={"Dashboard"}
       />
 

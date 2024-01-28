@@ -15,6 +15,12 @@ import Allimages from "../imagesdata/imagesdata";
 import { ThemeChanger } from "../../../redux/action";
 import { connect } from "react-redux";
 import store from "../../../redux/store";
+import {
+  ConnectWallet,
+  lightTheme,
+  useConnectionStatus,
+} from "@thirdweb-dev/react";
+import buttonStyles from "../../../assets/css/buttonStyles.module.css";
 
 import gblogo from "/Images/gblogo.png";
 
@@ -29,6 +35,7 @@ function Header({
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const elem: any = document.documentElement;
   const theme: any = local_varaiable;
+  const connectionStatus = useConnectionStatus();
 
   const handleFullscreen = () => {
     switch (isFullscreen) {
@@ -105,32 +112,28 @@ function Header({
   };
   return (
     <Fragment>
-      <Navbar
-        className="main-header side-header sticky nav nav-item"
-        style={{ marginBottom: "-63px" }}
-      >
+      <Navbar className="main-header side-header sticky nav nav-item">
         <div
           className={`main-container ${
             theme.datalayout == "horizontal" ? "container" : "container-fluid"
           } px-3`}
         >
+          <div
+            className="app-sidebar__toggle"
+            data-bs-toggle="sidebar"
+            onClick={() => openCloseSidebar()}
+          >
+            <a className="open-toggle">
+              <i className="header-icon fe fe-align-left"></i>
+            </a>
+            <a className="close-toggle">
+              <i className="header-icon fe fe-x"></i>
+            </a>
+          </div>{" "}
           <div className="main-header-left">
-            <div
-              className="app-sidebar__toggle"
-              data-bs-toggle="sidebar"
-              onClick={() => openCloseSidebar()}
-            >
-              <a className="open-toggle">
-                <i className="header-icon fe fe-align-left"></i>
-              </a>
-              <a className="close-toggle">
-                <i className="header-icon fe fe-x"></i>
-              </a>
-            </div>
-
             <div className="logo-horizontal">
               <Link
-                to={`${import.meta.env.BASE_URL}dashboard/index/`}
+                to={`${import.meta.env.BASE_URL}dashboard/MainDashboard/`}
                 className="header-logo"
               >
                 <img
@@ -146,7 +149,6 @@ function Header({
               </Link>
             </div>
           </div>
-
           <div className="main-header-right">
             <Navbar.Toggle
               className="navbar-toggler navresponsive-toggler d-lg-none ms-auto"
@@ -892,7 +894,6 @@ function Header({
                         </Link>
                       </div>
                     </Dropdown.Menu>
-                    <span className="pulse"></span>
                   </Dropdown>
 
                   <li className="nav-item full-screen fullscreen-button">
@@ -958,28 +959,44 @@ function Header({
                 </ul>
               </Navbar.Collapse>
             </div>
-            <div className="d-flex">
-              <a
-                className="switcher-icon new nav-link "
-                href="#;"
-                onClick={() => Swicherbutton()}
-              >
-                <svg
-                  className="ionicon header-icon-svgs fa-spin"
-                  viewBox="0 0 512 512"
-                >
-                  <title>Switcher</title>
-                  <path
-                    d="M262.29 192.31a64 64 0 1057.4 57.4 64.13 64.13 0 00-57.4-57.4zM416.39 256a154.34 154.34 0 01-1.53 20.79l45.21 35.46a10.81 10.81 0 012.45 13.75l-42.77 74a10.81 10.81 0 01-13.14 4.59l-44.9-18.08a16.11 16.11 0 00-15.17 1.75A164.48 164.48 0 01325 400.8a15.94 15.94 0 00-8.82 12.14l-6.73 47.89a11.08 11.08 0 01-10.68 9.17h-85.54a11.11 11.11 0 01-10.69-8.87l-6.72-47.82a16.07 16.07 0 00-9-12.22 155.3 155.3 0 01-21.46-12.57 16 16 0 00-15.11-1.71l-44.89 18.07a10.81 10.81 0 01-13.14-4.58l-42.77-74a10.8 10.8 0 012.45-13.75l38.21-30a16.05 16.05 0 006-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16 16 0 00-6.07-13.94l-38.19-30A10.81 10.81 0 0149.48 186l42.77-74a10.81 10.81 0 0113.14-4.59l44.9 18.08a16.11 16.11 0 0015.17-1.75A164.48 164.48 0 01187 111.2a15.94 15.94 0 008.82-12.14l6.73-47.89A11.08 11.08 0 01213.23 42h85.54a11.11 11.11 0 0110.69 8.87l6.72 47.82a16.07 16.07 0 009 12.22 155.3 155.3 0 0121.46 12.57 16 16 0 0015.11 1.71l44.89-18.07a10.81 10.81 0 0113.14 4.58l42.77 74a10.8 10.8 0 01-2.45 13.75l-38.21 30a16.05 16.05 0 00-6.05 14.08c.33 4.14.55 8.3.55 12.47z"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="32"
-                  />
-                </svg>
-              </a>
-            </div>
+            <ConnectWallet
+              className={buttonStyles.connectButton}
+              theme={lightTheme({
+                fontFamily: "Rajdhani",
+                colors: {
+                  modalBg: "#ededed",
+                  accentText: "#e54d2e",
+                  accentButtonBg: "#e54d2e",
+                  primaryText: "#464444",
+                  secondaryText: "#636363",
+                  primaryButtonText: "#636363",
+                  secondaryButtonBg: "#e3e3e3",
+                  secondaryButtonHoverBg: "#ffffff",
+                  connectedButtonBg: "#00000",
+                  success: "#e54d2e",
+                  primaryButtonBg: "#f5f4f6",
+                  connectedButtonBgHover: "#00000",
+                  secondaryIconHoverColor: "#706f78",
+                  selectedTextBg: "#ffa500",
+                  borderColor: "#00000",
+                },
+              })}
+              btnTitle={"Connect Wallet"}
+              modalTitle={"GorillaBully"}
+              modalSize={"wide"}
+              welcomeScreen={{
+                img: {
+                  src: "https://raw.githubusercontent.com/hbmevd/GB-website-new/d902d1a1ba9f850e0bd3fde8d44346b519993c32/public/Images/gblogo.png",
+                  width: 150,
+                  height: 150,
+                },
+                title: "Welcome to the Web3 jungle.",
+                subtitle: "Connect to the Gorilla Universe",
+              }}
+              modalTitleIconUrl={
+                "https://raw.githubusercontent.com/hbmevd/GB-website-new/d902d1a1ba9f850e0bd3fde8d44346b519993c32/public/Images/gblogo.png"
+              }
+            />
           </div>
         </div>
       </Navbar>

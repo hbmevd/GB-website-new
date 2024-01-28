@@ -9,12 +9,28 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.scss";
 import { Fragment } from "react";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+import {
+  ThirdwebProvider,
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  localWallet,
+  trustWallet,
+  rainbowWallet,
+} from "@thirdweb-dev/react";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <ThirdwebProvider
     activeChain="ethereum"
     clientId="9b406d6af880a571a409bc229085bdc5"
+    supportedWallets={[
+      metamaskWallet({ recommended: true }),
+      coinbaseWallet(),
+      walletConnect(),
+      localWallet(),
+      trustWallet(),
+      rainbowWallet(),
+    ]}
   >
     <Fragment>
       <App />

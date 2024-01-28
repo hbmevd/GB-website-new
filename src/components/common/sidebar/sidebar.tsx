@@ -6,6 +6,7 @@ import faviconwhite1 from "../../../assets/img/brand/favicon-white-1.png";
 import RSC from "react-scrollbars-custom";
 import { NavLink, useLocation } from "react-router-dom";
 import store from "../../../redux/store";
+import gblogo from "/Images/gblogo.png";
 
 const history: any = [];
 function Sidebar({
@@ -272,25 +273,25 @@ function Sidebar({
             <div className="main-sidebar-header active">
               <NavLink
                 className="header-logo active"
-                to={`${import.meta.env.BASE_URL}dashboard/index/`}
+                to={`${import.meta.env.BASE_URL}dashboard/MainDashboard/`}
               >
                 <img
-                  src={logowhite}
+                  src={gblogo}
                   className="main-logo  desktop-dark"
                   alt="logo"
                 />
                 <img
-                  src={logowhite1}
+                  src={gblogo}
                   className="main-logo  desktop-dark-1"
                   alt="logo"
                 />
                 <img
-                  src={faviconwhite}
+                  src={gblogo}
                   className="main-logo  mobile-dark"
                   alt="logo"
                 />
                 <img
-                  src={faviconwhite1}
+                  src={gblogo}
                   className="main-logo  mobile-dark-1"
                   alt="logo"
                 />

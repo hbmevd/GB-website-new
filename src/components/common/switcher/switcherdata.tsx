@@ -192,7 +192,6 @@ export function HorizantalHoverMenu(actionfunction: any) {
   localStorage.setItem("ZemhorizontalHover", "horizontalHover");
   localStorage.removeItem("Zemvertical");
   localStorage.removeItem("Zemhorizontal");
-
   if (localStorage.zemboxedwidth == "boxed") {
     document.querySelector("#slide-right")?.classList.remove("d-none");
   }
@@ -200,84 +199,33 @@ export function HorizantalHoverMenu(actionfunction: any) {
 
 export function Themedefault(actionfunction: any) {
   const theme = store.getState();
-  actionfunction({
-    ...theme,
-    datawidth: "fullwidth",
-    datathemecolor: "glassy",
-    datahorstyle: "hor-hover",
-  });
-
-  localStorage.setItem("ZemThemestyles", "glassy");
-  localStorage.removeItem("datathemecolor");
-  document.documentElement.style.removeProperty("--background-rgb");
-  localStorage.removeItem("Dynamicbackground");
-  localStorage.setItem("ZemhorizontalHover", "horizontalHover");
-  localStorage.removeItem("zemboxedwidth");
-  localStorage.setItem("zemfullwidth", "fullwidth");
-
-  console.log("localStorage.zemfullwidth:", localStorage.zemfullwidth);
+  actionfunction({ ...theme, datathemecolor: "default" });
+  localStorage.setItem("ZemThemestyles", "default");
 }
-
 export function Themelight(actionfunction: any) {
   const theme = store.getState();
-  actionfunction({
-    ...theme,
-    datawidth: "fullwidth",
-    datathemecolor: "glassy",
-    datahorstyle: "hor-hover",
-  });
-
-  localStorage.setItem("ZemThemestyles", "glassy");
-  localStorage.removeItem("datathemecolor");
+  actionfunction({ ...theme, datathemecolor: "light" });
   document.documentElement.style.removeProperty("--background-rgb");
-  localStorage.removeItem("Dynamicbackground");
-  localStorage.setItem("ZemhorizontalHover", "horizontalHover");
-  localStorage.removeItem("zemboxedwidth");
-  localStorage.setItem("zemfullwidth", "fullwidth");
-
-  console.log("localStorage.zemfullwidth:", localStorage.zemfullwidth);
+  localStorage.setItem("ZemThemestyles", "light");
+  localStorage.removeItem("datathemecolor");
+  localStorage.removeItem("bgimage1");
 }
-
 export function Themedark(actionfunction: any) {
   const theme = store.getState();
-  actionfunction({
-    ...theme,
-    datawidth: "fullwidth",
-    datathemecolor: "glassy",
-    datahorstyle: "hor-hover",
-  });
-
-  localStorage.setItem("ZemThemestyles", "glassy");
+  actionfunction({ ...theme, datathemecolor: "dark" });
+  localStorage.setItem("ZemThemestyles", "dark");
   localStorage.removeItem("datathemecolor");
   document.documentElement.style.removeProperty("--background-rgb");
   localStorage.removeItem("Dynamicbackground");
-  localStorage.setItem("ZemhorizontalHover", "horizontalHover");
-  localStorage.removeItem("zemboxedwidth");
-  localStorage.setItem("zemfullwidth", "fullwidth");
-
-  console.log("localStorage.zemfullwidth:", localStorage.zemfullwidth);
 }
-
 export function Themeglassy(actionfunction: any) {
   const theme = store.getState();
-  actionfunction({
-    ...theme,
-    datawidth: "fullwidth",
-    datathemecolor: "glassy",
-    datahorstyle: "hor-hover",
-  });
-
+  actionfunction({ ...theme, datathemecolor: "glassy" });
   localStorage.setItem("ZemThemestyles", "glassy");
   localStorage.removeItem("datathemecolor");
   document.documentElement.style.removeProperty("--background-rgb");
   localStorage.removeItem("Dynamicbackground");
-  localStorage.setItem("ZemhorizontalHover", "horizontalHover");
-  localStorage.removeItem("zemboxedwidth");
-  localStorage.setItem("zemfullwidth", "fullwidth");
-
-  console.log("localStorage.zemfullwidth:", localStorage.zemfullwidth);
 }
-
 export const bgImage1 = (actionfunction: any) => {
   const theme = store.getState();
   actionfunction({ ...theme, bgImg: "bg-img1" });

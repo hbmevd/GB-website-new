@@ -9,12 +9,17 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import { ThemeChanger } from "../../../redux/action";
 import { Row } from "react-bootstrap";
-function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; ThemeChanger: any; }) {
+function Switcher({
+  local_varaiable,
+  ThemeChanger,
+}: {
+  local_varaiable: any;
+  ThemeChanger: any;
+}) {
   useEffect(() => {
     SwitcherData.LocalStorageBackup(ThemeChanger);
-    
   }, []);
- 
+
   return (
     <Fragment>
       <Helmet>
@@ -72,7 +77,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               type="radio"
                               name="onoffswitch25"
                               checked={local_varaiable.dir == "ltr"}
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Ltr(ThemeChanger);
                               }}
@@ -94,7 +99,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               id="switchbtn-rtl"
                               className="onoffswitch2-checkbox"
                               checked={local_varaiable.dir == "rtl"}
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Rtl(ThemeChanger);
                               }}
@@ -121,7 +126,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               id="switchbtn-vertical"
                               className="onoffswitch2-checkbox"
                               checked={local_varaiable.datalayout == "vertical"}
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Verticaldirection(ThemeChanger);
                               }}
@@ -143,7 +148,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               checked={
                                 local_varaiable.datahorstyle == "hor-click"
                               }
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.HorizantalClickMenu(ThemeChanger);
                               }}
@@ -165,7 +170,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               checked={
                                 local_varaiable.datahorstyle == "hor-hover"
                               }
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.HorizantalHoverMenu(ThemeChanger);
                               }}
@@ -194,7 +199,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               checked={
                                 local_varaiable.datathemecolor == "default"
                               }
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Themedefault(ThemeChanger);
                               }}
@@ -216,7 +221,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               checked={
                                 local_varaiable.datathemecolor == "light"
                               }
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Themelight(ThemeChanger);
                               }}
@@ -236,7 +241,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               id="switchbtn-dark"
                               className="onoffswitch2-checkbox"
                               checked={local_varaiable.datathemecolor == "dark"}
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Themedark(ThemeChanger);
                               }}
@@ -258,7 +263,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               checked={
                                 local_varaiable.datathemecolor == "glassy"
                               }
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Themeglassy(ThemeChanger);
                               }}
@@ -279,15 +284,12 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                         <div className="switch-toggle d-flex">
                           <span className="me-auto">Theme Primary</span>
                           <div className="">
-
                             <Themeprimarycolor />
                           </div>
                         </div>
                         <div className="switch-toggle d-flex dynamic-bg">
                           <span className="me-auto">Theme Background</span>
-                          <div className="">
-
-                          </div>
+                          <div className=""></div>
                           <SwitcherData.Themebackgroundcolor />
                         </div>
                       </div>
@@ -308,7 +310,6 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                         <div className="switch-toggle d-flex">
                           <div
                             className="bg-image"
-                           
                             onClick={() => SwitcherData.bgImage2(ThemeChanger)}
                           >
                             <img src={Allimages("Menuimages2")} />
@@ -317,7 +318,6 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                         <div className="switch-toggle d-flex">
                           <div
                             className="bg-image"
-                          
                             onClick={() => SwitcherData.bgImage3(ThemeChanger)}
                           >
                             <img src={Allimages("Menuimages3")} />
@@ -326,7 +326,6 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                         <div className="switch-toggle d-flex">
                           <div
                             className="bg-image"
-                          
                             onClick={() => SwitcherData.bgImage4(ThemeChanger)}
                           >
                             <img src={Allimages("Menuimages4")} />
@@ -348,7 +347,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               id="switchbtn-fullwidth"
                               className="onoffswitch2-checkbox"
                               checked={local_varaiable.datawidth == "fullwidth"}
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Fullwidth(ThemeChanger);
                               }}
@@ -368,7 +367,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               id="switchbtn-boxed"
                               className="onoffswitch2-checkbox"
                               checked={local_varaiable.datawidth == "boxed"}
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Boxedwidth(ThemeChanger);
                               }}
@@ -395,7 +394,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               id="switchbtn-fixed"
                               className="onoffswitch2-checkbox"
                               checked={local_varaiable.dataposition == "fixed"}
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Fixed(ThemeChanger);
                               }}
@@ -417,7 +416,7 @@ function Switcher({ local_varaiable, ThemeChanger, }: { local_varaiable: any; Th
                               checked={
                                 local_varaiable.dataposition == "scrollable"
                               }
-                              onChange={() => { }}
+                              onChange={() => {}}
                               onClick={() => {
                                 SwitcherData.Scrollable(ThemeChanger);
                               }}

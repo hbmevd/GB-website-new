@@ -1,16 +1,31 @@
-/* Web3 Styling */
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project        :   ZEM - HTML5 Bootstrap Admin Template
+Version        :   V.1
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   SPRUKO
+Author URL     :   https://themeforest.net/user/spruko
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+/* ######## FONT ######## */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
 .connectButton {
-  background-color: #f77f30 !important;
-  color: #fff !important;
-  cursor: pointer !important;
-  font-size: 100% !important;
+  font-size: 15px !important;
   height: 44px !important;
-  padding: 25px 25px !important;
+  opacity: 0.9; /* Adjust the opacity value between 0 and 1 */
+  padding: 27px 20px !important;
   position: relative !important;
   text-align: center !important;
   transition: all 0.15s ease-in-out !important;
+
 }
 
 .connectButton:hover {
   transform: translateY(-2px) !important;
+  filter: blur(0.2px); /* Remove blur on hover */
 }

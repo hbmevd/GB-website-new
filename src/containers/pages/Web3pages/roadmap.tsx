@@ -3,13 +3,13 @@ import Pageheader from "../../../components/common/pageheader/pageheader";
 import Allimages from "../../../components/common/imagesdata/imagesdata";
 import { Link } from "react-router-dom";
 
-function Notificationlist() {
+function Roadmap() {
   return (
     <Fragment>
       <Pageheader
-        titles={"NOTIFICATIONS LIST"}
-        active={"Notificationlist"}
-        Subtite={"Pages"}
+        titles={"GorillaBully Roadmap"}
+        active={"Roadmap"}
+        Subtite={"Dashboard"}
       />
 
       <div className="container">
@@ -453,4 +453,4 @@ function Notificationlist() {
   );
 }
 
-export default Notificationlist;
+export default Roadmap;

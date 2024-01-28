@@ -7,7 +7,7 @@ import Signin from "./containers/pages/authentication/signin/signin.tsx";
 import Signup from "./containers/pages/authentication/signup/signup.tsx";
 import Error404 from "./containers/pages/authentication/error404/error404.tsx";
 import Landingpage from "./landingpage.tsx";
-import Landing from "./containers/pages/landing/landing.tsx";
+import Landing from "./containers/pages/Web3pages/landing.tsx";
 import Error505 from "./containers/pages/authentication/error505/error505.tsx";
 import Error501 from "./containers/pages/authentication/error501/error501.tsx";
 import Underconstruction from "./containers/pages/authentication/underconstruction/underconstruction.tsx";
@@ -15,11 +15,6 @@ import Lockscreen from "./containers/pages/authentication/lockscreen/lockscreen.
 import Restpassword from "./containers/pages/authentication/restpassword/restpassword.tsx";
 import Forgotpassword from "./containers/pages/authentication/forgotpassword/forgotpassword.tsx";
 import Ecommerce from "./containers/dashboard/ecommerce/ecommerce.tsx";
-import Project from "./containers/dashboard/project/project.tsx";
-import Hrm from "./containers/dashboard/hrm/hrm.tsx";
-import Crm from "./containers/dashboard/crm/crm.tsx";
-import Analytics from "./containers/dashboard/analytics/analytics.tsx";
-import Crypto from "./containers/dashboard/crypto/crypto.tsx";
 import Sales from "./containers/dashboard/sales/sales.tsx";
 import Cards from "./containers/apps/cards/cards.tsx";
 import Rangeslider from "./containers/apps/rangeslider/rangeslider.tsx";
@@ -57,7 +52,7 @@ import Accordin from "./containers/advanceui/accordin/accordin.tsx";
 import Carousel from "./containers/advanceui/carousel/carousel.tsx";
 import Collapse from "./containers/advanceui/collapse/collapse.tsx";
 import Modals from "./containers/advanceui/modals/modals.tsx";
-import Timelinepage from "./containers/advanceui/timeline/timelinepage.tsx";
+import Timelinepage from "./containers/pages/Web3pages/roadmap.tsx";
 import Sweetalert from "./containers/advanceui/sweetalert/sweetalert.tsx";
 import Ratings from "./containers/advanceui/rating/rating.tsx";
 import Search from "./containers/advanceui/search/search.tsx";
@@ -127,9 +122,14 @@ import Level2_1 from "./containers/menulevels/level-2/level2-1/level2-1.tsx";
 import Level2_2 from "./containers/menulevels/level-2/level2-2/level2-2.tsx";
 import Images from "./components/ui/elements/images/images.tsx";
 import Switcherpagelayout from "./switcherpagelayout.tsx";
-import WhitelistChecker from "./containers/pages/Web3pages/whitelistChecker.tsx";
-
-import General from "./containers/dashboard/general/general.tsx";
+import WhitelistVerifier from "./containers/pages/Web3pages/WhitelistVerifier.tsx";
+import EV1Rewards from "./containers/pages/Web3pages/EV1Rewards.tsx";
+import Evolution1 from "./containers/pages/Web3pages/Evolution1.tsx";
+import Evolution2 from "./containers/pages/Web3pages/Evolution2.tsx";
+import Evolution3 from "./containers/pages/Web3pages/Evolution3.tsx";
+import GorillaDAO from "./containers/pages/Web3pages/GorillaDao.tsx";
+import MainDashboard from "./containers/pages/Web3pages/MainDashboard.tsx";
+import Roadmap from "./containers/pages/Web3pages/roadmap.tsx";
 import Layout from "./layout.tsx";
 
 function App() {
@@ -140,36 +140,33 @@ function App() {
           <Routes>
             <Route path={`${import.meta.env.BASE_URL}`} element={<Layout />}>
               <Route
-                path={`${import.meta.env.BASE_URL}/`}
-                element={<WhitelistChecker />}
+                path={`${import.meta.env.BASE_URL}dashboard/MainDashboard`}
+                element={<MainDashboard />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}dashboard/index`}
-                element={<General />}
+                path={`${import.meta.env.BASE_URL}dashboard/WhitelistVerifier`}
+                element={<WhitelistVerifier />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}dashboard/index-1`}
-                element={<Ecommerce />}
+                path={`${import.meta.env.BASE_URL}dashboard/GorillaDao`}
+                element={<GorillaDAO />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}dashboard/index-2`}
-                element={<Project />}
+                path={`${import.meta.env.BASE_URL}dashboard/Evolution1`}
+                element={<Evolution1 />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}dashboard/index-3`}
-                element={<Hrm />}
+                path={`${import.meta.env.BASE_URL}dashboard/Evolution2`}
+                element={<Evolution2 />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}dashboard/index-4`}
-                element={<Crm />}
+                path={`${import.meta.env.BASE_URL}dashboard/Evolution3`}
+                element={<Evolution3 />}
               />
+
               <Route
-                path={`${import.meta.env.BASE_URL}dashboard/index-5`}
-                element={<Analytics />}
-              />
-              <Route
-                path={`${import.meta.env.BASE_URL}dashboard/index-6`}
-                element={<Crypto />}
+                path={`${import.meta.env.BASE_URL}dashboard/EV1FAUCET`}
+                element={<EV1Rewards />}
               />
               <Route
                 path={`${import.meta.env.BASE_URL}dashboard/index-7`}
@@ -188,8 +185,8 @@ function App() {
                 element={<Calendar />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}app/contacts`}
-                element={<Contactus />}
+                path={`${import.meta.env.BASE_URL}pages/landing`}
+                element={<Landing />}
               />
               <Route
                 path={`${import.meta.env.BASE_URL}app/notification`}
@@ -236,8 +233,8 @@ function App() {
                 element={<Alerts />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}elements/avatar`}
-                element={<Avatar />}
+                path={`${import.meta.env.BASE_URL}pages/contacts`}
+                element={<Contactus />}
               />
               <Route
                 path={`${import.meta.env.BASE_URL}elements/breadcrumbs`}
@@ -324,8 +321,8 @@ function App() {
                 element={<Modals />}
               />
               <Route
-                path={`${import.meta.env.BASE_URL}advancedui/timeline`}
-                element={<Timelinepage />}
+                path={`${import.meta.env.BASE_URL}dashboard/roadmap`}
+                element={<Roadmap />}
               />
               <Route
                 path={`${import.meta.env.BASE_URL}advancedui/sweetalert`}

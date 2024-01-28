@@ -1,0 +1,6 @@
+.newContainer {
+    background-image: url("/Images/Gb2.png"); 
+    background-size: cover;
+    padding: 355px;
+    /* Add more background properties as needed */
+}

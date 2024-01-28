@@ -20,9 +20,9 @@ License        :   Licensed under ThemeForest License
   --primary-rgb: 77, 238, 234;
   --background-rgb: 18, 55, 61;
   --main-gradient-bg: radial-gradient(circle, rgb(var(--background-rgb)) 0%, #121923,#121923 100%);
-  --primary-bg-color: rgb(var(--primary-rgb));
-  --primary-bg-hover: rgb(var(--primary-rgb));
-  --primary-bg-border: rgb(var(--primary-rgb));
+  --primary-bg-color: orange;
+  --primary-bg-hover: orange;
+  --primary-bg-border: orange;
   --primary01: rgba(var(--primary-rgb), 0.1);
   --primary02: rgba(var(--primary-rgb), 0.2);
   --primary03: rgba(var(--primary-rgb), 0.3);
@@ -1199,14 +1199,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #000 !important;
+  color: orange !important;
   background-color: var(--primary-bg-color);
-  border-color: var(--primary-bg-border);
+  border-color: orange;
 }
 .btn-primary:hover {
-  color: #000;
+  color: orange;
   background-color: var(--primary-bg-hover) !important;
-  border-color: var(--primary-bg-border);
+  border-color: orange;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #000;
@@ -3434,7 +3434,7 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
   }
 }
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: "Rajdhani", sans-serif;
   line-height: 1.15;
   text-size-adjust: 100%;
 }
@@ -3447,7 +3447,7 @@ body {
   margin: 0;
   font-family: "Rajdhani", sans-serif;
   font-size: 0.81568rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
   text-align: start;
@@ -11453,7 +11453,7 @@ a.close.disabled {
 }
 /* ###### 6.3 Global  ###### */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .main-body,
@@ -12675,7 +12675,7 @@ pre {
 }
 
 .main-logo1 {
-  font-family: poppins;
+  font-family: Rajdhani;
   font-weight: 600;
 }
 
@@ -19601,8 +19601,8 @@ form[role=search].active input {
 
 /* ###### 6.1 Content  ###### */
 .main-content .container, .main-content .container-fluid {
-  padding-inline-start: 24px;
-  padding-inline-end: 24px;
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
 }
 
 @media (min-width: 992px) {
@@ -20308,7 +20308,6 @@ form[role=search].active input {
   height: 37px;
   width: 37px;
   border-radius: 4px;
-  margin: auto;
   text-align: center;
 }
 .app-sidebar__toggle:hover {
@@ -39087,6 +39086,7 @@ button.bg-dark:hover, button.bg-dark:focus {
 
 .text-primary {
   color: var(--primary-bg-color) !important;
+  font-family: "Rajdhani";
 }
 
 a:hover {

@@ -1,20 +1,25 @@
 import { Fragment } from "react";
 import Allimages from "../../../components/common/imagesdata/imagesdata";
 import Pageheader from "../../../components/common/pageheader/pageheader";
-import { Card, Col, Dropdown, OverlayTrigger, Row, Tab, Tabs, Tooltip } from "react-bootstrap";
+import {
+  Card,
+  Col,
+  Dropdown,
+  OverlayTrigger,
+  Row,
+  Tab,
+  Tabs,
+  Tooltip,
+} from "react-bootstrap";
 import RSC from "react-scrollbars-custom";
 
 function Contactus() {
   const tooltip = (message: any) => {
-    return (
-      <Tooltip id="tooltip">
-        {message}
-      </Tooltip>
-    )
-  }
+    return <Tooltip id="tooltip">{message}</Tooltip>;
+  };
   return (
     <Fragment>
-      <Pageheader titles={"CONTACTS"} active={"Contacts"} Subtite={"Apps"} />
+      <Pageheader titles={"Team"} active={"Team"} Subtite={"Dashboard"} />
       <Row className=" row-sm">
         <Col xl={12} xxl={4} className="overflow-hidden">
           <Card>
@@ -23,10 +28,10 @@ function Contactus() {
                 <div className="d-flex align-items-center mb-3">
                   <h5 className="mb-0">Contacts </h5>
                   <div className="ms-auto d-flex align-items-center">
-                    <a  className="btn btn-sm btn-def tx-muted">
+                    <a className="btn btn-sm btn-def tx-muted">
                       <i className="fe fe-user-plus"></i>
                     </a>
-                    <a  className="btn btn-sm btn-def tx-muted ms-1">
+                    <a className="btn btn-sm btn-def tx-muted ms-1">
                       <i className="fe fe-settings"></i>
                     </a>
                   </div>
@@ -51,9 +56,16 @@ function Contactus() {
                   className="mb-3"
                   justify
                 >
-                  <Tab eventKey="profile" title="Profile" className="contact-tabs">
+                  <Tab
+                    eventKey="profile"
+                    title="Profile"
+                    className="contact-tabs"
+                  >
                     <div className="tab-pane active" id="contactsTab1">
-                      <RSC style={{ width: "100%", height: "100vh" }} className="contact-scroll">
+                      <RSC
+                        style={{ width: "100%", height: "100vh" }}
+                        className="contact-scroll"
+                      >
                         <div>
                           <div className="mb-3">
                             <p className="tx-24 tx-muted">A</p>
@@ -83,22 +95,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -128,22 +131,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -173,22 +167,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -223,22 +208,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -268,22 +244,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -313,22 +280,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -358,22 +316,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -403,22 +352,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -453,22 +393,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -498,22 +429,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -543,22 +465,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -588,22 +501,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -633,22 +537,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -678,22 +573,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -726,22 +612,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -771,22 +648,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -821,22 +689,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -871,22 +730,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -916,22 +766,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -961,22 +802,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1006,22 +838,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1051,22 +874,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1101,22 +915,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1144,22 +949,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1189,22 +985,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1234,22 +1021,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1279,22 +1057,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1324,22 +1093,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1369,22 +1129,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1419,22 +1170,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1464,22 +1206,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1509,22 +1242,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1554,22 +1278,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1602,22 +1317,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1647,22 +1353,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1692,22 +1389,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1742,22 +1430,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1787,22 +1466,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1830,22 +1500,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1875,22 +1536,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1925,22 +1577,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -1970,22 +1613,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -2015,22 +1649,13 @@ function Contactus() {
                                   </div>
                                 </a>
                                 <div className="contact_links d-none d-sm-block">
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-message-square tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-phone tx-15"></i>
                                   </a>
-                                  <a
-                                    
-                                    className="btn btn-def btn-sm tx-muted"
-                                  >
+                                  <a className="btn btn-def btn-sm tx-muted">
                                     <i className="fe fe-video tx-15"></i>
                                   </a>
                                 </div>
@@ -2074,9 +1699,11 @@ function Contactus() {
                           <p className="mb-0 tx-muted tx-12">Web Designer</p>
                         </div>
                         <div className="ms-auto btn-list d-flex mt-3 mt-sm-0">
-                          <OverlayTrigger placement="top" overlay={tooltip('Attachment')}>
+                          <OverlayTrigger
+                            placement="top"
+                            overlay={tooltip("Attachment")}
+                          >
                             <a
-                              
                               className="btn btn-primary-light btn-icon"
                               data-placement="top"
                               data-bs-toggle="tooltip"
@@ -2085,9 +1712,11 @@ function Contactus() {
                               <i className="fe fe-edit"></i>
                             </a>
                           </OverlayTrigger>
-                          <OverlayTrigger placement="top" overlay={tooltip('Attachment')}>
+                          <OverlayTrigger
+                            placement="top"
+                            overlay={tooltip("Attachment")}
+                          >
                             <a
-                              
                               className="btn btn-success-light btn-icon"
                               data-placement="top"
                               data-bs-toggle="tooltip"
@@ -2096,9 +1725,11 @@ function Contactus() {
                               <i className="fe fe-trash-2"></i>
                             </a>
                           </OverlayTrigger>
-                          <OverlayTrigger placement="top" overlay={tooltip('Attachment')}>
+                          <OverlayTrigger
+                            placement="top"
+                            overlay={tooltip("Attachment")}
+                          >
                             <a
-                              
                               className="btn btn-danger-light btn-icon"
                               data-placement="top"
                               data-bs-toggle="tooltip"
@@ -2112,9 +1743,11 @@ function Contactus() {
                     </div>
                   </div>
                   <div className="btn-list d-flex contact-btn-list mb-3">
-                    <OverlayTrigger placement="top" overlay={tooltip('Attachment')}>
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={tooltip("Attachment")}
+                    >
                       <a
-                        
                         className="btn btn-sm border rounded-circle btn-icon tx-inverse"
                         data-bs-toggle="tooltip"
                         title="Call"
@@ -2122,9 +1755,11 @@ function Contactus() {
                         <i className="fe fe-phone tx-14-f"></i>
                       </a>
                     </OverlayTrigger>
-                    <OverlayTrigger placement="top" overlay={tooltip('Attachment')}>
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={tooltip("Attachment")}
+                    >
                       <a
-                        
                         className="btn btn-sm border rounded-circle btn-icon tx-inverse"
                         data-bs-toggle="tooltip"
                         title="Video"
@@ -2133,27 +1768,35 @@ function Contactus() {
                       </a>
                     </OverlayTrigger>
 
-                    <OverlayTrigger placement="top" overlay={tooltip('Attachment')}><a
-                      
-                      className="btn btn-sm border rounded-circle btn-icon tx-inverse"
-                      data-bs-toggle="tooltip"
-                      title="message"
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={tooltip("Attachment")}
                     >
-                      <i className="fe fe-message-square tx-14-f"></i>
-                    </a>
-                    </OverlayTrigger>
-                    <OverlayTrigger placement="top" overlay={tooltip('Attachment')}>
                       <a
-                        
+                        className="btn btn-sm border rounded-circle btn-icon tx-inverse"
+                        data-bs-toggle="tooltip"
+                        title="message"
+                      >
+                        <i className="fe fe-message-square tx-14-f"></i>
+                      </a>
+                    </OverlayTrigger>
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={tooltip("Attachment")}
+                    >
+                      <a
                         className="btn btn-sm border rounded-circle btn-icon tx-inverse"
                         data-bs-toggle="tooltip"
                         title="Add to Group"
                       >
                         <i className="fe fe-user-plus tx-14-f"></i>
-                      </a></OverlayTrigger>
-                    <OverlayTrigger placement="top" overlay={tooltip('Attachment')}>
+                      </a>
+                    </OverlayTrigger>
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={tooltip("Attachment")}
+                    >
                       <a
-                        
                         className="btn btn-sm border rounded-circle btn-icon tx-inverse"
                         data-bs-toggle="tooltip"
                         title="Block"
@@ -2292,11 +1935,9 @@ function Contactus() {
                           <i className="fe fe-more-vertical"></i>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="dropdown-menu tx-13">
-                          <Dropdown.Item >Action</Dropdown.Item>
-                          <Dropdown.Item >Another action</Dropdown.Item>
-                          <Dropdown.Item >
-                            Something else here
-                          </Dropdown.Item>
+                          <Dropdown.Item>Action</Dropdown.Item>
+                          <Dropdown.Item>Another action</Dropdown.Item>
+                          <Dropdown.Item>Something else here</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -2305,13 +1946,13 @@ function Contactus() {
                     <div className="d-flex align-items-center">
                       <p className="mb-0">+110-3893679</p>
                       <div className="ms-auto">
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-message-square tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-phone tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-video tx-15"></i>
                         </a>
                       </div>
@@ -2347,11 +1988,9 @@ function Contactus() {
                           <i className="fe fe-more-vertical"></i>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="dropdown-menu tx-13">
-                          <Dropdown.Item >Action</Dropdown.Item>
-                          <Dropdown.Item >Another action</Dropdown.Item>
-                          <Dropdown.Item >
-                            Something else here
-                          </Dropdown.Item>
+                          <Dropdown.Item>Action</Dropdown.Item>
+                          <Dropdown.Item>Another action</Dropdown.Item>
+                          <Dropdown.Item>Something else here</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -2360,13 +1999,13 @@ function Contactus() {
                     <div className="d-flex align-items-center">
                       <p className="mb-0">+110-7853379</p>
                       <div className="ms-auto">
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-message-square tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-phone tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-video tx-15"></i>
                         </a>
                       </div>
@@ -2402,11 +2041,9 @@ function Contactus() {
                           <i className="fe fe-more-vertical"></i>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item >Action</Dropdown.Item>
-                          <Dropdown.Item >Another action</Dropdown.Item>
-                          <Dropdown.Item >
-                            Something else here
-                          </Dropdown.Item>
+                          <Dropdown.Item>Action</Dropdown.Item>
+                          <Dropdown.Item>Another action</Dropdown.Item>
+                          <Dropdown.Item>Something else here</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -2415,13 +2052,13 @@ function Contactus() {
                     <div className="d-flex align-items-center">
                       <p className="mb-0">+110-4853672</p>
                       <div className="ms-auto">
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-message-square tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-phone tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-video tx-15"></i>
                         </a>
                       </div>
@@ -2457,11 +2094,9 @@ function Contactus() {
                           <i className="fe fe-more-vertical"></i>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="dropdown-menu tx-13">
-                          <Dropdown.Item >Action</Dropdown.Item>
-                          <Dropdown.Item >Another action</Dropdown.Item>
-                          <Dropdown.Item >
-                            Something else here
-                          </Dropdown.Item>
+                          <Dropdown.Item>Action</Dropdown.Item>
+                          <Dropdown.Item>Another action</Dropdown.Item>
+                          <Dropdown.Item>Something else here</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -2470,13 +2105,13 @@ function Contactus() {
                     <div className="d-flex align-items-center">
                       <p className="mb-0">+110-3893679</p>
                       <div className="ms-auto">
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-message-square tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-phone tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-video tx-15"></i>
                         </a>
                       </div>
@@ -2512,11 +2147,9 @@ function Contactus() {
                           <i className="fe fe-more-vertical"></i>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="dropdown-menu tx-13">
-                          <Dropdown.Item >Action</Dropdown.Item>
-                          <Dropdown.Item >Another action</Dropdown.Item>
-                          <Dropdown.Item >
-                            Something else here
-                          </Dropdown.Item>
+                          <Dropdown.Item>Action</Dropdown.Item>
+                          <Dropdown.Item>Another action</Dropdown.Item>
+                          <Dropdown.Item>Something else here</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -2525,13 +2158,13 @@ function Contactus() {
                     <div className="d-flex align-items-center">
                       <p className="mb-0">+110-7893473</p>
                       <div className="ms-auto">
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-message-square tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-phone tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-video tx-15"></i>
                         </a>
                       </div>
@@ -2567,11 +2200,9 @@ function Contactus() {
                           <i className="fe fe-more-vertical"></i>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="dropdown-menu tx-13">
-                          <Dropdown.Item >Action</Dropdown.Item>
-                          <Dropdown.Item >Another action</Dropdown.Item>
-                          <Dropdown.Item >
-                            Something else here
-                          </Dropdown.Item>
+                          <Dropdown.Item>Action</Dropdown.Item>
+                          <Dropdown.Item>Another action</Dropdown.Item>
+                          <Dropdown.Item>Something else here</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -2580,13 +2211,13 @@ function Contactus() {
                     <div className="d-flex align-items-center">
                       <p className="mb-0">+110-4268713</p>
                       <div className="ms-auto">
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-message-square tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-phone tx-15"></i>
                         </a>
-                        <a  className="btn btn-def btn-sm tx-muted">
+                        <a className="btn btn-def btn-sm tx-muted">
                           <i className="fe fe-video tx-15"></i>
                         </a>
                       </div>

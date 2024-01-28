@@ -8,11 +8,11 @@ import {
   Dropdown,
   Form,
 } from "react-bootstrap";
-import logowhite from "../../../assets/img/brand/logo-white.png";
-import logowhite1 from "../../../assets/img/brand/logo-white-1.png";
+
 import { Link, NavLink } from "react-router-dom";
 import Allimages from "../imagesdata/imagesdata";
 import store from "../../../redux/store";
+import gblogo from "/Images/gblogo.png";
 
 function Header() {
   const [Lang, setLang] = useState(false);
@@ -98,12 +98,12 @@ function Header() {
                 className="header-logo"
               >
                 <img
-                  src={logowhite}
+                  src={gblogo}
                   className="mobile-logo dark-logo-1"
                   alt="logo"
                 />
                 <img
-                  src={logowhite1}
+                  src={gblogo}
                   className="mobile-logo-1 dark-logo-1"
                   alt="logo"
                 />
@@ -127,12 +127,12 @@ function Header() {
                 className="header-logo"
               >
                 <img
-                  src={logowhite}
+                  src={gblogo}
                   className="mobile-logo dark-logo-1"
                   alt="logo"
                 />
                 <img
-                  src={logowhite1}
+                  src={gblogo}
                   className="mobile-logo-1 dark-logo-1"
                   alt="logo"
                 />

@@ -8,8 +8,9 @@ import {
   useConnectionStatus,
 } from "@thirdweb-dev/react";
 import { useEffect } from "react";
+import Multislider from "../../advanceui/carousel/carouseldata/multiplecards";
 
-function WhitelistChecker() {
+function Evolution1() {
   const address = useAddress();
   const gblogo = "../../../public/images/gblogo.png";
   const connectionStatus = useConnectionStatus();
@@ -27,11 +28,25 @@ function WhitelistChecker() {
   return (
     //page header
     <Fragment>
-      <Pageheader
-        titles=""
-        active={"Whitelist Verifier"}
-        Subtite={"Dashboard"}
-      />
+      <Pageheader titles="" active={"Evolution 1"} Subtite={"Dashboard"} />
+      <Col md={12}>
+        <Card>
+          <div className="card-header">
+            <div className="card-title">Multi Slider</div>
+          </div>
+          <Card.Body>
+            <p className="card-subtitle">
+              Multislider is a jQuery powered slideshow that specializes in
+              showing more than one slide at a time. There's no need to find
+              messy CSS and JS work arounds for other single-slide solutions.
+              Multislider allows the developer to focus fully on each individual
+              slide as it's own component, and then displays as many slides as
+              you decide in a manner that is fluid, consistent, and dymanic.
+            </p>
+            <Multislider />
+          </Card.Body>
+        </Card>
+      </Col>
 
       {/* Conditional rendering based on connection status */}
       {isConnected ? (
@@ -43,7 +58,7 @@ function WhitelistChecker() {
                   className="card-title numberfont"
                   style={{ fontSize: "23px" }}
                 >
-                  <b>WHITELIST VERIFIER</b>
+                  <b>Evolution1</b>
                 </h3>
               </div>
               <p
@@ -59,38 +74,6 @@ function WhitelistChecker() {
                 </h3>
               </div>
             </Card.Header>
-            <Card.Body className="p-0">
-              <div className="browser-stats">
-                <div className="d-flex align-items-center item border-bottom">
-                  <div className="d-flex">
-                    <img src={gblogo} alt="img" className="ht-60 wd-60 me-2" />
-                    <div>
-                      <h6 className="numberfont" style={{ fontSize: "23px" }}>
-                        <b>STATUS</b>
-                      </h6>
-                      <h5 className="numberfont" style={{ fontSize: "18px" }}>
-                        Congratulations <b>Bully</b>, welcome to the jungle.
-                      </h5>
-                      <h5 className="numberfont" style={{ fontSize: "18px" }}>
-                        You are eligible to mint
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="ms-auto my-auto">
-                    <div className="d-flex">
-                      <span className="me-4 my-auto">35,502</span>
-                      <span className="tx-success fs-15">
-                        <i className="fe fe-arrow-up"></i>12.75%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="progress progress-style ht-5">
-                {" "}
-                <div className="progress-bar bg-primary wd-80p"></div>{" "}
-              </div>
-            </Card.Body>
           </Card>
           <div
             className="numberfont justify-content-center card d-flex align-items-center"
@@ -100,14 +83,13 @@ function WhitelistChecker() {
               <b>JOIN DISCORD TO WHITELIST</b>
             </a>
           </div>
+          <div></div>
         </Col>
       ) : (
-        <div className="d-flex justify-content-center mb-3">
-          <ConnectWallet className={buttonStyles.connectButton} />
-        </div>
+        <div></div>
       )}
     </Fragment>
   );
 }
 
-export default WhitelistChecker;
+export default Evolution1;

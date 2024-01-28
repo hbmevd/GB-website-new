@@ -3831,7 +3831,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 100%;
   }
 }
 .row {
@@ -19612,7 +19612,7 @@ form[role=search].active input {
 }
 @media (max-width: 991.98px) {
   .main-content .container {
-    max-width: none;
+    max-width: 100%;
   }
   .browser-stats .sub-text {
     display: none;
@@ -41008,8 +41008,8 @@ a.text-dark:hover, a.text-dark:focus {
   [data-width=boxed] body .main-content .container,
   [data-width=boxed] body .main-header > .container,
   [data-width=boxed] body .horizontal-mainwrapper.container {
-    padding-inline-end: 0.75rem;
-    padding-inline-start: 0.75rem;
+    padding-inline-end: 0rem;
+    padding-inline-start: 0rem;
   }
   [data-width=boxed] body .horizontalMenu > .horizontalMenu-list > li > a {
     padding: 15px 11px;

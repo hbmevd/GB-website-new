@@ -6,7 +6,7 @@ import pageStyles from "../../../assets/css/pageStyles.module.css";
 function MainDashboard() {
   return (
     <Fragment>
-      <div className={pageStyles.newContainer}></div>
+      <div className={pageStyles.newContainerBG}></div>
       <Row>
         <Col xl={12} xxl={12}>
           <Row>

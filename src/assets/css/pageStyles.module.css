@@ -1,6 +1,14 @@
 .newContainer {
+    background-size: cover;
+    padding: 355px;
+    width: 100%;
+    /* Add more background properties as needed */
+}
+
+.newContainerBG {
     background-image: url("/Images/Gb2.png"); 
     background-size: cover;
     padding: 355px;
+    width: 100%;
     /* Add more background properties as needed */
 }

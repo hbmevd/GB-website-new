@@ -1,116 +1,165 @@
 // import React from 'react'
-import { Fragment } from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Fragment, useEffect } from "react";
+import { Card, Col, Row, Tab, Tabs } from "react-bootstrap";
 import pageStyles from "../../../assets/css/pageStyles.module.css";
+import Allimages from "../../../components/common/imagesdata/imagesdata";
+import { useAddress, useConnectionStatus } from "@thirdweb-dev/react";
+import RSC from "react-scrollbars-custom";
+import Pageheader from "../../../components/common/pageheader/pageheader";
+import { Accordion, Container, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Landing from "./landing";
 
 function MainDashboard() {
+  const connectionStatus = useConnectionStatus();
+  const isConnected = connectionStatus === "connected";
+
+  // Log a message when the user is connected
+  useEffect(() => {
+    if (isConnected) {
+      console.log(
+        "User is connected to GorillaBully Web3 Auth. You're encrypted using GB+ThirdWeb SDK."
+      );
+    }
+  }, [isConnected]);
+
   return (
     <Fragment>
-      <div className={pageStyles.newContainerBG}></div>
-      <Row>
-        <Col xl={12} xxl={12}>
-          <Row>
-            <Col xl={12} lg={12} md={12}>
-              <Card>
-                <Card.Body className=" py-0 px-3">
-                  <Row>
-                    <Col
-                      xxl={3}
-                      xl={6}
-                      md={6}
-                      sm={12}
-                      className="d-flex align-items-center justify-content-between flex-wrap border-primary-end p-4"
-                    >
-                      <div>
-                        <p className="tx-primary tx-12 mb-1">Holders </p>
-                        <h4 className="tx-22 numberfont font-weight-semibold mb-1">
-                          0
-                        </h4>
-                        <p className="tx-11 tx-muted mb-0">Evolution 1 NFT</p>
-                      </div>
-                      <div className="flex-center"></div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        className="svg-warning total-sales-svg main-dashboard-cards-svg"
-                        viewBox="0 0 24 24"
-                        width="24px"
-                        fill="#175787"
+      {/* Conditional rendering based on connection status */}
+      {isConnected ? (
+        <Col xl={12} lg={12}>
+          <div></div>
+          <Card>
+            <Card.Body className="p-0">
+              <div className="browser-stats">
+                <div className="d-flex align-items-center item border-bottom">
+                  <div className="d-flex">
+                    <div>
+                      <h6
+                        className="numberfont"
+                        style={{
+                          fontSize: "23px",
+                          margin: "0 20px",
+                        }}
                       >
-                        <path d="M0 0h24v24H0V0z" fill="none"></path>
-                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"></path>
-                      </svg>
-                    </Col>
-                    <Col
-                      xxl={3}
-                      xl={6}
-                      md={6}
-                      sm={12}
-                      className="d-flex align-items-center justify-content-between flex-wrap border-primary-end p-4"
-                    >
-                      <div>
-                        <p className="tx-primary tx-12 mb-1">Current Supply</p>
-                        <h4 className="tx-22 numberfont font-weight-semibold mb-1">
-                          1,000
-                        </h4>
-                        <p className="tx-11 tx-muted mb-0">NFTs</p>
-                      </div>
-                      <div className="flex-center"></div>
-                    </Col>
-                    <Col
-                      xxl={3}
-                      xl={6}
-                      md={6}
-                      sm={12}
-                      className="d-flex align-items-center justify-content-between flex-wrap border-primary-end p-4"
-                    >
-                      <div>
-                        <p className="tx-primary tx-12 mb-1">Price</p>
-                        <h4 className="tx-22 numberfont font-weight-semibold mb-1">
-                          FREE
-                        </h4>
-                        <p className="tx-11 tx-muted mb-0">ETH</p>
-                      </div>
-                      <div className="flex-center"></div>
-                    </Col>
-                    <Col
-                      xxl={3}
-                      xl={6}
-                      md={6}
-                      sm={12}
-                      className="d-flex align-items-center justify-content-between flex-wrap ps-4 py-4 pe-2"
-                    >
-                      <div className="flex-grow-1">
-                        <p className="tx-primary tx-12 mb-1"></p>
-                        <h4 className="tx-22 numberfont font-weight-semibold mb-1">
-                          $34K
-                          <span className="badge badge-success-transparent tx-success tx-11 ms-2">
-                            56<i className="fe fe-arrow-up tx-11"></i>
-                          </span>
-                        </h4>
-                        <p className="tx-11 tx-muted mb-0">Current Month</p>
-                      </div>
-                    </Col>
-                  </Row>
-                </Card.Body>
-              </Card>
-              {/* <NavLink
-                to={`${import.meta.env.BASE_URL}pages/invoice/`}
-                className="tx-muted tx-11"
-              >
-                NAVIGATION LINK
-              </NavLink> */}
-            </Col>
-          </Row>
+                        <b>STATUS</b>
+                      </h6>
+                      <h5
+                        className="numberfont"
+                        style={{ fontSize: "18px", margin: "0 20px" }}
+                      >
+                        Congratulations <b>Bully</b>
+                        <br></br>Welcome to the jungle...
+                      </h5>
+                      <h5 style={{ fontSize: "25px", margin: "20px 20px" }}>
+                        YOU ARE ELIGIBLE TO MINT:
+                      </h5>
+                    </div>
+                  </div>
+                  <div className="ms-auto my-auto">
+                    <div className="d-flex">
+                      {" "}
+                      <h4 className="numberfont" style={{ fontSize: "75px" }}>
+                        36
+                      </h4>
+                    </div>
+                  </div>
+                  <h4
+                    className="numberfont"
+                    style={{ fontSize: "25px", margin: "0 20px" }}
+                  >
+                    Evolution 1 <b>NFTs</b>
+                  </h4>
+                </div>
+              </div>
+            </Card.Body>
+          </Card>
         </Col>
-
-        <div className="col-xl-12 col-xxl-3"></div>
-      </Row>
-      {/* <!-- row closed --> */}
-
-      {/* <!-- row  --> */}
-
-      {/* <!-- /row closed --> */}
+      ) : (
+        <div>
+          <section
+            className="pricing-section bg-primary-transparent pt-5"
+            id="pricing"
+          >
+            <div className="panel tabs-style5 w-fit-content mx-5">
+              <div className="panel-head text-left">
+                <Tabs
+                  defaultActiveKey="comingsoon"
+                  id="uncontrolled-tab-example"
+                  className="mb-3 d-inline-flex"
+                >
+                  <Tab eventKey="comingsoon" title="Coming Soon">
+                    <div className="row align-items-center">
+                      <Col xl={12} md={12}>
+                        <Card className="card pricing-card mb-5">
+                          <Card.Body>
+                            <div className="tx-center">
+                              <h4>Basic</h4>
+                              <p className="tx-muted">
+                                Sed duo rebum et et dolores sed amet rebum
+                                magna. Et sea elitr.
+                              </p>
+                              <p className="tx-50">$10</p>
+                            </div>
+                            <ul className="list-unstyled mb-4">
+                              <li className="mb-3 tx-14 tx-primary">
+                                <span>
+                                  <i className="fa fa-check me-2 tx-10"></i>
+                                </span>
+                                2 Free Domain Name
+                              </li>
+                              <li className="mb-3 tx-14 tx-primary">
+                                <span>
+                                  <i className="fa fa-check me-2 tx-10"></i>
+                                </span>
+                                3 One-Click Apps
+                              </li>
+                              <li className="mb-3 tx-14 tx-muted">
+                                <span>
+                                  <i className="fa fa-check me-2 tx-10"></i>
+                                </span>
+                                1 Databases
+                              </li>
+                              <li className="mb-3 tx-14 tx-muted">
+                                <span>
+                                  <i className="fa fa-check me-2 tx-10"></i>
+                                </span>
+                                Money BackGuarantee
+                              </li>
+                              <li className="mb-0 tx-14 tx-muted">
+                                <span>
+                                  <i className="fa fa-check me-2 tx-10"></i>
+                                </span>
+                                24/7 support
+                              </li>
+                            </ul>
+                            <div className="tx-center">
+                              <a
+                                href="#;"
+                                className="btn btn-primary-light btn-block"
+                              >
+                                Choose Plan
+                              </a>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                    </div>
+                  </Tab>
+                </Tabs>
+              </div>
+            </div>
+          </section>
+          <div
+            className="numberfont justify-content-center card d-flex align-items-center"
+            style={{ padding: "20px" }}
+          >
+            <a href="" style={{ fontSize: "23px" }}>
+              <b>JOIN DISCORD TO WHITELIST</b>
+            </a>
+          </div>
+        </div>
+      )}
     </Fragment>
   );
 }

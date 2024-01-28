@@ -5,7 +5,15 @@
     /* Add more background properties as needed */
 }
 
-.newContainerBG {
+.MainDashboardBG {
+    background-image: url("/Images/collage.jpg"); 
+    background-size: contain;
+    align-content: left;
+    position: relative;
+    /* Add more background properties as needed */
+}
+
+.WhitelistVerifierBG {
     background-image: url("/Images/collage.jpg"); 
     opacity: 7.5%;
     background-size: contain;

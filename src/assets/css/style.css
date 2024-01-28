@@ -11951,7 +11951,7 @@ body {
 .panel-body .lead {
   font-size: 20px;
   margin-block-end: 0;
-  padding: 10px 0;
+
 }
 .panel-body .lead strong {
   font-size: 40px;
@@ -27198,7 +27198,10 @@ button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .bg-primary-transparent {
-  background: var(--primary02) !important;
+  /* background: var(--primary02) !important; */
+  background-image: url("/Images/collage3.png"); 
+  background-size: contain;
+  position: relative;
 }
 
 .bg-secondary-transparent {
@@ -29646,7 +29649,7 @@ button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .mt-3, .my-3 {
-  margin-block-start: 1rem !important;
+  margin-block-start: 0rem !important;
 }
 
 .me-3, .mx-3 {

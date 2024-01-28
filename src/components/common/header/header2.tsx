@@ -93,10 +93,7 @@ function Header() {
         >
           <div className="main-header-left">
             <div className="responsive-logo">
-              <Link
-                to={`${import.meta.env.BASE_URL}dashboard/index/`}
-                className="header-logo"
-              >
+              <Link to={`${import.meta.env.BASE_URL}/`} className="header-logo">
                 <img
                   src={gblogo}
                   className="mobile-logo dark-logo-1"

@@ -6,9 +6,11 @@
 }
 
 .newContainerBG {
-    background-image: url("/Images/Gb2.png"); 
-    background-size: cover;
-    padding: 355px;
+    background-image: url("/Images/collage.jpg"); 
+    opacity: 7.5%;
+    background-size: contain;
+    align-content: center;
+    padding: 365px;
     width: 100%;
     /* Add more background properties as needed */
 }

@@ -12410,12 +12410,12 @@ pre {
   inset-inline-end: 20px;
   z-index: 900;
   display: none;
-  color: var(--dark);
+  color: white;
   text-align: center;
   height: 50px;
   width: 50px;
-  border: 2px solid var(--secondary);
-  background: var(--secondary);
+  border: var(--primary-bg-color);
+  background: var(--primary-bg-color);
   background-repeat: no-repeat;
   background-position: center;
   transition: all ease 0.3s;

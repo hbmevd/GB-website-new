@@ -45,9 +45,9 @@ function WhitelistVerifier() {
               <div
                 className="hero-section text-center"
                 style={{
-                  backgroundImage: 'url("/Images/Background2.png")',
+                  backgroundImage: 'url("/Images/blueBG2.jpg")',
                   backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundPosition: "left bottom",
                   backgroundRepeat: "no-repeat",
                   height: "64vh",
                 }}
@@ -60,7 +60,11 @@ function WhitelistVerifier() {
                 className="numberfont justify-content-center card d-flex align-items-center"
                 style={{ padding: "20px" }}
               >
-                <a href="" style={{ fontSize: "23px" }}>
+                <a
+                  href="https://discord.gg/BRfAGDtUmK"
+                  target="_blank"
+                  style={{ fontSize: "23px" }}
+                >
                   <b>JOIN YOUR COMMUNITY</b>
                 </a>
               </div>

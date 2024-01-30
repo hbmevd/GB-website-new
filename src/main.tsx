@@ -21,6 +21,13 @@ import {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <ThirdwebProvider
+    dAppMeta={{
+      name: "GorillaBully",
+      logoUrl:
+        "https://gorillabully.com/Evolution1/PublicLogos/gb-logo-glow.png",
+      url: "https://GorillaBully.com",
+      isDarkMode: true,
+    }}
     activeChain="ethereum"
     clientId="9b406d6af880a571a409bc229085bdc5"
     supportedWallets={[

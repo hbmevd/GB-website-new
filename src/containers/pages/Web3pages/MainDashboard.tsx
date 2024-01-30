@@ -46,7 +46,11 @@ function MainDashboard() {
           className="numberfont justify-content-center card d-flex align-items-center"
           style={{ padding: "20px" }}
         >
-          <a href="" style={{ fontSize: "23px" }}>
+          <a
+            href="https://discord.gg/BRfAGDtUmK"
+            target="_blank"
+            style={{ fontSize: "23px" }}
+          >
             <b>JOIN DISCORD TO WHITELIST</b>
           </a>
         </div>

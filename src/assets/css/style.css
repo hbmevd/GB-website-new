@@ -378,7 +378,7 @@ License        :   Licensed under ThemeForest License
   background-color: #ffcf86;
 }
 .alert.style-4 .alert_inner_icn .avatar.bg-info::before {
-  background-color: #4ec2f0;
+  background-color: #36393b;
 }
 .alert.style-4 .alert_inner_icn .avatar.bg-secondary::before {
   background-color: var(--secondary);

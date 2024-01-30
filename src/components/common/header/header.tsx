@@ -132,7 +132,10 @@ function Header({
           </div>{" "}
           <div className="main-header-left">
             <div className="logo-horizontal">
-              <Link to={`${import.meta.env.BASE_URL}/`} className="header-logo">
+              <Link
+                to={`${import.meta.env.BASE_URL}dashboard/MainDashboard`}
+                className="header-logo"
+              >
                 <img
                   src={gblogo}
                   className="mobile-logo dark-logo-1"
@@ -962,16 +965,16 @@ function Header({
                 fontFamily: "Rajdhani",
                 colors: {
                   modalBg: "#ededed",
-                  accentText: "#e54d2e",
-                  accentButtonBg: "#e54d2e",
+                  accentText: "#fffff",
+                  accentButtonBg: "#464444",
                   primaryText: "#464444",
-                  secondaryText: "#636363",
-                  primaryButtonText: "#636363",
+                  secondaryText: "#fffff",
+                  primaryButtonText: "#fffff",
                   secondaryButtonBg: "#e3e3e3",
                   secondaryButtonHoverBg: "#ffffff",
-                  connectedButtonBg: "#00000",
+                  connectedButtonBg: "#00000036",
                   success: "#e54d2e",
-                  primaryButtonBg: "#f5f4f6",
+                  primaryButtonBg: "#00000036",
                   connectedButtonBgHover: "#00000",
                   secondaryIconHoverColor: "#706f78",
                   selectedTextBg: "#ffa500",

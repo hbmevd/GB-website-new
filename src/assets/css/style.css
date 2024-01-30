@@ -82,7 +82,7 @@ License        :   Licensed under ThemeForest License
   --black-05: rgba(255, 255, 255, 0.05);
   --shadow: 0 0 4px rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0,0,0, 0.1);
-  --card-background: rgba(255,255,255,0.10);
+  --card-background: rgba(255, 255, 255, 0.778);
   --border: rgba(var(--primary-rgb), 0.1);
   --float-start: left;
   --float-end: right;
@@ -103,6 +103,14 @@ License        :   Licensed under ThemeForest License
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@font-face {
+  font-family: 'Gridular'; /* Provide a name for your font */
+  src: url('/fonts/Gridular-Regular.woff') format('woff');
+  /* Replace 'your-font-file.woff' with the actual name of your WOFF font file */
+  font-weight: normal;
+  font-style: normal;
 }
 
 /******variables Declaration******/
@@ -42290,7 +42298,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed !important;
-  background: url(../../assets/img/media/11.jpg);
+  background: url(../../assets/img/media/13.jpg);
   color: #585656;
 }
 [data-theme-color=glassy] body::before {
@@ -42999,10 +43007,10 @@ a.text-dark:hover, a.text-dark:focus {
   border-block-end: 1px solid var(--border) !important;
 }
 [data-theme-color=glassy] .page {
-  background-color: rgba(239, 239, 239, 0.1019607843);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 [data-theme-color=glassy] .card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(217, 217, 217, 90%);
   box-shadow: inset 0 8px 32px 0 rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.4);

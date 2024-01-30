@@ -18,7 +18,7 @@ interface RootState {
 const initialState: RootState = {
   lang: "en",
   dir: "ltr",
-  datathemecolor: "glassy",
+  datathemecolor: "default",
   bgImg: "",
   datawidth: "fullwidth",
   dataposition: "fixed",

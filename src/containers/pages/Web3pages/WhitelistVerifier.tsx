@@ -41,7 +41,12 @@ function WhitelistVerifier() {
     fetchData();
   }, [isConnected, address]);
 
-  function truncateAddress(address: string | undefined) {
+  // Function to truncate the address
+  function truncateAddress(address?: string | undefined) {
+    if (!address) {
+      return "No address available";
+    }
+
     const truncatedAddress =
       address.substring(0, 7) + "......" + address.slice(-5);
     return truncatedAddress;

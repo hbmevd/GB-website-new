@@ -150,12 +150,12 @@ function Header({
             </div>
           </div>
           <div className="main-header-right">
-            <Navbar.Toggle
+            {/* <Navbar.Toggle
               className="navbar-toggler navresponsive-toggler d-lg-none ms-auto"
               type="button"
             >
               <span className="navbar-toggler-icon fe fe-more-vertical"></span>
-            </Navbar.Toggle>
+            </Navbar.Toggle> */}
             <div className="mb-0 navbar navbar-expand-lg navbar-nav-right responsive-navbar navbar-dark p-0">
               <Navbar.Collapse className="collapse ">
                 <ul className="nav nav-item header-icons navbar-nav-right">

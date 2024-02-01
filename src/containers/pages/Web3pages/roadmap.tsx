@@ -49,7 +49,7 @@ function Roadmap() {
                         backgroundSize: "cover",
                         backgroundPosition: "bottom",
                         backgroundRepeat: "no-repeat",
-                        height: "20vh",
+                        height: "30vh",
                       }}
                     >
                       <Container></Container>
@@ -116,7 +116,7 @@ function Roadmap() {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        height: "20vh",
+                        height: "30vh",
                       }}
                     >
                       <Container></Container>
@@ -179,7 +179,7 @@ function Roadmap() {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        height: "20vh",
+                        height: "30vh",
                       }}
                     >
                       <Container></Container>

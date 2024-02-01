@@ -9,6 +9,7 @@ import Rightsidebar from "./components/common/rightsidebar/rightsidebar";
 import Footer from "./components/common/footer/footer";
 import { Fragment, useEffect, useState } from "react";
 import { MENUITEMS } from "./components/common/sidebar/menudata";
+import MainDashboard from "./containers/pages/Web3pages/MainDashboard";
 function Layout() {
   const [menuitems, setMenuitems] = useState(MENUITEMS);
   document

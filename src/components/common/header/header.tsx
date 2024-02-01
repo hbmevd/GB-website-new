@@ -160,7 +160,7 @@ function Header({
               <Navbar.Collapse className="collapse ">
                 <ul className="nav nav-item header-icons navbar-nav-right">
                   <li className="dropdown nav-item">
-                    <Link
+                    {/* <Link
                       className="new nav-link"
                       data-bs-target="#country-selector"
                       data-bs-toggle="modal"
@@ -202,7 +202,7 @@ function Header({
                           d="M256 48v416M464 256H48"
                         />
                       </svg>
-                    </Link>
+                    </Link> */}
                     <Modal
                       show={Lang}
                       onHide={() => setLang(false)}
@@ -496,7 +496,7 @@ function Header({
                     </Modal>
                   </li>
 
-                  <Dropdown className="dropdown nav-item main-header-notification d-flex">
+                  {/* <Dropdown className="dropdown nav-item main-header-notification d-flex">
                     <Dropdown.Toggle
                       className="new nav-link no-caret"
                       variant="default"
@@ -894,7 +894,7 @@ function Header({
                         </Link>
                       </div>
                     </Dropdown.Menu>
-                  </Dropdown>
+                  </Dropdown> */}
 
                   <li className="nav-item full-screen fullscreen-button">
                     <a className="new nav-link full-screen-link">

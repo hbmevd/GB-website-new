@@ -38,6 +38,7 @@ function Landingpage() {
       <Provider store={store}>
         <div className="progress-top-bar" style={{ width: 0 }} />
         <Landing />
+        <div>Hello</div>
         <TabToTop />
       </Provider>
     </Fragment>

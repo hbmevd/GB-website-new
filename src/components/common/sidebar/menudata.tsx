@@ -56,14 +56,14 @@ export const MENUITEMS: any = [
           //   doublemenu: false,
           //   title: "Team",
           // },
-          // {
-          //   path: `${import.meta.env.BASE_URL}dashboard/Roadmap`,
-          //   type: "link",
-          //   active: false,
-          //   selected: false,
-          //   doublemenu: false,
-          //   title: "Roadmap",
-          // },
+          {
+            path: `${import.meta.env.BASE_URL}dashboard/Roadmap`,
+            type: "link",
+            active: false,
+            selected: false,
+            doublemenu: false,
+            title: "Roadmap",
+          },
           // {
           //   path: `${import.meta.env.BASE_URL}app/filemanagers/file`,
           //   title: "Files",

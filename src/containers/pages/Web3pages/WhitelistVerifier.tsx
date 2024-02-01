@@ -41,6 +41,12 @@ function WhitelistVerifier() {
     fetchData();
   }, [isConnected, address]);
 
+  function truncateAddress(address: string | undefined) {
+    const truncatedAddress =
+      address.substring(0, 7) + "......" + address.slice(-5);
+    return truncatedAddress;
+  }
+
   return (
     <Fragment>
       {/* Your Pageheader component */}
@@ -94,7 +100,11 @@ function WhitelistVerifier() {
                       {whitelistStatus ? (
                         <>
                           Congratulations <b>Bully</b>
-                          <br></br> You are in the Evolution 1 FREEMINT
+                          <br></br> You are whitelisted.
+                          <br></br>
+                          <br></br>
+                          <b>Verified Address: </b>
+                          {truncateAddress(address)}
                         </>
                       ) : (
                         "You are not whitelisted."
@@ -134,9 +144,9 @@ function WhitelistVerifier() {
                     </div>
                     <h4
                       className="numberfont"
-                      style={{ fontSize: "25px", marginTop: "20px" }}
+                      style={{ fontSize: "20px", marginTop: "20px" }}
                     >
-                      Evolution 1 <b>FREEMINT</b>
+                      EVOLUTION PHASE I<br></br> TOTAL SUPPLY: <b>1,000</b>
                     </h4>
                   </div>
                 </div>

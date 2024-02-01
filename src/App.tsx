@@ -136,6 +136,10 @@ function App() {
         <React.Suspense fallback={<Loader />}>
           <Routes>
             <Route path={`${import.meta.env.BASE_URL}`} element={<Layout />}>
+              {/* Set MainDashboard as the default landing page */}
+              <Route index element={<MainDashboard />} />
+
+              {/* Other dashboard routes */}
               <Route
                 path={`${import.meta.env.BASE_URL}dashboard/MainDashboard`}
                 element={<MainDashboard />}

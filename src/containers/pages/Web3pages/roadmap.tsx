@@ -44,8 +44,7 @@ function Roadmap() {
                     <div
                       className="hero-section text-center"
                       style={{
-                        backgroundImage:
-                          'url("/Images/BullyBackgroundNoText.png")',
+                        backgroundImage: 'url("/Images/BullyBackground.png")',
                         backgroundSize: "cover",
                         backgroundPosition: "bottom",
                         backgroundRepeat: "no-repeat",

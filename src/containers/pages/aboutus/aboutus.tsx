@@ -60,6 +60,18 @@ function Aboutus() {
                 </p>
               </Col>
             </Card.Body>
+            <div
+              className="numberfont justify-content-center card3 d-flex align-items-center"
+              style={{ padding: "20px" }}
+            >
+              <a
+                href="https://discord.gg/BRfAGDtUmK"
+                target="_blank"
+                style={{ fontSize: "23px" }}
+              >
+                <b>JOIN DISCORD TO WHITELIST</b>
+              </a>
+            </div>
 
             <section
               className="product-section bg-primary-transparent mt-3"
@@ -122,7 +134,7 @@ function Aboutus() {
                 </Container>
                 <Container className="text-start">
                   <Card className="">
-                    <Card.Header className="text-start">
+                    <Card.Header className="text-center">
                       <div className="card-title tx-23">Mint Progress</div>
                     </Card.Header>
                     <Card.Body className="d-grid">

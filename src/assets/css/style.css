@@ -2791,6 +2791,19 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
   width: 100%;
 }
 
+.card3 {
+  border-radius: 5px;
+  box-shadow: inset 0px -1px 12px 3px rgba(255, 255, 255, 0.05);
+  background-color: transparent;
+  background-position: center top;
+  background-repeat: no-repeat;
+  content: "";
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  top: 0;
+  width: 100%;
+}
+
 .card:before {
   position: absolute;
   content: "";

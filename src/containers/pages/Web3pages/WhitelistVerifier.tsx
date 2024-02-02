@@ -173,20 +173,7 @@ function WhitelistVerifier() {
                   }}
                 >
                   <Container>
-                    <Row className="justify-content-center">
-                      <div
-                        className="numberfont justify-content-center card d-flex align-items-center"
-                        style={{ padding: "20px", marginLeft: "20px" }}
-                      >
-                        <a
-                          href="https://discord.gg/BRfAGDtUmK"
-                          target="_blank"
-                          style={{ fontSize: "23px" }}
-                        >
-                          <b>JOIN THE DISCORD TO WHITELIST</b>
-                        </a>
-                      </div>
-                    </Row>
+                    <Row className="justify-content-center"></Row>
                   </Container>
                 </div>
               </div>
@@ -235,7 +222,7 @@ function WhitelistVerifier() {
               </div>
               <div className="d-flex justify-content-center align-items-center">
                 <h3
-                  className="card-title numberfont mt-4 mb-5 text-center"
+                  className="card-title numberfont mt-4 mb-3 text-center"
                   style={{ fontSize: "23px" }}
                 >
                   <b>CONNECT WALLET TO VERIFY WHITELIST</b>
@@ -251,7 +238,7 @@ function WhitelistVerifier() {
                 target="_blank"
                 style={{ fontSize: "23px" }}
               >
-                <b>JOIN THE DISCORD TO WHITELIST</b>
+                <b>JOIN THE DISCORD</b>
               </a>
             </div>
           </div>

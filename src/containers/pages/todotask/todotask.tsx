@@ -1,12 +1,18 @@
 import { Fragment, useState } from "react";
 import Allimages from "../../../components/common/imagesdata/imagesdata";
 import Pageheader from "../../../components/common/pageheader/pageheader";
-import { Col, Dropdown, InputGroup, ProgressBar, Tab, Tabs } from "react-bootstrap";
+import {
+  Col,
+  Dropdown,
+  InputGroup,
+  ProgressBar,
+  Tab,
+  Tabs,
+} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import * as chartdata from './data/chartdata'
+import * as chartdata from "./data/chartdata";
 import { Bar } from "react-chartjs-2";
 import DatePicker from "react-datepicker";
-
 
 function Todotask() {
   const [startDate, setStartDate] = useState(new Date());
@@ -86,22 +92,13 @@ function Todotask() {
                                     <i className="fe fe-more-vertical align-middle"></i>
                                   </Dropdown.Toggle>
                                   <Dropdown.Menu className="dropdown-menu tx-13">
-                                    <Dropdown.Item
-                                      className="dropdown-item"
-                                      
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      className="dropdown-item"
-                                      
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Another action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      className="dropdown-item"
-                                      
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Something else here
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
@@ -165,22 +162,13 @@ function Todotask() {
                                     <i className="fe fe-more-vertical align-middle"></i>
                                   </Dropdown.Toggle>
                                   <Dropdown.Menu className="dropdown-menu tx-13">
-                                    <Dropdown.Item
-                                      className="dropdown-item"
-                                      
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      className="dropdown-item"
-                                      
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Another action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      className="dropdown-item"
-                                      
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Something else here
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
@@ -260,22 +248,13 @@ function Todotask() {
                                     <i className="fe fe-more-vertical align-middle"></i>
                                   </Dropdown.Toggle>
                                   <Dropdown.Menu className="dropdown-menu">
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Another Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Something else here
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
@@ -294,8 +273,7 @@ function Todotask() {
                                     25 / 110
                                   </span>
                                 </div>
-                                <div className="progress">
-                              </div>
+                                <div className="progress"></div>
                               </div>
                               <div className="d-flex">
                                 <div className="avatar-list-stacked">
@@ -340,14 +318,14 @@ function Todotask() {
                                   In progress
                                 </span>
                                 <div className="ms-auto">
-                                  <a  className="tx-muted">
+                                  <a className="tx-muted">
                                     <i className="fe fe-message-circle mx-1 tx-13"></i>
                                     3
                                     <span className="d-sm-inline d-none">
                                       comments
                                     </span>
                                   </a>
-                                  <a  className="tx-muted ms-3 d-inline-flex">
+                                  <a className="tx-muted ms-3 d-inline-flex">
                                     <i className="fe fe-paperclip mx-1 tx-13"></i>
                                     2
                                     <span className="d-sm-inline d-none">
@@ -383,22 +361,13 @@ function Todotask() {
                                     <i className="fe fe-more-vertical align-middle"></i>
                                   </Dropdown.Toggle>
                                   <Dropdown.Menu className="dropdown-menu">
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Another Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Something else here
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
@@ -468,14 +437,14 @@ function Todotask() {
                                   Completed
                                 </span>
                                 <div className="ms-auto">
-                                  <a  className="tx-muted">
+                                  <a className="tx-muted">
                                     <i className="fe fe-message-circle mx-1 tx-13"></i>
                                     3
                                     <span className="d-sm-inline d-none">
                                       comments
                                     </span>
                                   </a>
-                                  <a  className="tx-muted ms-3 d-inline-flex">
+                                  <a className="tx-muted ms-3 d-inline-flex">
                                     <i className="fe fe-paperclip mx-1 tx-13"></i>
                                     2
                                     <span className="d-sm-inline d-none">
@@ -514,22 +483,13 @@ function Todotask() {
                                     <i className="fe fe-more-vertical align-middle"></i>
                                   </Dropdown.Toggle>
                                   <Dropdown.Menu className="dropdown-menu">
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Another Action
                                     </Dropdown.Item>
-                                    <Dropdown.Item
-                                      
-                                      className="dropdown-item"
-                                    >
+                                    <Dropdown.Item className="dropdown-item">
                                       Something else here
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
@@ -596,14 +556,14 @@ function Todotask() {
                                   Pending
                                 </span>
                                 <div className="ms-auto">
-                                  <a  className="tx-muted">
+                                  <a className="tx-muted">
                                     <i className="fe fe-message-circle mx-1 tx-13"></i>
                                     3
                                     <span className="d-sm-inline d-none">
                                       comments
                                     </span>
                                   </a>
-                                  <a  className="tx-muted ms-3 d-inline-flex">
+                                  <a className="tx-muted ms-3 d-inline-flex">
                                     <i className="fe fe-paperclip mx-1 tx-13"></i>
                                     2
                                     <span className="d-sm-inline d-none">
@@ -635,9 +595,7 @@ function Todotask() {
                                         <div className="mb-2 d-sm-flex flex-wrap">
                                           <div className="flex-1">
                                             <p className="tx-14 font-weight-semibold mb-0">
-                                              <a >
-                                                Designing Landing Page
-                                              </a>
+                                              <a>Designing Landing Page</a>
                                             </p>
                                             <p className="tx-12 mb-0 tx-muted">
                                               Sit diam nonumy et amet ipsum.
@@ -661,19 +619,13 @@ function Todotask() {
                                             22-05-22
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-message-circle me-1 tx-11 d-inline-flex"></i>
                                               3
                                             </a>
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-paperclip me-1 tx-11 d-inline-flex"></i>
                                               2
                                             </a>
@@ -690,22 +642,13 @@ function Todotask() {
                                             <i className="fe fe-more-vertical align-middle"></i>
                                           </Dropdown.Toggle>
                                           <Dropdown.Menu className="dropdown-menu">
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Another action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Something else here
                                             </Dropdown.Item>
                                           </Dropdown.Menu>
@@ -727,9 +670,7 @@ function Todotask() {
                                         <div className="mb-2 d-sm-flex flex-wrap">
                                           <div className="flex-1">
                                             <p className="tx-14 font-weight-semibold mb-0">
-                                              <a >
-                                                Designing Landing Page
-                                              </a>
+                                              <a>Designing Landing Page</a>
                                             </p>
                                             <p className="tx-12 mb-0 tx-muted">
                                               Sit diam nonumy et amet ipsum.
@@ -753,19 +694,13 @@ function Todotask() {
                                             09-03-22
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-message-circle me-1 tx-11 d-inline-flex"></i>
                                               38
                                             </a>
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-paperclip me-1 tx-11 d-inline-flex"></i>
                                               1
                                             </a>
@@ -782,22 +717,13 @@ function Todotask() {
                                             <i className="fe fe-more-vertical align-middle"></i>
                                           </Dropdown.Toggle>
                                           <Dropdown.Menu className="dropdown-menu">
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Another action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Something else here
                                             </Dropdown.Item>
                                           </Dropdown.Menu>
@@ -819,9 +745,7 @@ function Todotask() {
                                         <div className="mb-2 d-sm-flex flex-wrap">
                                           <div className="flex-1">
                                             <p className="tx-14 font-weight-semibold mb-0">
-                                              <a >
-                                                Designing Landing Page
-                                              </a>
+                                              <a>Designing Landing Page</a>
                                             </p>
                                             <p className="tx-12 mb-0 tx-muted">
                                               Sit diam nonumy et amet ipsum.
@@ -845,19 +769,13 @@ function Todotask() {
                                             22-05-22
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-message-circle me-1 tx-11 d-inline-flex"></i>
                                               8
                                             </a>
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-paperclip me-1 tx-11 d-inline-flex"></i>
                                               13
                                             </a>
@@ -874,22 +792,13 @@ function Todotask() {
                                             <i className="fe fe-more-vertical align-middle"></i>
                                           </Dropdown.Toggle>
                                           <Dropdown.Menu className="dropdown-menu">
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Another action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Something else here
                                             </Dropdown.Item>
                                           </Dropdown.Menu>
@@ -911,9 +820,7 @@ function Todotask() {
                                         <div className="mb-2 d-sm-flex flex-wrap">
                                           <div className="flex-1">
                                             <p className="tx-14 font-weight-semibold mb-0">
-                                              <a >
-                                                Designing Landing Page
-                                              </a>
+                                              <a>Designing Landing Page</a>
                                             </p>
                                             <p className="tx-12 mb-0 tx-muted">
                                               Sit diam nonumy et amet ipsum.
@@ -937,19 +844,13 @@ function Todotask() {
                                             28-05-22
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-message-circle me-1 tx-11 d-inline-flex"></i>
                                               18
                                             </a>
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-paperclip me-1 tx-11 d-inline-flex"></i>
                                               3
                                             </a>
@@ -966,22 +867,13 @@ function Todotask() {
                                             <i className="fe fe-more-vertical align-middle"></i>
                                           </Dropdown.Toggle>
                                           <Dropdown.Menu className="dropdown-menu">
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Another action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Something else here
                                             </Dropdown.Item>
                                           </Dropdown.Menu>
@@ -1003,9 +895,7 @@ function Todotask() {
                                         <div className="mb-2 d-sm-flex flex-wrap">
                                           <div className="flex-1">
                                             <p className="tx-14 font-weight-semibold mb-0">
-                                              <a >
-                                                Designing Landing Page
-                                              </a>
+                                              <a>Designing Landing Page</a>
                                             </p>
                                             <p className="tx-12 mb-0 tx-muted">
                                               Sit diam nonumy et amet ipsum.
@@ -1029,19 +919,13 @@ function Todotask() {
                                             28-05-22
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-message-circle me-1 tx-11 d-inline-flex"></i>
                                               18
                                             </a>
                                           </p>
                                           <p className="mb-0 ms-2">
-                                            <a
-                                              
-                                              className="tx-inverse tx-12"
-                                            >
+                                            <a className="tx-inverse tx-12">
                                               <i className="fe fe-paperclip me-1 tx-11 d-inline-flex"></i>
                                               3
                                             </a>
@@ -1058,22 +942,13 @@ function Todotask() {
                                             <i className="fe fe-more-vertical align-middle"></i>
                                           </Dropdown.Toggle>
                                           <Dropdown.Menu className="dropdown-menu">
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Another action
                                             </Dropdown.Item>
-                                            <Dropdown.Item
-                                              
-                                              className="dropdown-item"
-                                            >
+                                            <Dropdown.Item className="dropdown-item">
                                               Something else here
                                             </Dropdown.Item>
                                           </Dropdown.Menu>
@@ -1094,8 +969,9 @@ function Todotask() {
                                 <li>
                                   <div className="d-flex pos-relative">
                                     <NavLink
-                                      to={`${import.meta.env.BASE_URL
-                                        }app/mail/chat/`}
+                                      to={`${
+                                        import.meta.env.BASE_URL
+                                      }app/mail/chat/`}
                                       className="masked-link"
                                     ></NavLink>
                                     <div className="avatar">
@@ -1122,8 +998,9 @@ function Todotask() {
                                 <li>
                                   <div className="d-flex pos-relative">
                                     <NavLink
-                                      to={`${import.meta.env.BASE_URL
-                                        }app/mail/chat/`}
+                                      to={`${
+                                        import.meta.env.BASE_URL
+                                      }app/mail/chat/`}
                                       className="masked-link"
                                     ></NavLink>
                                     <div className="avatar">
@@ -1150,8 +1027,9 @@ function Todotask() {
                                 <li>
                                   <div className="d-flex pos-relative">
                                     <NavLink
-                                      to={`${import.meta.env.BASE_URL
-                                        }app/mail/chat/`}
+                                      to={`${
+                                        import.meta.env.BASE_URL
+                                      }app/mail/chat/`}
                                       className="masked-link"
                                     ></NavLink>
                                     <div className="avatar">
@@ -1178,8 +1056,9 @@ function Todotask() {
                                 <li>
                                   <div className="d-flex pos-relative">
                                     <NavLink
-                                      to={`${import.meta.env.BASE_URL
-                                        }app/mail/chat/`}
+                                      to={`${
+                                        import.meta.env.BASE_URL
+                                      }app/mail/chat/`}
                                       className="masked-link"
                                     ></NavLink>
                                     <div className="avatar">
@@ -1206,8 +1085,9 @@ function Todotask() {
                                 <li>
                                   <div className="d-flex pos-relative">
                                     <NavLink
-                                      to={`${import.meta.env.BASE_URL
-                                        }app/mail/chat/`}
+                                      to={`${
+                                        import.meta.env.BASE_URL
+                                      }app/mail/chat/`}
                                       className="masked-link"
                                     ></NavLink>
                                     <div className="avatar">
@@ -1242,15 +1122,12 @@ function Todotask() {
                               </div>
                             </div>
                             <div className="card-body">
-
                               <Bar
                                 options={chartdata.Areachart}
                                 data={chartdata.areachart}
                                 height={130}
                                 className="barchart"
-
                               />
-
                             </div>
                           </div>
                           <div className="card">
@@ -1497,22 +1374,13 @@ function Todotask() {
                                 <i className="fe fe-more-vertical align-middle"></i>
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Another Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Something else here
                                 </Dropdown.Item>
                               </Dropdown.Menu>
@@ -1579,14 +1447,14 @@ function Todotask() {
                               Pending
                             </span>
                             <div className="ms-auto">
-                              <a  className="tx-muted">
+                              <a className="tx-muted">
                                 <i className="fe fe-message-circle mx-1 tx-13"></i>
                                 3
                                 <span className="d-sm-inline d-none">
                                   comments
                                 </span>
                               </a>
-                              <a  className="tx-muted ms-3 d-inline-flex">
+                              <a className="tx-muted ms-3 d-inline-flex">
                                 <i className="fe fe-paperclip mx-1 tx-13"></i>2
                                 <span className="d-sm-inline d-none">
                                   files
@@ -1624,22 +1492,13 @@ function Todotask() {
                                 <i className="fe fe-more-vertical align-middle"></i>
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Another Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Something else here
                                 </Dropdown.Item>
                               </Dropdown.Menu>
@@ -1705,14 +1564,14 @@ function Todotask() {
                               Pending
                             </span>
                             <div className="ms-auto">
-                              <a  className="tx-muted">
+                              <a className="tx-muted">
                                 <i className="fe fe-message-circle mx-1 tx-13"></i>
                                 3
                                 <span className="d-sm-inline d-none">
                                   comments
                                 </span>
                               </a>
-                              <a  className="tx-muted ms-3 d-inline-flex">
+                              <a className="tx-muted ms-3 d-inline-flex">
                                 <i className="fe fe-paperclip mx-1 tx-13"></i>2
                                 <span className="d-sm-inline d-none">
                                   files
@@ -1750,22 +1609,13 @@ function Todotask() {
                                 <i className="fe fe-more-vertical align-middle"></i>
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Another Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Something else here
                                 </Dropdown.Item>
                               </Dropdown.Menu>
@@ -1829,14 +1679,14 @@ function Todotask() {
                               In progress
                             </span>
                             <div className="ms-auto">
-                              <a  className="tx-muted">
+                              <a className="tx-muted">
                                 <i className="fe fe-message-circle mx-1 tx-13"></i>
                                 3
                                 <span className="d-sm-inline d-none">
                                   comments
                                 </span>
                               </a>
-                              <a  className="tx-muted ms-3 d-inline-flex">
+                              <a className="tx-muted ms-3 d-inline-flex">
                                 <i className="fe fe-paperclip mx-1 tx-13"></i>2
                                 <span className="d-sm-inline d-none">
                                   files
@@ -1871,22 +1721,13 @@ function Todotask() {
                                 <i className="fe fe-more-vertical align-middle"></i>
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Another Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Something else here
                                 </Dropdown.Item>
                               </Dropdown.Menu>
@@ -1950,14 +1791,14 @@ function Todotask() {
                               In progress
                             </span>
                             <div className="ms-auto">
-                              <a  className="tx-muted">
+                              <a className="tx-muted">
                                 <i className="fe fe-message-circle mx-1 tx-13"></i>
                                 3
                                 <span className="d-sm-inline d-none">
                                   comments
                                 </span>
                               </a>
-                              <a  className="tx-muted ms-3 d-inline-flex">
+                              <a className="tx-muted ms-3 d-inline-flex">
                                 <i className="fe fe-paperclip mx-1 tx-13"></i>2
                                 <span className="d-sm-inline d-none">
                                   files
@@ -1995,22 +1836,13 @@ function Todotask() {
                                 <i className="fe fe-more-vertical align-middle"></i>
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Another Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Something else here
                                 </Dropdown.Item>
                               </Dropdown.Menu>
@@ -2076,14 +1908,14 @@ function Todotask() {
                               In progress
                             </span>
                             <div className="ms-auto">
-                              <a  className="tx-muted">
+                              <a className="tx-muted">
                                 <i className="fe fe-message-circle mx-1 tx-13"></i>
                                 3
                                 <span className="d-sm-inline d-none">
                                   comments
                                 </span>
                               </a>
-                              <a  className="tx-muted ms-3 d-inline-flex">
+                              <a className="tx-muted ms-3 d-inline-flex">
                                 <i className="fe fe-paperclip mx-1 tx-13"></i>2
                                 <span className="d-sm-inline d-none">
                                   files
@@ -2118,22 +1950,13 @@ function Todotask() {
                                 <i className="fe fe-more-vertical align-middle"></i>
                               </Dropdown.Toggle>
                               <Dropdown.Menu className="dropdown-menu">
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Another Action
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                  
-                                  className="dropdown-item"
-                                >
+                                <Dropdown.Item className="dropdown-item">
                                   Something else here
                                 </Dropdown.Item>
                               </Dropdown.Menu>
@@ -2199,14 +2022,14 @@ function Todotask() {
                               In progress
                             </span>
                             <div className="ms-auto">
-                              <a  className="tx-muted">
+                              <a className="tx-muted">
                                 <i className="fe fe-message-circle mx-1 tx-13"></i>
                                 3
                                 <span className="d-sm-inline d-none">
                                   comments
                                 </span>
                               </a>
-                              <a  className="tx-muted ms-3 d-inline-flex">
+                              <a className="tx-muted ms-3 d-inline-flex">
                                 <i className="fe fe-paperclip mx-1 tx-13"></i>2
                                 <span className="d-sm-inline d-none">
                                   files
@@ -2232,17 +2055,17 @@ function Todotask() {
                               From
                             </label>
                             <div className="input-group">
-                                <InputGroup className="input-group reactdate-pic">
-                    <InputGroup.Text className="input-group-text">
-                      <i className="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                    </InputGroup.Text>
+                              <InputGroup className="input-group reactdate-pic">
+                                <InputGroup.Text className="input-group-text">
+                                  <i className="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                </InputGroup.Text>
 
-                    <DatePicker
-                      className="form-control rounded-start-0 h-34px"
-                      selected={startDate}
-                      onChange={(date: any) => setStartDate(date)}
-                    />
-                  </InputGroup>
+                                <DatePicker
+                                  className="form-control rounded-start-0 h-34px"
+                                  selected={startDate}
+                                  onChange={(date: any) => setStartDate(date)}
+                                />
+                              </InputGroup>
                             </div>
                           </div>
                         </div>
@@ -2252,24 +2075,22 @@ function Todotask() {
                               To
                             </label>
                             <div className="input-group">
-                                <InputGroup className="input-group reactdate-pic">
-                    <InputGroup.Text className="input-group-text">
-                      <i className="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                    </InputGroup.Text>
+                              <InputGroup className="input-group reactdate-pic">
+                                <InputGroup.Text className="input-group-text">
+                                  <i className="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                </InputGroup.Text>
 
-                    <DatePicker
-                      className="form-control rounded-start-0 h-34px"
-                      selected={startDate}
-                      onChange={(date: any) => setStartDate(date)}
-                    />
-                  </InputGroup>
+                                <DatePicker
+                                  className="form-control rounded-start-0 h-34px"
+                                  selected={startDate}
+                                  onChange={(date: any) => setStartDate(date)}
+                                />
+                              </InputGroup>
                             </div>
                           </div>
                         </div>
                         <div className="col-xl-2 col-lg-4 col-md-4 col-sm-12">
-                          <a  className="btn btn-primary">
-                            Apply
-                          </a>
+                          <a className="btn btn-primary">Apply</a>
                         </div>
                         <Col
                           xl={6}
@@ -2306,7 +2127,11 @@ function Todotask() {
                               <i className="fe fe-list"></i>
                             </label>
                           </div>
-                          <Dropdown drop="start"  key="start" className="btn-group ms-2 mg-y-sm-0-f mg-y-10">
+                          <Dropdown
+                            drop="start"
+                            key="start"
+                            className="btn-group ms-2 mg-y-sm-0-f mg-y-10"
+                          >
                             <Dropdown.Toggle
                               type="button"
                               className="btn no-caret-before btn-outline-primary dropdown-toggle  toggle-before-none p-0 border-0"
@@ -2317,16 +2142,13 @@ function Todotask() {
                               <i className="fe fe-clock"></i>
                             </Dropdown.Toggle>
                             <Dropdown.Menu className="dropdown-menu">
-                              <Dropdown.Item
-                                className="dropdown-item active"
-                                
-                              >
+                              <Dropdown.Item className="dropdown-item active">
                                 Date
                               </Dropdown.Item>
-                              <Dropdown.Item className="dropdown-item" >
+                              <Dropdown.Item className="dropdown-item">
                                 Name
                               </Dropdown.Item>
-                              <Dropdown.Item className="dropdown-item" >
+                              <Dropdown.Item className="dropdown-item">
                                 Progress
                               </Dropdown.Item>
                             </Dropdown.Menu>
@@ -2354,22 +2176,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -2412,34 +2225,18 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
                               </Dropdown>
-                              <div className="mb-2">
-                                <h5 className="mb-1">Fixing Bug in Demo</h5>
-                                <span className="tx-muted tx-12">
-                                  <i className="fe fe-tag mx-1 tx-11"></i>
-                                  Development
-                                </span>
-                                D
-                              </div>
+
                               <div className="mb-1">
                                 <span className="tx-muted font-weight-semibold">
                                   25% Completed
@@ -2471,22 +2268,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -2530,22 +2318,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -2589,22 +2368,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -2647,22 +2417,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -2705,22 +2466,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -2765,22 +2517,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -2823,22 +2566,13 @@ function Todotask() {
                                   <i className="fe fe-more-vertical align-middle"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu">
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Another Action
                                   </Dropdown.Item>
-                                  <Dropdown.Item
-                                    
-                                    className="dropdown-item"
-                                  >
+                                  <Dropdown.Item className="dropdown-item">
                                     Something else here
                                   </Dropdown.Item>
                                 </Dropdown.Menu>

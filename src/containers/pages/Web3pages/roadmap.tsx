@@ -8,7 +8,7 @@ function Roadmap() {
   return (
     <Fragment>
       <Container>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center" style={{ marginRight: "10px" }}>
           <div
             className="numberfont justify-content-center card d-flex align-items-center"
             style={{ padding: "20px", marginLeft: "20px" }}
@@ -18,7 +18,7 @@ function Roadmap() {
               target=""
               style={{ fontSize: "23px" }}
             >
-              <b>VERIFY EVOLUTION PHASE I WHITELIST</b>
+              <b>VERIFY EVOLUTION I WHITELIST</b>
             </a>
           </div>
         </Row>

@@ -1207,14 +1207,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: orange !important;
+  color: rgb(32, 32, 32) !important;
   background-color: var(--primary-bg-color);
-  border-color: orange;
+  border-color: rgb(45, 45, 45);
 }
 .btn-primary:hover {
-  color: orange;
+  color: rgb(87, 87, 87);
   background-color: var(--primary-bg-hover) !important;
-  border-color: orange;
+  border-color: rgb(192, 192, 192);
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #000;
@@ -2777,6 +2777,20 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
   top: 0;
   width: 100%;
 }
+
+.card2 {
+  border-radius: 5px;
+  box-shadow: inset 0px -1px 12px 3px rgba(255, 255, 255, 0.05);
+  background-color: transparent;
+  background-position: center top;
+  background-repeat: no-repeat;
+  content: "";
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  top: 0;
+  width: 100%;
+}
+
 .card:before {
   position: absolute;
   content: "";
@@ -15588,7 +15602,6 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
   }
   .landing-layout section:not(.banner-section) {
     padding-block-start: 3rem;
-    padding-block-end: 3rem;
   }
   .landing-layout .faq-section .general-faq-container {
     margin-block-end: 50px;
@@ -15650,9 +15663,12 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
     transition: none;
   }
   .landing-layout section:not(.banner-section) {
-    padding: 3rem;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
 }
+
 @media (min-width: 1200px) {
   .landing-layout .working-section .working-container {
     position: relative;
@@ -27207,8 +27223,8 @@ button.bg-dark:hover, button.bg-dark:focus {
 
 .bg-primary-transparent {
   /* background: var(--primary02) !important; */
-  background-image: url("/Images/collage3.png"); 
-  background-size: contain;
+  background-image: url("/Images/blueBG8.jpg"); 
+  background-size: cover;
   position: relative;
 }
 

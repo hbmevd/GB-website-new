@@ -5,6 +5,22 @@
     /* Add more background properties as needed */
 }
 
+.newContainer2 {
+    background-size: cover;
+    padding: 55px;
+    width: 100%;
+    /* Add more background properties as needed */
+}
+
+.newContainer3 {
+    background-image: url("/Images/blueBG8.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 55px;
+    width: 100%;
+    /* Add more background properties as needed */
+}
+
 .MainDashboardBG {
     background-image: url("/Images/collage.jpg"); 
     background-size: contain;

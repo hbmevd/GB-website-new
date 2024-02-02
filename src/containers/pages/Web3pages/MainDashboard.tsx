@@ -38,28 +38,7 @@ function MainDashboard() {
             backgroundRepeat: "no-repeat",
             height: "85vh",
           }}
-        >
-          {" "}
-          <Container>
-            <Row className="justify-content-center"></Row>
-          </Container>
-          <Container className="text-start" style={{ marginTop: "36rem" }}>
-            <Card className="">
-              <Card.Header className="text-start">
-                <div className="card-title tx-23">Mint Progress</div>
-              </Card.Header>
-              <Card.Body className="d-grid">
-                <div className="mb-2 tx-23">
-                  <span>0 / 1,000 MINTED</span>
-                </div>
-                <div className="mb-2 tx-18 text-start">
-                  <span>0% completed</span>
-                </div>
-                <ProgressBar now={1} />
-              </Card.Body>
-            </Card>
-          </Container>
-        </div>
+        ></div>
 
         <div
           className="numberfont justify-content-center card d-flex align-items-center"

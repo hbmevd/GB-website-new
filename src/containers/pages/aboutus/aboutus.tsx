@@ -1,7 +1,14 @@
 import { Fragment } from "react";
 import Allimages from "../../../components/common/imagesdata/imagesdata";
 import Pageheader from "../../../components/common/pageheader/pageheader";
-import { Card, Col, Container, Dropdown, Row } from "react-bootstrap";
+import {
+  Card,
+  Col,
+  Container,
+  Dropdown,
+  ProgressBar,
+  Row,
+} from "react-bootstrap";
 import pageStyles from "../../../assets/css/pageStyles.module.css";
 import { Link } from "react-router-dom";
 
@@ -93,11 +100,8 @@ function Aboutus() {
                     <span className="badge badge-lg tx-18 badge-light rounded-pill mb-3 me-1 mb-sm-0">
                       Price(ETH): FREE
                     </span>
-                    <span className="badge badge-lg tx-18 badge-light rounded-pill mb-3 me-1 mb-sm-0">
-                      Mint date: 26th February{" "}
-                    </span>
                   </div>
-                  <div className="btn-list min-btn-list-lg mt-5">
+                  <div className="btn-list min-btn-list-lg">
                     <Link
                       to={`${import.meta.env.BASE_URL}dashboard/index/`}
                       className="btn btn-primary"
@@ -113,6 +117,25 @@ function Aboutus() {
                     style={{ maxWidth: "100%", height: "auto" }}
                   />
                 </div>
+                <Container>
+                  <Row className="justify-content-center"></Row>
+                </Container>
+                <Container className="text-start">
+                  <Card className="">
+                    <Card.Header className="text-start">
+                      <div className="card-title tx-23">Mint Progress</div>
+                    </Card.Header>
+                    <Card.Body className="d-grid">
+                      <div className="mb-2 tx-23">
+                        <span>0 / 1,000 MINTED</span>
+                      </div>
+                      <div className="mb-2 tx-18 text-start">
+                        <span>0% completed</span>
+                      </div>
+                      <ProgressBar now={1} />
+                    </Card.Body>
+                  </Card>
+                </Container>
               </Container>
             </section>
           </Card>

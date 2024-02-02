@@ -133,7 +133,7 @@ function Aboutus() {
                   <Row className="justify-content-center"></Row>
                 </Container>
                 <Container className="text-start">
-                  <Card className="">
+                  <Card>
                     <Card.Header className="text-center">
                       <div className="card-title tx-23">Mint Progress</div>
                     </Card.Header>

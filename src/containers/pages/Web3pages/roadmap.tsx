@@ -23,7 +23,6 @@ function Roadmap() {
           </div>
         </Row>
       </Container>
-      <Pageheader titles={""} active={"Roadmap"} Subtite={"Dashboard"} />
 
       <div className="container">
         <ul className="notification contents">
